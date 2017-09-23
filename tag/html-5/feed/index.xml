@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTML 5 &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/html-5/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Líneas maestras del desarrollo para Tizen, nuevo SO enfocado a Smartphones</title>
+		<link>/lineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones/</link>
+		<pubDate>Thu, 11 Jul 2013 19:03:19 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[HTML 5]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[sistemas operativos]]></category>
+
+		<guid isPermaLink="false">/?p=380</guid>
+		<description><![CDATA[Tizen es un nuevo sistema operativo, que pretende ser global. Su principal objetivo son los Smartphone pero exitirán versiones para PC, para tablets, TV inteligentes e incluso para coches (por cierto este último con muy buena pinta, ver vídeo)&#160; Tizen esta patrocinado y promovido por la Linux Foundation. El proyecto es una “join venture” de [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

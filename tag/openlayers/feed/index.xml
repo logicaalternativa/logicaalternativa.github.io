@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OpenLayers &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/openlayers/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps</title>
+		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/</link>
+		<comments>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comments</comments>
+		<pubDate>Wed, 03 Jul 2013 09:32:20 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Geolocalización]]></category>
+		<category><![CDATA[Mapas]]></category>
+		<category><![CDATA[OpenLayers]]></category>
+		<category><![CDATA[OpenStreetMap]]></category>
+
+		<guid isPermaLink="false">/?p=362</guid>
+		<description><![CDATA[Realmente no te das cuenta de la dependencia que tienes de los servicios de Google. Piensas que puedes disponer de ellos porque además de ser potentes son gratis&#8230; hasta que dejan de serlo. Me ha ocurrido en el pasado, en un proyecto personal (747mx.com) que utilizaba el traductor de Google. Era gratis hasta un número [&#8230;]]]></description>
+		<wfw:commentRss>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+	</channel>
+</rss>

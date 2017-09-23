@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Cambio de color a barra de progreso en Android | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='(Java) Securización de formulario de acceso con SHA-1' href='/java-securizacion-de-formulario-de-acceso-con-sha-1/' />
+<link rel='next' title='Puppy Linux' href='/puppy-linux/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="/cambio-de-color-a-barra-de-progreso-en-android/" />
+<link rel='shortlink' href='/?p=163' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fcambio-de-color-a-barra-de-progreso-en-android%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fcambio-de-color-a-barra-de-progreso-en-android%2F&#038;format=xml" />
+
+<!-- Bad Behavior 2.2.19 run time: 2.967 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196601 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="post-template-default single single-post postid-163 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-163" class="post-163 post type-post status-publish format-standard hentry category-android category-java">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Cambio de color a barra de progreso en Android</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><b><img class="alignleft size-full wp-image-185" alt="Android" src="/wp-content/uploads/2013/05/Android.png" width="150" height="150" />L</b>a duración de manga de motocross se mide en minutos + 2 vueltas. A nivel regional son 20 minutos + 2 vueltas, a nivel nacional 30 minutos + 2 vueltas, etc&#8230; Entrenando lo normal es hacer mangas de la misma duración, o de menos tiempo (mejorando la rapidez) o de más (mejorando el fondo). Las motos de cross no tienen instrumentación y obliga a que una persona desde fuera indique al piloto cuanto le queda de manga.</p>
+<p>¿Qué por qué cuento esto? Desde hace bastante tiempo mi hermano y yo corremos motocross a nivel regional. Bueno en realidad mi hermano es el “quemao” y siempre andaba quejándose de que sus entrenos no podían ser de calidad porque no sabía el tiempo que llevaba, no sabía cuando apretar, cuando regular, bla, bla, bla&#8230;</p>
+<p>Ahí salió el “<i>hermano informático</i>”, surgió el problema de cambiar el color a una barra de progreso y echarme a la cara el peor &#8216;<i>stakeholder</i>&#8216; que he tenido en mi vida … <span id="more-163"></span></p>
+<p><div id="attachment_180" style="width: 160px" class="wp-caption alignleft"><img class="size-full wp-image-180" alt="Aplicación de motocroos" src="/wp-content/uploads/2013/05/screenshot-1368098659735_p.png" width="150" height="100" /><p class="wp-caption-text">[Pantallazo aplicación de motocross]</p></div>La solución una&nbsp;sencilla aplicación en <b>Android</b>. Con un código de colores que, de un simple vistazo entre bache y salto, se puede ver el tiempo que queda. No es bonita pero si muy visual. También tiene una <b>barra de progreso</b> para indicar lo que queda de un vistazo. Con los colores por defecto no se veía bien y el &#8216;<i>stakeholder</i>&#8216; me hizo cambiarla.</p>
+<p>Para mostrar los pasos que tuve que seguir he creado una pequeña aplicación de ejemplo. El código lo puedes ver aquí.</p>
+<p style="text-align: center;"><a title="Código en github" href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso" target="_blank">https://github.com/logicaalternativa/ejemAndroidBarraProgreso</a></p>
+<p><div id="attachment_181" style="width: 310px" class="wp-caption aligncenter"><img class="size-full wp-image-181" alt="[Pantallazo aplicación ejemplo]" src="/wp-content/uploads/2013/05/screenshot-1368098681963.png" width="300" height="450" srcset="/wp-content/uploads/2013/05/screenshot-1368098681963.png 300w, /wp-content/uploads/2013/05/screenshot-1368098681963-200x300.png 200w" sizes="(max-width: 300px) 100vw, 300px" /><p class="wp-caption-text">[Pantallazo aplicación ejemplo]</p></div>El ejemplo es una <b>barra de progreso</b> que termina en 20 segundos , un <b>radio button </b>que permite cambiar el color y <b>botón</b> de &#8216;<i>Empezar</i>&#8216; para volver a comenzar la cuenta.</p>
+<h2>Definición de los colores</h2>
+<p>He creado dos recursos de tipo <a href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso/tree/master/res/drawable" target="_blank">drawable</a>, (en el directorio del proyecto <em>res/drawable</em>),&nbsp;<strong> dw_amarilloazul.xml</strong> y <strong>dw_verdegris.xml</strong>. En ellos se define el color del progreso de la barra y su color de fondo. Por ejemplo lo puedes ver en <a href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso/blob/master/res/drawable/dw_amarilloazul.xml" target="_blank">dw_amarilloazul.xml</a></p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="XML"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #808080; font-style: italic;">&lt;!-- Color de fondo azul --&gt;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;item</span> <span style="color: #000066;">android:id</span>=<span style="color: #ff0000;">&quot;@android:id/background&quot;</span><span style="color: #000000; font-weight: bold;">&gt;</span></span></pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline">  ...</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/item<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre></td></tr><tr><td class="devcodelines" width="3%">5</td><td class="devcodelinesarea"><pre class="devcode devcodeline">...</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">6</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #808080; font-style: italic;">&lt;!-- Color de la barra amarillo --&gt;</span></pre></td></tr><tr><td class="devcodelines" width="3%">7</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;item</span> <span style="color: #000066;">android:id</span>=<span style="color: #ff0000;">&quot;@android:id/progress&quot;</span><span style="color: #000000; font-weight: bold;">&gt;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">8</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">  ...</pre></td></tr><tr><td class="devcodelines" width="3%">9</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/item<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 01</strong></p>
+<p style="text-align: left;">Dentro de cada nodo <em>item</em> se define un nodo <em>gradient&nbsp;</em> que permite dar &#8216;volumen&#8217; al color. Por ejemplo:</p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="XML"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;gradient</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:startColor</span>=<span style="color: #ff0000;">&quot;#9966cc&quot;</span></span></pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:centerColor</span>=<span style="color: #ff0000;">&quot;#6b4794&quot;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:centerY</span>=<span style="color: #ff0000;">&quot;0.75&quot;</span></span></pre></td></tr><tr><td class="devcodelines" width="3%">5</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:endColor</span>=<span style="color: #ff0000;">&quot;#6b2394&quot;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">6</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:angle</span>=<span style="color: #ff0000;">&quot;270&quot;</span> <span style="color: #000000; font-weight: bold;">/&gt;</span></span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 02</strong></p>
+<p style="text-align: left;">Para elegir el color no me he complicado mucho la vida. Del mismo color, he elegido un tono apagado para el atributo <em>startColor</em>, uno medio para el <em>centerColor</em> y el más vivo para el <em>endColor</em></p>
+<p style="text-align: left;">El color por defecto de la barra es el verde con fondo gris. En <a href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso/blob/master/res/layout/activity_principal.xml" target="_blank">activity_principal.xml</a> lo he asignado como atributo de la barra de progreso</p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="XML"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;ProgressBar</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:id</span>=<span style="color: #ff0000;">&quot;@+id/barraProgreso&quot;</span></span></pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">style</span>=<span style="color: #ff0000;">&quot;?android:attr/progressBarStyleHorizontal&quot;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"> ...</span></pre></td></tr><tr><td class="devcodelines" width="3%">5</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000066;">android:progressDrawable</span>=<span style="color: #ff0000;">&quot;@drawable/dw_verdegris&quot;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">6</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"> <span style="color: #000000; font-weight: bold;">/&gt;</span></span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 03</strong></p>
+<p style="text-align: left;">En realidad hasta aquí te basta para cambiar el color a una barra de progreso. El ejemplo tiene &#8220;más chicha&#8221; y cambia el color dinámicamente</p>
+<h2 style="text-align: left;">Cómo funciona la aplicación</h2>
+<h3 style="text-align: left;">Cuenta atrás</h3>
+<p style="text-align: left;">El funcionamiento es sencillo. En la clase <a href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso/blob/master/src/com/logicaalternativa/ejemplos/android/barraprogreso/Principal.java" target="_blank">Principal</a> se define una clase privada <em>CuentaAtras</em> que hereda de <em>CountDownTimer</em>. Es una cuenta atrás de 20 segundos que se encarga simular el progreso de la barra.</p>
+<p style="text-align: left;">En el evento <em>onTick</em> se actualiza el porcentaje de la barra</p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="Java"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">01</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">class</span> <span style="color: #003399;">Principal</span> <span style="color: #000000; font-weight: bold;">extends</span> Activity <span style="color: #009900;">&#123;</span> </pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">02</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"> ....</pre></td></tr><tr><td class="devcodelines" width="3%">03</td><td class="devcodelinesarea"><pre class="devcode devcodeline"> <span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000000; font-weight: bold;">class</span> CuentaAtras  <span style="color: #000000; font-weight: bold;">extends</span> CountDownTimer <span style="color: #009900;">&#123;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">04</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">  ...</pre></td></tr><tr><td class="devcodelines" width="3%">05</td><td class="devcodelinesarea"><pre class="devcode devcodeline">  @Override</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">06</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">  <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> onTick<span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">long</span> quedaMilisegundos<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></pre></td></tr><tr><td class="devcodelines" width="3%">07</td><td class="devcodelinesarea"><pre class="devcode devcodeline">   <span style="color: #000066; font-weight: bold;">int</span> progresoBarra <span style="color: #339933;">=</span> damePorcentajeProgreso<span style="color: #009900;">&#40;</span> quedaMilisegundos <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>    </pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">08</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   barraProgreso.<span style="color: #006633;">setProgress</span><span style="color: #009900;">&#40;</span> progresoBarra <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines" width="3%">09</td><td class="devcodelinesarea"><pre class="devcode devcodeline">  <span style="color: #009900;">&#125;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">10</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"> ...</pre></td></tr><tr><td class="devcodelines" width="3%">11</td><td class="devcodelinesarea"><pre class="devcode devcodeline">  <span style="color: #009900;">&#125;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">12</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;">&#125;</span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 04</strong></p>
+<p style="text-align: left;">El método <em>damePorcentajeProgreso</em> es de la clase Principal y devuelve un valor entre 0 (quedan 20 segundos) y 100 (quedan 0 segundos)</p>
+<h3 style="text-align: left;">Cambiar el color</h3>
+<p>El cambio de color de la barra se hace en el método <em>onRadioButtonClicked </em> de la clase <a href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso/blob/master/src/com/logicaalternativa/ejemplos/android/barraprogreso/Principal.java" target="_blank">Principal</a>. Este método se ejecutará cada vez que se haga click en los RadioButton. Se ha definido en <a href="https://github.com/logicaalternativa/ejemAndroidBarraProgreso/blob/master/res/layout/activity_principal.xmlhttps://github.com/logicaalternativa/ejemAndroidBarraProgreso/blob/master/res/layout/activity_principal.xml" target="_blank">activity_principal.xml</a></p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="XML"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">01</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;RadioGroup</span> <span style="color: #000066;">xmlns:android</span>=<span style="color: #ff0000;">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">02</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;">   ...</span></pre></td></tr><tr><td class="devcodelines" width="3%">03</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;">   <span style="color: #000000; font-weight: bold;">&gt;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">04</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">      <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;RadioButton</span> <span style="color: #000066;">android:id</span>=<span style="color: #ff0000;">&quot;@+id/verde_gris&quot;</span></span></pre></td></tr><tr><td class="devcodelines" width="3%">05</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;">         ...</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">06</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;">         <span style="color: #000066;">android:onClick</span>=<span style="color: #ff0000;">&quot;onRadioButtonClicked&quot;</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span></pre></td></tr><tr><td class="devcodelines" width="3%">07</td><td class="devcodelinesarea"><pre class="devcode devcodeline">      <span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;RadioButton</span> <span style="color: #000066;">android:id</span>=<span style="color: #ff0000;">&quot;@+id/amarillo_azul&quot;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">08</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;">         ...</span></pre></td></tr><tr><td class="devcodelines" width="3%">09</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;">         <span style="color: #000066;">android:onClick</span>=<span style="color: #ff0000;">&quot;onRadioButtonClicked&quot;</span><span style="color: #000000; font-weight: bold;">/&gt;</span></span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">10</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;"><span style="color: #000000; font-weight: bold;">&lt;/RadioGroup<span style="color: #000000; font-weight: bold;">&gt;</span></span></span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 05</strong></p>
+<p style="text-align: left;">En <em>onRadioButtonClicked</em> se comprueba cual ha sido el radio que se ha &#8216;clickado&#8217; y se llama a <em>cambiarColorBarra&nbsp;</em>pasándole el color.</p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="Java"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">01</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000066; font-weight: bold;">void</span> onRadioButtonClicked<span style="color: #009900;">&#40;</span><span style="color: #003399;">View</span> view<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">02</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   <span style="color: #000066; font-weight: bold;">boolean</span> checked <span style="color: #339933;">=</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span>RadioButton<span style="color: #009900;">&#41;</span> view<span style="color: #009900;">&#41;</span>.<span style="color: #006633;">isChecked</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines" width="3%">03</td><td class="devcodelinesarea"><pre class="devcode devcodeline">   <span style="color: #666666; font-style: italic;">// Comprueba que radio button ha sido apretado</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">04</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   <span style="color: #000000; font-weight: bold;">switch</span><span style="color: #009900;">&#40;</span>view.<span style="color: #006633;">getId</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></pre></td></tr><tr><td class="devcodelines" width="3%">05</td><td class="devcodelinesarea"><pre class="devcode devcodeline">      <span style="color: #000000; font-weight: bold;">case</span> R.<span style="color: #006633;">id</span>.<span style="color: #006633;">verde_gris</span><span style="color: #339933;">:</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">06</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">         <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>checked<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></pre></td></tr><tr><td class="devcodelines" width="3%">07</td><td class="devcodelinesarea"><pre class="devcode devcodeline">         cambiarColorBarra<span style="color: #009900;">&#40;</span> R.<span style="color: #006633;">drawable</span>.<span style="color: #006633;">dw_verdegris</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">08</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">         <span style="color: #009900;">&#125;</span></pre></td></tr><tr><td class="devcodelines" width="3%">09</td><td class="devcodelinesarea"><pre class="devcode devcodeline">         <span style="color: #000000; font-weight: bold;">break</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">10</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">      <span style="color: #000000; font-weight: bold;">case</span> R.<span style="color: #006633;">id</span>.<span style="color: #006633;">amarillo_azul</span><span style="color: #339933;">:</span></pre></td></tr><tr><td class="devcodelines" width="3%">11</td><td class="devcodelinesarea"><pre class="devcode devcodeline">         <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>checked<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">12</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">         cambiarColorBarra<span style="color: #009900;">&#40;</span> R.<span style="color: #006633;">drawable</span>.<span style="color: #006633;">dw_amarilloazul</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines" width="3%">13</td><td class="devcodelinesarea"><pre class="devcode devcodeline">         <span style="color: #009900;">&#125;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">14</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">         <span style="color: #000000; font-weight: bold;">break</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines" width="3%">15</td><td class="devcodelinesarea"><pre class="devcode devcodeline">   <span style="color: #009900;">&#125;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">16</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #009900;">&#125;</span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 06</strong></p>
+<p style="text-align: left;">y en <em>cambiarColorBarra </em>para que se vuelva a dibujar la barra he tenido que obtener el objeto <em>Rect</em> antes de cambiar el color para después volverlo a asignar.</p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="XML"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline">private void cambiarColorBarra( int id ){</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   Rect bounds = barraProgreso.getProgressDrawable().getBounds();</pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline">   barraProgreso.setProgressDrawable( getResources().getDrawable( id ) );</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   barraProgreso.getProgressDrawable().setBounds(bounds);</pre></td></tr><tr><td class="devcodelines" width="3%">5</td><td class="devcodelinesarea"><pre class="devcode devcodeline">&nbsp;</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">6</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   arrancarCuentaAtras();</pre></td></tr><tr><td class="devcodelines" width="3%">7</td><td class="devcodelinesarea"><pre class="devcode devcodeline">}</pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 07</strong></p>
+<h3 style="text-align: left;">Arrancar la cuenta atrás</h3>
+<p style="text-align: left;">La cuenta atrás se arranca en el evento onClick del botón y cada vez que se cambia de color. El método es <em>arrancarCuentaAtras.</em></p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="Java"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">private</span> <span style="color: #000066; font-weight: bold;">void</span> arrancarCuentaAtras<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>      </pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   <span style="color: #000000; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span> cuentaAtras <span style="color: #339933;">!=</span> <span style="color: #000066; font-weight: bold;">null</span> <span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>      </pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline">      cuentaAtras.<span style="color: #006633;">cancel</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   <span style="color: #009900;">&#125;</span></pre></td></tr><tr><td class="devcodelines" width="3%">5</td><td class="devcodelinesarea"><pre class="devcode devcodeline">   cuentaAtras <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> CuentaAtras<span style="color: #009900;">&#40;</span> MILI_SEG_DURACIONBARRA, MILI_SEG_ACTUALIZACIONBARRA<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> </pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">6</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">   cuentaAtras.<span style="color: #006633;">start</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>      </pre></td></tr><tr><td class="devcodelines" width="3%">7</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #009900;">&#125;</span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 08</strong></p>
+<p style="text-align: left;">Se cancela la cuenta atrás, se crea una nueva instancia de la clase y se vuelve a arrancar.</p>
+<p style="text-align: left;">Puedes bajarte la aplicación ejemplo (<a href="/wp-content/uploads/2013/05/BarraProgreso.apk_.zip">BarraProgreso.apk</a>) para comprobar como queda. Probado y testeado en mi vetusto pero no por eso menos valorado Geeksphone Zero.</p>
+<p style="text-align: left;">Espero que os sirva.</p>
+<p style="text-align: left;"><a title="Mi CV" href="/mi-cv/">M.E.</a></p>
+<p style="text-align: left;">P.D.: He apaciguado al &#8216;<i>stakeholder</i>&#8216;, de hecho está bastante contento con la aplicación de motocross. Quizás un día me anime y la ponga en Google Play. Pero eso como en en el final de la peli de Conan &#8220;será otra&#8230; entrada&#8221;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada fue publicada en <a href="/category/programacion/android/" rel="category tag">Android</a>, <a href="/category/programacion/java/" rel="category tag">Java</a> el <a href="/cambio-de-color-a-barra-de-progreso-en-android/" title="18:34" rel="bookmark"><time class="entry-date" datetime="2013-05-09T18:34:51+00:00">9 mayo, 2013</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navegación de entradas</h3>
+					<span class="nav-previous"><a href="/java-securizacion-de-formulario-de-acceso-con-sha-1/" rel="prev"><span class="meta-nav">&larr;</span> (Java) Securización de formulario de acceso con SHA-1</a></span>
+					<span class="nav-next"><a href="/puppy-linux/" rel="next">Puppy Linux <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

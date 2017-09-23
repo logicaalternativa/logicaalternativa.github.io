@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Android &#8211; Lógica Alternativa</title>
+	<atom:link href="/category/programacion/android/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Cambio de color a barra de progreso en Android</title>
+		<link>/cambio-de-color-a-barra-de-progreso-en-android/</link>
+		<pubDate>Thu, 09 May 2013 16:34:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Android]]></category>
+		<category><![CDATA[Java]]></category>
+
+		<guid isPermaLink="false">/?p=163</guid>
+		<description><![CDATA[La duración de manga de motocross se mide en minutos + 2 vueltas. A nivel regional son 20 minutos + 2 vueltas, a nivel nacional 30 minutos + 2 vueltas, etc&#8230; Entrenando lo normal es hacer mangas de la misma duración, o de menos tiempo (mejorando la rapidez) o de más (mejorando el fondo). Las [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

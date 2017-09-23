@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>trabajo &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/trabajo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Networking, networking</title>
+		<link>/networking-networking/</link>
+		<pubDate>Fri, 19 Apr 2013 09:58:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[networking]]></category>
+		<category><![CDATA[trabajo]]></category>
+
+		<guid isPermaLink="false">/?p=54</guid>
+		<description><![CDATA[Esta entrada también se podía haber llamado &#8220;Los motivos de este blog&#8221; o &#8220;¿Por qué hago este blog?&#8221; Se han tenido que dar una serie de circunstancias que han creado la tormenta perfecta que ha terminado en el nacimiento de LogicaAlternativa.com. Este comienzo de año ha sido de locura. Problemas en la empresa en la [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

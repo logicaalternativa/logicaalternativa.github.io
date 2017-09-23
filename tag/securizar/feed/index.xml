@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>securizar &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/securizar/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>(Java) Securización de formulario de acceso con SHA-1</title>
+		<link>/java-securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Sun, 28 Apr 2013 19:29:17 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=133</guid>
+		<description><![CDATA[Completando la entrada anterior, he realizado la implementación en Java. Básicamente &#8216;todo es lo mismo&#8230; pero no es igual&#8216;&#160; :-). Cambia la manera de obtener el número aleatorio y la forma de obtener el sha-1. La estructura es la de un proyecto Maven web con su pom.xml para que sea sencillo compilarlo y generar el [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Securización de formulario de acceso con SHA-1</title>
+		<link>/securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Fri, 19 Apr 2013 10:06:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=68</guid>
+		<description><![CDATA[Muchas veces las aplicaciones web no tienen acceso por ssl (https) y suelen tener un formulario de &#8216;login&#8217; de usuario y contraseña. Esto quiere decir que información sensible como la contraseña se transmite en texto claro y que sea relativamente fácil que terceros pueden tener acceso a ella. Por ejemplo esnifando el tráfico si el [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

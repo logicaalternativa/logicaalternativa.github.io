@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comentarios en: Java versus JavaScript, reflexiones</title>
+	<atom:link href="/%EF%BB%BFjava-versus-javascript-reflexiones/feed/" rel="self" type="application/rss+xml" />
+	<link>/%ef%bb%bfjava-versus-javascript-reflexiones/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Wed, 10 Jun 2015 18:24:04 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Por: José Viera</title>
+		<link>/%ef%bb%bfjava-versus-javascript-reflexiones/#comment-173</link>
+		<dc:creator><![CDATA[José Viera]]></dc:creator>
+		<pubDate>Wed, 10 Jun 2015 18:24:04 +0000</pubDate>
+		<guid isPermaLink="false">/?p=555#comment-173</guid>
+		<description><![CDATA[Estoy de acuerdo contigo Miguel, la tendencia hoy en día es HTML5+JS+CSS3, además esto te permite llevarlo a otras plataformas como a los móviles, gracias a Apache Cordova y PhoneGap.
+
+Actualmente estoy trabajando en el Front-End usando HTML5 + Angularjs + Bootstrap3 , me comunico con el Back-End usando servicios Rest, una arquitectura de esta forma te ayuda a desacoplar los componentes de una manera muy eficiente.
+
+Saludos!]]></description>
+		<content:encoded><![CDATA[<p>Estoy de acuerdo contigo Miguel, la tendencia hoy en día es HTML5+JS+CSS3, además esto te permite llevarlo a otras plataformas como a los móviles, gracias a Apache Cordova y PhoneGap.</p>
+<p>Actualmente estoy trabajando en el Front-End usando HTML5 + Angularjs + Bootstrap3 , me comunico con el Back-End usando servicios Rest, una arquitectura de esta forma te ayuda a desacoplar los componentes de una manera muy eficiente.</p>
+<p>Saludos!</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

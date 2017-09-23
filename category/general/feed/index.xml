@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>General &#8211; Lógica Alternativa</title>
+	<atom:link href="/category/general/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Actores tipados, Akka por ejemplos</title>
+		<link>/akka-por-ejemplos-actores-tipados/</link>
+		<pubDate>Mon, 09 Nov 2015 20:48:05 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+
+		<guid isPermaLink="false">/?p=956</guid>
+		<description><![CDATA[&#8220;Tercer y último artículo sobre Akka explicado mediante ejemplos. En los dos anteriores se basó en como funcionan la cola de mensajes de un actor, que es un router, como se envían mensajes entre actores. Después se trató temas como la supervisión y el bus de eventos. Ahora me centraré en los actores tipados.&#8220; Entrada [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Post en el blog de civitana: &#8220;Firma electrónica fácil de usar&#8221;</title>
+		<link>/post-en-el-blog-de-civitana-firma-digital-facil-de-usar/</link>
+		<pubDate>Tue, 09 Sep 2014 22:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+
+		<guid isPermaLink="false">/?p=716</guid>
+		<description><![CDATA[Antes de vacaciones escribí el siguiente artículo en el blog de Civitana.org [Firma electrónica fácil de usar] ( http://blog.civitana.org/2014/08/11/firma-electronica-facil-de-usar/)]]></description>
+		</item>
+		<item>
+		<title>La aventura de Civitana.org</title>
+		<link>/la-aventura-de-civitana-org/</link>
+		<pubDate>Wed, 04 Jun 2014 21:44:26 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Civitana]]></category>
+		<category><![CDATA[firma digital]]></category>
+		<category><![CDATA[NOsql]]></category>
+		<category><![CDATA[Nube]]></category>
+
+		<guid isPermaLink="false">/?p=678</guid>
+		<description><![CDATA[Actualización octubre del 2014: &#8221; Después de un verano intenso que nos ha dado tiempo a desarrollar un protocolo de voto electrónico en el que por mis tareas me he tocado definir y desarrollar en gran parte, a partir de octubre de 2014, las circunstancias  hacen que me desligue de Civitana.org, . Aunque tengo una [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Configuración de entornos flexible en Spring utilizando SpEL</title>
+		<link>/configuracion-de-entornos-flexible-en-spring-utilizando-spel/</link>
+		<pubDate>Mon, 16 Dec 2013 22:53:59 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Configuración]]></category>
+		<category><![CDATA[Externalizar]]></category>
+		<category><![CDATA[Jetty]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Tomcat]]></category>
+
+		<guid isPermaLink="false">/?p=532</guid>
+		<description><![CDATA[Introducción En general cuando desarrollas una aplicación de cualquier tipo te enfrentas al reto de: 1) Configurar la aplicación de una manera sencilla La configuración tiene que ser cómoda de modificar y tiene que estar centralizada (evitando que este desperdigada en multitud de ficheros de configuración las rutas, parámetros de conexión etc&#8230;) 2) Que un [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Networking, networking</title>
+		<link>/networking-networking/</link>
+		<pubDate>Fri, 19 Apr 2013 09:58:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[networking]]></category>
+		<category><![CDATA[trabajo]]></category>
+
+		<guid isPermaLink="false">/?p=54</guid>
+		<description><![CDATA[Esta entrada también se podía haber llamado &#8220;Los motivos de este blog&#8221; o &#8220;¿Por qué hago este blog?&#8221; Se han tenido que dar una serie de circunstancias que han creado la tormenta perfecta que ha terminado en el nacimiento de LogicaAlternativa.com. Este comienzo de año ha sido de locura. Problemas en la empresa en la [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

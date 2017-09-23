@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Card Sorting &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/card-sorting/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230;</title>
+		<link>/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/</link>
+		<pubDate>Tue, 27 Aug 2013 19:02:55 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Card Sorting]]></category>
+		<category><![CDATA[Diseño Centrado en el Usuario]]></category>
+		<category><![CDATA[Experiencia de Usuario]]></category>
+		<category><![CDATA[Testing A/B]]></category>
+		<category><![CDATA[Usabilidad]]></category>
+
+		<guid isPermaLink="false">/?p=400</guid>
+		<description><![CDATA[Usabilidad, Experiencia de Usuario, Diseño Centrado en el Usuario, &#8230; son palabras que se nos han hecho familiares a raíz de la evolución de la web y sobre todo con la aparición de los nuevos dispositivos móviles. Esto ha hecho que el técnico experto en estas materias sean uno de los perfiles más valorados en [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

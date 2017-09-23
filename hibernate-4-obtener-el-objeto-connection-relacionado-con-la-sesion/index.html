@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Hibernate 4: obtener el objeto Connection relacionado con la sesión | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Hibernate 4: obtener el objeto Connection relacionado con la sesión RSS de los comentarios" href="/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Puppy Linux' href='/puppy-linux/' />
+<link rel='next' title='El siguiente nivel, Agile Coach Competency Framework' href='/el-siguiente-nivel-agile-coach-competency-framework/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/" />
+<link rel='shortlink' href='/?p=214' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fhibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fhibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion%2F&#038;format=xml" />
+
+<!-- Bad Behavior 2.2.19 run time: 2.870 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196597 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="post-template-default single single-post postid-214 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-214" class="post-214 post type-post status-publish format-standard hentry category-java tag-hibernate tag-java">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Hibernate 4: obtener el objeto Connection relacionado con la sesión</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><strong>U</strong>na nota rápida de un problema con el que me he pegado hace poco.</p>
+<p>Necesitaba lanzar una función de BBDD (<strong>Oracle</strong>) desde <strong>Hibernate</strong> manteniendo la transacción.&nbsp; Para lanzar la función desde jdbc, en las versiones anteriores de Hibernate era muy intuitivo obtener el objeto <strong>Connection</strong> relacionado con la sesión pero en <strong>Hibernate 4</strong> ha cambiado el interface <strong>Session.<span id="more-214"></span></strong></p>
+<h2 style="text-align: left;">En versiones anteriores de Hibernate&#8230;</h2>
+<p>El código java para obtener el objeto Connection relacionado con la sesión es:<!--DEVFMTCODE--><pre class="devcodeblock" title="Java"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">org.hibernate.Session</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.sql.Connection</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline">...</pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #003399;">Connection</span> conn <span style="color: #339933;">=</span> sesion.<span style="color: #006633;">connection</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 01</strong></p>
+<h2 style="text-align: left;">&#8230; en Hibernate 4</h2>
+<p>Ahora es:</p>
+<p><!--DEVFMTCODE--><pre class="devcodeblock" title="Java"><div class="devcodeoverflow"><table class="devcodearea" width="100%"><tr><td class="devcodelines" width="3%">1</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">org.hibernate.Session</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">2</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">org.hibernate.engine.spi.SessionImplementor</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines" width="3%">3</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #000000; font-weight: bold;">import</span> <span style="color: #006699;">java.sql.Connection</span><span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">4</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline">...</pre></td></tr><tr><td class="devcodelines" width="3%">5</td><td class="devcodelinesarea"><pre class="devcode devcodeline"><span style="color: #006633;">SessionImplementor</span> miSessionImplementor <span style="color: #339933;">=</span> <span style="color: #009900;">&#40;</span>SessionImplementor<span style="color: #009900;">&#41;</span> sesion<span style="color: #339933;">;</span></pre></td></tr><tr><td class="devcodelines devcodelinesodd devcodelinesodd" width="3%">6</td><td class="devcodelinesarea devcodelinesareaodd devcodelinesareaodd"><pre class="devcode devcodeline"><span style="color: #003399;">Connection</span> conn <span style="color: #339933;">=</span> miSessionImplementor.<span style="color: #006633;">connection</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre></td></tr></table></div></pre><!--END_DEVFMTCODE--></p>
+<p style="text-align: center;"><strong>Código 02</strong></p>
+<p>Esto es así porque el interfaz <strong>Session</strong> cambia en Hibernate 4. Mirando la documentación del api se puede ver que la única implementación del interfaz <a title="Interface Session Api" href="http://docs.jboss.org/hibernate/orm/4.0/javadocs/org/hibernate/Session.htmlhttp://docs.jboss.org/hibernate/orm/4.0/javadocs/org/hibernate/Session.html" target="_blank">Session</a> es <a title="[SessionImp Api]" href="http://docs.jboss.org/hibernate/orm/4.0/javadocs/org/hibernate/internal/SessionImpl.html" target="_blank">SessionImp</a> que implementa a su vez el interface <a title="[SessionImplementor Api]" href="http://docs.jboss.org/hibernate/orm/4.0/javadocs/org/hibernate/engine/spi/SessionImplementor.html" target="_blank">SessionImplementor.</a></p>
+<p>Comprobado, esta es la conexión &#8220;güena&#8221;. Lo que hagas con ella (lanzar una función, procedimiento almacenado, etc) estás en la misma transacción de base de datos que tiene la sesión.</p>
+<p>Así que está un poco enrevesado, pero ahí está&#8230;</p>
+<p>Espero que os sirva.</p>
+<p><a title="Mi CV" href="/mi-cv/" target="_blank">M.E.</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/programacion/java/" rel="category tag">Java</a> y está etiquetada con <a href="/tag/hibernate/" rel="tag">Hibernate</a>, <a href="/tag/java/" rel="tag">Java</a> en <a href="/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/" title="13:47" rel="bookmark"><time class="entry-date" datetime="2013-05-28T13:47:38+00:00">28 mayo, 2013</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navegación de entradas</h3>
+					<span class="nav-previous"><a href="/puppy-linux/" rel="prev"><span class="meta-nav">&larr;</span> Puppy Linux</a></span>
+					<span class="nav-next"><a href="/el-siguiente-nivel-agile-coach-competency-framework/" rel="next">El siguiente nivel, Agile Coach Competency Framework <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			Un pensamiento en &ldquo;<span>Hibernate 4: obtener el objeto Connection relacionado con la sesión</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-89">
+		<article id="comment-89" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/e19ce0f1a77f61533dd632d3e50a1630?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e19ce0f1a77f61533dd632d3e50a1630?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://mydevelopnotepad.blogspot.com/' rel='external nofollow' class='url'>Peter</a></b> </cite><a href="/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/#comment-89"><time datetime="2014-04-10T23:17:45+00:00">10 abril, 2014 en 23:17</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Excelente lo que esta buscando, ¡gracias!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Los comentarios están cerrados.</p>
+		
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

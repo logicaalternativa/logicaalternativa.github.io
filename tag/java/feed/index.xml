@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Java &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/java/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Futuros y promesas,&#8230; y también monadas. Implementando el patrón</title>
+		<link>/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/</link>
+		<pubDate>Tue, 15 Aug 2017 17:20:34 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Patrones]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[patrones]]></category>
+
+		<guid isPermaLink="false">/?p=1035</guid>
+		<description><![CDATA[&#8220;Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más.&#8221; Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Actores tipados, Akka por ejemplos</title>
+		<link>/akka-por-ejemplos-actores-tipados/</link>
+		<pubDate>Mon, 09 Nov 2015 20:48:05 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+
+		<guid isPermaLink="false">/?p=956</guid>
+		<description><![CDATA[&#8220;Tercer y último artículo sobre Akka explicado mediante ejemplos. En los dos anteriores se basó en como funcionan la cola de mensajes de un actor, que es un router, como se envían mensajes entre actores. Después se trató temas como la supervisión y el bus de eventos. Ahora me centraré en los actores tipados.&#8220; Entrada [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</title>
+		<link>/akka-por-ejemplos-sobre-supervision-bus-de-eventos/</link>
+		<pubDate>Sun, 25 Oct 2015 22:34:53 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[bus de eventos]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[robustez]]></category>
+
+		<guid isPermaLink="false">/?p=918</guid>
+		<description><![CDATA[Esta es la segunda entrega de Akka por ejemplos. La primera trató sobre cual es el funcionamiento de la cola de mensajes de un actor, que es un router y como se envían mensajes entre actores. Ahora se tratarán temas como el control de fallos y la supervisión de actores, el bus de eventos de [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Akka por ejemplos</title>
+		<link>/akka-por-ejemplos/</link>
+		<pubDate>Mon, 12 Oct 2015 18:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[scala]]></category>
+
+		<guid isPermaLink="false">/?p=861</guid>
+		<description><![CDATA[&#8220;Akka representa muchos conceptos nuevos que al principio cuesta asimilar. Para poder entenderlo mejor, he ido creando, poco a poco, una serie de ejemplos que me han permitido comprender mejor el paradigma que conlleva. Este artículo trata sobre esto, intentar tener una prueba de código de cada nuevo concepto que permita ver cual es su [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Mocks&#8230; o el TDD y yo</title>
+		<link>/mocks-o-el-tdd-y-yo/</link>
+		<pubDate>Thu, 23 Oct 2014 22:24:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[junit]]></category>
+		<category><![CDATA[maven]]></category>
+		<category><![CDATA[Mock]]></category>
+		<category><![CDATA[REST]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Test]]></category>
+
+		<guid isPermaLink="false">/?p=739</guid>
+		<description><![CDATA[&#8230; segunda Parte de TDD is dead? … o yo y el TDD Este es el segundo y último artículo de la serie que completa el anterior post TDD is dead? … o yo y el TDD. Trataré de explicar como defino y codifico mis propios objetos &#8216;mock&#8216;, y de como los uso tanto para [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>TDD is dead? … o yo y el TDD. Primera Parte</title>
+		<link>/tdd-is-dead-o-yo-y-el-tdd-primera-parte/</link>
+		<pubDate>Tue, 08 Jul 2014 22:11:34 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Mock]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">/?p=698</guid>
+		<description><![CDATA[“Test-driven development (TDD)”, en la lengua de Cervantes “Desarrollo guiado por pruebas”&#8230; Palabras malditas para algunos&#8230; Últimamente se dice que está muerto&#8230; “TDD is dead?”. Actualización: La segunda parte de este artículo es &#8220;Mocks… o el TDD y yo&#8221; ¿Qué es? A grandes rasgos, consiste en primero diseñar y realizar los test de una determinada [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Aprendiendo Grunt a partir de Ant</title>
+		<link>/aprendiendo-grunt-a-partir-de-ant/</link>
+		<pubDate>Sun, 11 May 2014 21:22:48 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Control de la configuración]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[ant]]></category>
+		<category><![CDATA[grunt]]></category>
+
+		<guid isPermaLink="false">/?p=642</guid>
+		<description><![CDATA[Prólogo Hace unos años, unos 8 ya &#8230; En un proyecto me tocó realizar una &#8216;builtool&#8216;. Era una herramienta común que utilizarían todos los demás proyectos no importando su tecnología, PHP,.Net, Java, etc. Obtenía el código del sistema de control de versiones compilaba, paquetizaba y subía la build compilada a otra rama del control de [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>﻿Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230;</title>
+		<link>/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/</link>
+		<pubDate>Sun, 09 Mar 2014 22:27:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Concurrencia]]></category>
+		<category><![CDATA[vert.x]]></category>
+
+		<guid isPermaLink="false">/?p=583</guid>
+		<description><![CDATA[Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x La primera vez que oí hablar de Vert.x fue en la charla sobre el nuevo lenguaje Ceylon basado en la JVM que dio Gavin King&#160; (la mente pensante detrás de Hibernate) el pasado febrero en MadridJUG. Comentó que para la web estaban enfocando sus esfuerzos [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Java versus JavaScript, reflexiones</title>
+		<link>/%ef%bb%bfjava-versus-javascript-reflexiones/</link>
+		<comments>/%ef%bb%bfjava-versus-javascript-reflexiones/#comments</comments>
+		<pubDate>Sun, 05 Jan 2014 19:21:53 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[MVC]]></category>
+		<category><![CDATA[NOsql]]></category>
+
+		<guid isPermaLink="false">/?p=555</guid>
+		<description><![CDATA[Con la aparición de Node.js y la posibilidad de programar JavaScript en servidor se palpa entre los “javeros” cierta, no se encontrar la palabra, &#8230;¿preocupación?. La sensación es de “&#8230;nos están cambiando el agua&#8230;” y el comentario más oído es “&#8230; parece que es lo que se lleva ahora, no me gusta, pero habrá que [&#8230;]]]></description>
+		<wfw:commentRss>/%ef%bb%bfjava-versus-javascript-reflexiones/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Configuración de entornos flexible en Spring utilizando SpEL</title>
+		<link>/configuracion-de-entornos-flexible-en-spring-utilizando-spel/</link>
+		<pubDate>Mon, 16 Dec 2013 22:53:59 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Configuración]]></category>
+		<category><![CDATA[Externalizar]]></category>
+		<category><![CDATA[Jetty]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Tomcat]]></category>
+
+		<guid isPermaLink="false">/?p=532</guid>
+		<description><![CDATA[Introducción En general cuando desarrollas una aplicación de cualquier tipo te enfrentas al reto de: 1) Configurar la aplicación de una manera sencilla La configuración tiene que ser cómoda de modificar y tiene que estar centralizada (evitando que este desperdigada en multitud de ficheros de configuración las rutas, parámetros de conexión etc&#8230;) 2) Que un [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>De despliegue continuo y de responsabilidad personal</title>
+		<link>/de-despliegue-continuo-y-de-responsabilidad-personal/</link>
+		<pubDate>Sun, 17 Nov 2013 19:38:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[despliegue continuo]]></category>
+		<category><![CDATA[jenkins]]></category>
+		<category><![CDATA[junit]]></category>
+		<category><![CDATA[maven]]></category>
+
+		<guid isPermaLink="false">/?p=489</guid>
+		<description><![CDATA[Despliegue continuo con Jenkins, Maven, Selenium y Junit Están surgiendo nuevos conceptos como el despliegue continuo y la responsabilidad personal que están cambiando la forma de desplegar en un entorno de producción. Digamos que la “manera tradicional” es decidir que funcionalidades van a ir en cada versión codificarlas, probar esa versión y por fin el [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Hibernate 4: obtener el objeto Connection relacionado con la sesión</title>
+		<link>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/</link>
+		<comments>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/#comments</comments>
+		<pubDate>Tue, 28 May 2013 11:47:38 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Hibernate]]></category>
+
+		<guid isPermaLink="false">/?p=214</guid>
+		<description><![CDATA[Una nota rápida de un problema con el que me he pegado hace poco. Necesitaba lanzar una función de BBDD (Oracle) desde Hibernate manteniendo la transacción.&#160; Para lanzar la función desde jdbc, en las versiones anteriores de Hibernate era muy intuitivo obtener el objeto Connection relacionado con la sesión pero en Hibernate 4 ha cambiado [&#8230;]]]></description>
+		<wfw:commentRss>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>(Java) Securización de formulario de acceso con SHA-1</title>
+		<link>/java-securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Sun, 28 Apr 2013 19:29:17 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=133</guid>
+		<description><![CDATA[Completando la entrada anterior, he realizado la implementación en Java. Básicamente &#8216;todo es lo mismo&#8230; pero no es igual&#8216;&#160; :-). Cambia la manera de obtener el número aleatorio y la forma de obtener el sha-1. La estructura es la de un proyecto Maven web con su pom.xml para que sea sencillo compilarlo y generar el [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

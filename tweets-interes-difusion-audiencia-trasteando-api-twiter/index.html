@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Dar valor a los tweets: Interés, difusión, audiencia,&#8230; trasteando con el API de Twitter | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230;' href='/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/' />
+<link rel='next' title='De despliegue continuo y de responsabilidad personal' href='/de-despliegue-continuo-y-de-responsabilidad-personal/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="/tweets-interes-difusion-audiencia-trasteando-api-twiter/" />
+<link rel='shortlink' href='/?p=427' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Ftweets-interes-difusion-audiencia-trasteando-api-twiter%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Ftweets-interes-difusion-audiencia-trasteando-api-twiter%2F&#038;format=xml" />
+
+<!-- Bad Behavior 2.2.19 run time: 3.230 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196588 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="post-template-default single single-post postid-427 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-427" class="post-427 post type-post status-publish format-standard hentry category-apis category-php tag-api tag-php tag-rest tag-tweets tag-twitter tag-widget">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Dar valor a los tweets: Interés, difusión, audiencia,&#8230; trasteando con el API de Twitter</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><strong>N</strong>o se puede decir que sea un &#8216;<em>social media</em>&#8216;, pero de un tiempo a esta parte <strong>Twitter</strong> se ha convertido para mi en una fuente de información esencial y casi imprescindible.&nbsp; Tiene un pero, a veces te pierdes entre toda la información que te llega&#8230; Pensando siempre &#8216;<strong>alternativamente</strong>&#8216; me surgieron <strong>estas preguntas</strong>:</p>
+<blockquote><p>¿Sé puede hacer un poco más social una red social como Twitter?&#8230; ¿Por qué no mostrar de una manera sencilla como han valorado los demás usuarios el tweet que estás leyendo?&#8230;¿cuánto se ha difundido?&#8230;. ¿Sé puede estimar a cuanta gente a llegado?</p></blockquote>
+<p>Lo que me dio pie fue que, para<a title="[747mx.com]" href="http://www.747mx.com/" target="_blank"> 747mx.com</a>, un proyecto hermano de <strong>Lógica Alternativa</strong>, quería incorporar la información de los tweets pero el <strong>widget</strong> oficial me fastidiaba el diseño, no sabía como encajarlo. La solución pasaba en estudiar el <strong>API REST</strong> de <strong>Twitter</strong>. Puesto manos a la obra me di cuenta del mundo de posibilidades que permitía,&#8230; apareció en mi el físico que llevo dentro, ese el que le gusta lo de los coeficientes y esas cosas, la cosa se lío y el resultado fue el siguiente.<span id="more-427"></span></p>
+<p>Gidget con mi <strong>timeline</strong> que muestra a lo que quiero llegar:</p>
+<p><code><div id="twitter_principal"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget-principal.js.php"></script></code></p>
+<h2>Grado de interés de un tweet</h2>
+<p>Generalmente, cuando un tweet te interesa lo puedes marcar como <strong>favorito</strong> o directamente lo puedes compartir con tus seguidores (<strong>retwittear</strong>). Cuantas más veces se haya compartido o se haya marcado como favorito más &#8216;<em>interesante</em>&#8216; es. Dentro de esto doy más valor a lo primero ( al hecho que se haya compartido) que a lo segundo, ya que demuestra más interés.</p>
+<p>Por otra parte a igualdad de veces que se ha compartido o se ha marcado como favorito, un tweet de un autor que tiene menos seguidores es &#8216;<em>más interesante</em>&#8216; que un tweet de una persona que tiene más, simplemente por el hecho de que hay más posibilidades de que se comparta o sea favorito, si en un primer momento llega a más personas.</p>
+<p>Resumiendo que para mi, el <strong>grado de interés</strong> es <strong>directamente proporcional</strong> al número de veces que se ha compartido (con más peso) y se ha marcado como favorito (con menos peso) <strong>e inversamente proporcional</strong> al número de seguidores que tiene el autor.</p>
+<p>Con todo esto he pensado la siguiente formula:</p>
+<blockquote><p>&nbsp;Gr<sub>Int</sub>&nbsp;= ( S / ( S + Num<sub>seg</sub> ) ) * 5</p></blockquote>
+<p>Donde :</p>
+<ul>
+<li>Gr<sub>Int</sub>&nbsp;es el grado de interés</li>
+<li><em>Num<sub>seg</sub></em> es el número de seguidores que tiene el autor del tweet</li>
+</ul>
+<p><em>S</em> se calcula de la siguiente manera:</p>
+<blockquote><p>&nbsp;S = F<sub>ret</sub> * Num<sub>ret</sub> + F<sub>fav</sub> * Num<sub>fav</sub></p></blockquote>
+<ul>
+<li><em>F<sub>ret</sub></em>: Es el <strong>factor de retweets</strong>, un número mayor que cero. Es el &#8216;<em>peso</em>&#8216; que se da a cada retweets</li>
+<li><em>Num<sub>ret</sub></em>: Número de veces que se ha compartido.</li>
+<li><em>F<sub>fav</sub></em>: Es el <strong>factor de favoritos</strong>, un número mayor que cero. Es el &#8216;<em>peso</em>&#8216; que se da a cada vez que se ha marcado como favorito.</li>
+<li><em>Num<sub>fav</sub></em>: Número de veces que se ha marcado como favorito</li>
+</ul>
+<p>Lo que está entre paréntesis de la formula del grado de interés es un número entre <strong>0</strong> y el <strong>1</strong>. El <strong>0</strong> sería el <strong>peor</strong> escenario, en el que el tweet no haya conseguido ningún retweet o no se haya marcado como favorito. El <strong>1</strong> sería el <strong>escenario perfecto</strong> donde el valor de <em>S</em> es tan grande que hace que el valor del número de seguidores sea despreciable. El hecho de multiplicarlo por 5 es para normalizarlo y que sea <strong>un valor entre 0 y 5</strong>.</p>
+<p>En la implementación que he hecho he elegido como valores de&nbsp; <em>F<sub>ret</sub></em> = 33 y de <em>F<sub>fav</sub></em> = 16. Es decir que sin tener en cuenta el valor de favoritos para obtener un valor de <strong>2,5</strong> en el grado de interés,&nbsp; harían falta 3 retwees por cada 100 seguidores. Lo mismo para los favoritos pero en este caso sería necesario que fuera marcado 6 veces.</p>
+<h2>Audiencia</h2>
+<p>La audiencia de un tweet es el número de personas que le han llegado, es decir la suma de los seguidores del autor, más los seguidores de los que lo han compartido. No es un cálculo exacto pero si fiable. El cálculo real puede ser un poco menor porque puede darse el caso de que el autor o una de las personas que lo han compartido tengan seguidores en común. También el número de seguidores ha podido variar en la vida del tweet.</p>
+<h2>Grado de difusión</h2>
+<p>Es la proporción de las personas que han podido ver el tweet y que no son tus seguidores.</p>
+<blockquote><p>Gr<sub>dif</sub>&nbsp;=&nbsp;&nbsp; 5 * (&nbsp; ( Aud &#8211;&nbsp; Num<sub>seg</sub> ) /&nbsp; Aud )<sup>2</sup></p></blockquote>
+<p>Donde :</p>
+<ul>
+<li>Gr<sub>dif</sub>&nbsp;es el grado de difusión</li>
+<li><em>Num<sub>seg</sub></em> es el número de seguidores que tiene el autor del tweet</li>
+<li><em>Aud</em>: La audiencia calculada en el apartado anterior</li>
+</ul>
+<p>El hecho de multiplicarlo por 5 es para conseguir un valor entre 0 y 5. Es <strong>0</strong> cuando <strong>no</strong> ha habido <strong>difusión</strong>, la audiencia es igual al número de seguidores del autor y tiende a <strong>5</strong> cuando la audiencia es tan grande que es despreciable el valor del número de seguidores.</p>
+<p>El valor del primer paréntesis se eleva al cuadrado para dar más importancia a las proporciones altas.</p>
+<p>Si nos fijamos el grado de interés no tiene en cuenta la &#8216;calidad&#8217; de los retweets. A todos ellos le da la misma importancia, sin embargo el grado de difusión si que tiene en cuenta si quien reenvía tiene más seguidores. Tienes una gran difusión si los que lo comparten tienen muchos seguidores, aunque&nbsp; tengas pocos retweets .</p>
+<h2>Implementación</h2>
+<p>He realizado una implementación en <strong>PHP</strong>. El código está en <strong>GitHub</strong>.</p>
+<p style="text-align: center;"><a title="witterDarValor-php Librería de implementación" href="https://github.com/logicaalternativa/TwitterDarValor-php" target="_blank"><img class="size-full wp-image-432 alignnone" title="[Logo GitHub]" alt="[Logo GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /><strong> TwitterDarValor-php</strong></a></p>
+<p>La librería obtiene tanto el <strong>timeline</strong> pública del usuario como la <strong>home timeline</strong> privada. De cada uno de los registros obtiene los <strong>datos significativos</strong> y el <strong>texto procesado</strong> para que se muestren los enlaces. Se calcula además el <strong>grado de interés</strong>. Si se indica como parámetro se calcula la <strong>audiencia y </strong>el <strong>grado de difusión</strong>. Para más información os redirijo al <strong><a title="[README TwitterDarValor-php]" href="https://github.com/logicaalternativa/TwitterDarValor-php/blob/master/README.md" target="_blank">README.MD</a></strong> del proyecto y a los comentarios de la clase <strong><a title="[TwitterDarValor.php]" href="https://github.com/logicaalternativa/TwitterDarValor-php/blob/master/TwitterDarValor.php" target="_blank">TwitterDarValor.php</a></strong></p>
+<p>Con los datos que devuelve la clase me he creado mi propio <strong>widget</strong> que podéis ver más arriba. En un futuro artículo entraré más en detalle del <strong>widget</strong></p>
+<h2>Limitaciones</h2>
+<p>El <strong>API REST</strong> de <strong>Twitter</strong> tiene una serie de limitaciones, tanto de número de información que se puede hacer en una llamada como el número de peticiones que se pueden hacer en un determinado intervalo de tiempo.</p>
+<p>&nbsp;Para calcular la audiencia de un tweet en una sola petición, existe un servicio que devuelve los últimos 100 retwets. En el caso que se supere esta cifra en la implementación que he hecho se hace una <strong>estimación</strong> con la suma de seguidores que se obtiene de estos 100. El resultado en este caso se muestra con <strong>4 cifras significativas</strong>.</p>
+<p>Este servicio está limitado a 15 peticiones en 15 minutos por lo que me ha obligado a cachear el resultado.</p>
+<h2>Conclusiones</h2>
+<p>La información que se puede obtener con el API Rest de Twitter es muy valiosa y esto es sólo un botón de lo que se puede hacer.</p>
+<p>Puede parecer que se me ha ido la pinza con tanto cálculo, pero ya he dicho que no lo he podido remediar, ha sido superior a mi&nbsp; :- ) . Fuera de bromas, me resulta de mucha utilidad y lo estoy usando para ver mi Home Timeline. En realidad en lo que más me fijo más el grado de interés. Sobre todo si un tweet ya tiene un poco de tiempo y ya hay feedback por parte del resto de usuarios.</p>
+<p>Espero que os sirva.</p>
+<p><a title="Mi CV" href="/mi-cv/">M.E.</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/apis/" rel="category tag">APIs</a>, <a href="/category/programacion/php/" rel="category tag">PHP</a> y está etiquetada con <a href="/tag/api/" rel="tag">API</a>, <a href="/tag/php/" rel="tag">PHP</a>, <a href="/tag/rest/" rel="tag">REST</a>, <a href="/tag/tweets/" rel="tag">tweets</a>, <a href="/tag/twitter/" rel="tag">Twitter</a>, <a href="/tag/widget/" rel="tag">widget</a> en <a href="/tweets-interes-difusion-audiencia-trasteando-api-twiter/" title="20:39" rel="bookmark"><time class="entry-date" datetime="2013-09-17T20:39:54+00:00">17 septiembre, 2013</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navegación de entradas</h3>
+					<span class="nav-previous"><a href="/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/" rel="prev"><span class="meta-nav">&larr;</span> Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230;</a></span>
+					<span class="nav-next"><a href="/de-despliegue-continuo-y-de-responsabilidad-personal/" rel="next">De despliegue continuo y de responsabilidad personal <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

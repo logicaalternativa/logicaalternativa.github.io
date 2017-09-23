@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WordPress &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>LogicaAlternativa.com está en la(s) nube(s), en OpenShift</title>
+		<link>/logicaalternativa-com-esta-en-las-nubes/</link>
+		<pubDate>Sat, 15 Jun 2013 19:39:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[La Nube]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Nube]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=315</guid>
+		<description><![CDATA[“Si lees esto significa que Lógica Alternativa está ya en la nube”&#8230; Lo siento no he podido resistir la tentación de empezar esta entrada como los epílogos de las pelis 🙂 OpenShift es un servicio de Red Hat encuadrado en la capa PaaS (Plataforma como Servicio), enfocado por lo tanto al desarrollador. Permite desplegar un [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

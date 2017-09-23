@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Lógica Alternativa</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Futuros y promesas,&#8230; y también monadas. Implementando el patrón</title>
+		<link>/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/</link>
+		<pubDate>Tue, 15 Aug 2017 17:20:34 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Patrones]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[patrones]]></category>
+
+		<guid isPermaLink="false">/?p=1035</guid>
+		<description><![CDATA[&#8220;Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más.&#8221; Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Actores tipados, Akka por ejemplos</title>
+		<link>/akka-por-ejemplos-actores-tipados/</link>
+		<pubDate>Mon, 09 Nov 2015 20:48:05 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+
+		<guid isPermaLink="false">/?p=956</guid>
+		<description><![CDATA[&#8220;Tercer y último artículo sobre Akka explicado mediante ejemplos. En los dos anteriores se basó en como funcionan la cola de mensajes de un actor, que es un router, como se envían mensajes entre actores. Después se trató temas como la supervisión y el bus de eventos. Ahora me centraré en los actores tipados.&#8220; Entrada [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</title>
+		<link>/akka-por-ejemplos-sobre-supervision-bus-de-eventos/</link>
+		<pubDate>Sun, 25 Oct 2015 22:34:53 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[bus de eventos]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[robustez]]></category>
+
+		<guid isPermaLink="false">/?p=918</guid>
+		<description><![CDATA[Esta es la segunda entrega de Akka por ejemplos. La primera trató sobre cual es el funcionamiento de la cola de mensajes de un actor, que es un router y como se envían mensajes entre actores. Ahora se tratarán temas como el control de fallos y la supervisión de actores, el bus de eventos de [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Akka por ejemplos</title>
+		<link>/akka-por-ejemplos/</link>
+		<pubDate>Mon, 12 Oct 2015 18:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[scala]]></category>
+
+		<guid isPermaLink="false">/?p=861</guid>
+		<description><![CDATA[&#8220;Akka representa muchos conceptos nuevos que al principio cuesta asimilar. Para poder entenderlo mejor, he ido creando, poco a poco, una serie de ejemplos que me han permitido comprender mejor el paradigma que conlleva. Este artículo trata sobre esto, intentar tener una prueba de código de cada nuevo concepto que permita ver cual es su [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>﻿Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</title>
+		<link>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/</link>
+		<comments>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/#comments</comments>
+		<pubDate>Tue, 27 Jan 2015 23:54:19 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[rendimiento]]></category>
+		<category><![CDATA[robustez]]></category>
+
+		<guid isPermaLink="false">/?p=803</guid>
+		<description><![CDATA[(más =&#62; simular concurrencia, modelo de actores, de “pull request”,&#8230;) “Este artículo trata sobre la importancia de las pruebas de robustez y de rendimiento y su relación directa con la calidad del software, y lo importante que es medir y representar los datos en una gráfica. Un caso práctico, un sistema de cache PHP simpe [&#8230;]]]></description>
+		<wfw:commentRss>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Mocks&#8230; o el TDD y yo</title>
+		<link>/mocks-o-el-tdd-y-yo/</link>
+		<pubDate>Thu, 23 Oct 2014 22:24:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[junit]]></category>
+		<category><![CDATA[maven]]></category>
+		<category><![CDATA[Mock]]></category>
+		<category><![CDATA[REST]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Test]]></category>
+
+		<guid isPermaLink="false">/?p=739</guid>
+		<description><![CDATA[&#8230; segunda Parte de TDD is dead? … o yo y el TDD Este es el segundo y último artículo de la serie que completa el anterior post TDD is dead? … o yo y el TDD. Trataré de explicar como defino y codifico mis propios objetos &#8216;mock&#8216;, y de como los uso tanto para [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Post en el blog de civitana: &#8220;Firma electrónica fácil de usar&#8221;</title>
+		<link>/post-en-el-blog-de-civitana-firma-digital-facil-de-usar/</link>
+		<pubDate>Tue, 09 Sep 2014 22:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+
+		<guid isPermaLink="false">/?p=716</guid>
+		<description><![CDATA[Antes de vacaciones escribí el siguiente artículo en el blog de Civitana.org [Firma electrónica fácil de usar] ( http://blog.civitana.org/2014/08/11/firma-electronica-facil-de-usar/)]]></description>
+		</item>
+		<item>
+		<title>TDD is dead? … o yo y el TDD. Primera Parte</title>
+		<link>/tdd-is-dead-o-yo-y-el-tdd-primera-parte/</link>
+		<pubDate>Tue, 08 Jul 2014 22:11:34 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Mock]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[TDD]]></category>
+
+		<guid isPermaLink="false">/?p=698</guid>
+		<description><![CDATA[“Test-driven development (TDD)”, en la lengua de Cervantes “Desarrollo guiado por pruebas”&#8230; Palabras malditas para algunos&#8230; Últimamente se dice que está muerto&#8230; “TDD is dead?”. Actualización: La segunda parte de este artículo es &#8220;Mocks… o el TDD y yo&#8221; ¿Qué es? A grandes rasgos, consiste en primero diseñar y realizar los test de una determinada [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>La aventura de Civitana.org</title>
+		<link>/la-aventura-de-civitana-org/</link>
+		<pubDate>Wed, 04 Jun 2014 21:44:26 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Civitana]]></category>
+		<category><![CDATA[firma digital]]></category>
+		<category><![CDATA[NOsql]]></category>
+		<category><![CDATA[Nube]]></category>
+
+		<guid isPermaLink="false">/?p=678</guid>
+		<description><![CDATA[Actualización octubre del 2014: &#8221; Después de un verano intenso que nos ha dado tiempo a desarrollar un protocolo de voto electrónico en el que por mis tareas me he tocado definir y desarrollar en gran parte, a partir de octubre de 2014, las circunstancias  hacen que me desligue de Civitana.org, . Aunque tengo una [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Aprendiendo Grunt a partir de Ant</title>
+		<link>/aprendiendo-grunt-a-partir-de-ant/</link>
+		<pubDate>Sun, 11 May 2014 21:22:48 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Control de la configuración]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[ant]]></category>
+		<category><![CDATA[grunt]]></category>
+
+		<guid isPermaLink="false">/?p=642</guid>
+		<description><![CDATA[Prólogo Hace unos años, unos 8 ya &#8230; En un proyecto me tocó realizar una &#8216;builtool&#8216;. Era una herramienta común que utilizarían todos los demás proyectos no importando su tecnología, PHP,.Net, Java, etc. Obtenía el código del sistema de control de versiones compilaba, paquetizaba y subía la build compilada a otra rama del control de [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>﻿Certificados, relaciones de confianza y Autoridades Certificadoras</title>
+		<link>/%ef%bb%bfcertificados-relaciones-de-confianza-y-entidades-certificadoras/</link>
+		<pubDate>Sun, 06 Apr 2014 18:13:31 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Criptografía y certificados]]></category>
+		<category><![CDATA[Autoridades certificadoras]]></category>
+		<category><![CDATA[Certificados digitales]]></category>
+		<category><![CDATA[cifrado asimético]]></category>
+		<category><![CDATA[clave privada]]></category>
+		<category><![CDATA[clave pública]]></category>
+		<category><![CDATA[ssl]]></category>
+
+		<guid isPermaLink="false">/?p=609</guid>
+		<description><![CDATA[Hace unos par de meses, por fin tuve tiempo para realizar la integración del plugin de twitter que hice en 747mx.com. Para mi desgracia el servidor compartido no estaba muy actualizado y para que me funcionara tuve que añadir como parámetro, en las propiedades de la función cURL, el certificado de la Autoridad Certificadora. En [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>﻿Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230;</title>
+		<link>/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/</link>
+		<pubDate>Sun, 09 Mar 2014 22:27:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Concurrencia]]></category>
+		<category><![CDATA[vert.x]]></category>
+
+		<guid isPermaLink="false">/?p=583</guid>
+		<description><![CDATA[Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x La primera vez que oí hablar de Vert.x fue en la charla sobre el nuevo lenguaje Ceylon basado en la JVM que dio Gavin King&#160; (la mente pensante detrás de Hibernate) el pasado febrero en MadridJUG. Comentó que para la web estaban enfocando sus esfuerzos [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Mis primeros pasos de &#8216;newbie&#8217; en AngularJs</title>
+		<link>/mis-primeros-pasos-de-newbie-en-angularjs/</link>
+		<pubDate>Fri, 31 Jan 2014 20:51:18 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[AngularJs]]></category>
+		<category><![CDATA[Framework]]></category>
+
+		<guid isPermaLink="false">/?p=572</guid>
+		<description><![CDATA[Actualmente estoy involucrado en un proyecto en el que la arquitectura es un Backend de servicios web Rest (Java) y como Frontend una aplicación de una sola página (SPA Single-page application) hecha en AngularJs, utilizando el patrón MVC en el navegador. Siempre he tenido ganas en saber algo más de como funciona este framework y [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Java versus JavaScript, reflexiones</title>
+		<link>/%ef%bb%bfjava-versus-javascript-reflexiones/</link>
+		<comments>/%ef%bb%bfjava-versus-javascript-reflexiones/#comments</comments>
+		<pubDate>Sun, 05 Jan 2014 19:21:53 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[MVC]]></category>
+		<category><![CDATA[NOsql]]></category>
+
+		<guid isPermaLink="false">/?p=555</guid>
+		<description><![CDATA[Con la aparición de Node.js y la posibilidad de programar JavaScript en servidor se palpa entre los “javeros” cierta, no se encontrar la palabra, &#8230;¿preocupación?. La sensación es de “&#8230;nos están cambiando el agua&#8230;” y el comentario más oído es “&#8230; parece que es lo que se lleva ahora, no me gusta, pero habrá que [&#8230;]]]></description>
+		<wfw:commentRss>/%ef%bb%bfjava-versus-javascript-reflexiones/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Configuración de entornos flexible en Spring utilizando SpEL</title>
+		<link>/configuracion-de-entornos-flexible-en-spring-utilizando-spel/</link>
+		<pubDate>Mon, 16 Dec 2013 22:53:59 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Configuración]]></category>
+		<category><![CDATA[Externalizar]]></category>
+		<category><![CDATA[Jetty]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Tomcat]]></category>
+
+		<guid isPermaLink="false">/?p=532</guid>
+		<description><![CDATA[Introducción En general cuando desarrollas una aplicación de cualquier tipo te enfrentas al reto de: 1) Configurar la aplicación de una manera sencilla La configuración tiene que ser cómoda de modificar y tiene que estar centralizada (evitando que este desperdigada en multitud de ficheros de configuración las rutas, parámetros de conexión etc&#8230;) 2) Que un [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>De despliegue continuo y de responsabilidad personal</title>
+		<link>/de-despliegue-continuo-y-de-responsabilidad-personal/</link>
+		<pubDate>Sun, 17 Nov 2013 19:38:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[despliegue continuo]]></category>
+		<category><![CDATA[jenkins]]></category>
+		<category><![CDATA[junit]]></category>
+		<category><![CDATA[maven]]></category>
+
+		<guid isPermaLink="false">/?p=489</guid>
+		<description><![CDATA[Despliegue continuo con Jenkins, Maven, Selenium y Junit Están surgiendo nuevos conceptos como el despliegue continuo y la responsabilidad personal que están cambiando la forma de desplegar en un entorno de producción. Digamos que la “manera tradicional” es decidir que funcionalidades van a ir en cada versión codificarlas, probar esa versión y por fin el [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Dar valor a los tweets: Interés, difusión, audiencia,&#8230; trasteando con el API de Twitter</title>
+		<link>/tweets-interes-difusion-audiencia-trasteando-api-twiter/</link>
+		<pubDate>Tue, 17 Sep 2013 18:39:54 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[APIs]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[REST]]></category>
+		<category><![CDATA[tweets]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<category><![CDATA[widget]]></category>
+
+		<guid isPermaLink="false">/?p=427</guid>
+		<description><![CDATA[No se puede decir que sea un &#8216;social media&#8216;, pero de un tiempo a esta parte Twitter se ha convertido para mi en una fuente de información esencial y casi imprescindible.&#160; Tiene un pero, a veces te pierdes entre toda la información que te llega&#8230; Pensando siempre &#8216;alternativamente&#8216; me surgieron estas preguntas: ¿Sé puede hacer [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230;</title>
+		<link>/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/</link>
+		<pubDate>Tue, 27 Aug 2013 19:02:55 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Card Sorting]]></category>
+		<category><![CDATA[Diseño Centrado en el Usuario]]></category>
+		<category><![CDATA[Experiencia de Usuario]]></category>
+		<category><![CDATA[Testing A/B]]></category>
+		<category><![CDATA[Usabilidad]]></category>
+
+		<guid isPermaLink="false">/?p=400</guid>
+		<description><![CDATA[Usabilidad, Experiencia de Usuario, Diseño Centrado en el Usuario, &#8230; son palabras que se nos han hecho familiares a raíz de la evolución de la web y sobre todo con la aparición de los nuevos dispositivos móviles. Esto ha hecho que el técnico experto en estas materias sean uno de los perfiles más valorados en [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Líneas maestras del desarrollo para Tizen, nuevo SO enfocado a Smartphones</title>
+		<link>/lineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones/</link>
+		<pubDate>Thu, 11 Jul 2013 19:03:19 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[HTML 5]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[sistemas operativos]]></category>
+
+		<guid isPermaLink="false">/?p=380</guid>
+		<description><![CDATA[Tizen es un nuevo sistema operativo, que pretende ser global. Su principal objetivo son los Smartphone pero exitirán versiones para PC, para tablets, TV inteligentes e incluso para coches (por cierto este último con muy buena pinta, ver vídeo)&#160; Tizen esta patrocinado y promovido por la Linux Foundation. El proyecto es una “join venture” de [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps</title>
+		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/</link>
+		<comments>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comments</comments>
+		<pubDate>Wed, 03 Jul 2013 09:32:20 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Geolocalización]]></category>
+		<category><![CDATA[Mapas]]></category>
+		<category><![CDATA[OpenLayers]]></category>
+		<category><![CDATA[OpenStreetMap]]></category>
+
+		<guid isPermaLink="false">/?p=362</guid>
+		<description><![CDATA[Realmente no te das cuenta de la dependencia que tienes de los servicios de Google. Piensas que puedes disponer de ellos porque además de ser potentes son gratis&#8230; hasta que dejan de serlo. Me ha ocurrido en el pasado, en un proyecto personal (747mx.com) que utilizaba el traductor de Google. Era gratis hasta un número [&#8230;]]]></description>
+		<wfw:commentRss>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>LogicaAlternativa.com está en la(s) nube(s), en OpenShift</title>
+		<link>/logicaalternativa-com-esta-en-las-nubes/</link>
+		<pubDate>Sat, 15 Jun 2013 19:39:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[La Nube]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Nube]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=315</guid>
+		<description><![CDATA[“Si lees esto significa que Lógica Alternativa está ya en la nube”&#8230; Lo siento no he podido resistir la tentación de empezar esta entrada como los epílogos de las pelis 🙂 OpenShift es un servicio de Red Hat encuadrado en la capa PaaS (Plataforma como Servicio), enfocado por lo tanto al desarrollador. Permite desplegar un [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>El siguiente nivel, Agile Coach Competency Framework</title>
+		<link>/el-siguiente-nivel-agile-coach-competency-framework/</link>
+		<pubDate>Fri, 31 May 2013 08:52:52 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Programación]]></category>
+
+		<guid isPermaLink="false">/?p=288</guid>
+		<description><![CDATA[Para mi son tiempos de cambios, algunos “forzados” y otros “provocados”. Ahora tengo la necesidad de saber que es lo que está pasando en este mundillo de la programación y la informática. Siempre me ha interesado las metodologías ágiles, así que el pasado miércoles asistí a un seminario/taller organizado por Agile Madrid y dirigido por [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Hibernate 4: obtener el objeto Connection relacionado con la sesión</title>
+		<link>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/</link>
+		<comments>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/#comments</comments>
+		<pubDate>Tue, 28 May 2013 11:47:38 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Hibernate]]></category>
+
+		<guid isPermaLink="false">/?p=214</guid>
+		<description><![CDATA[Una nota rápida de un problema con el que me he pegado hace poco. Necesitaba lanzar una función de BBDD (Oracle) desde Hibernate manteniendo la transacción.&#160; Para lanzar la función desde jdbc, en las versiones anteriores de Hibernate era muy intuitivo obtener el objeto Connection relacionado con la sesión pero en Hibernate 4 ha cambiado [&#8230;]]]></description>
+		<wfw:commentRss>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Puppy Linux</title>
+		<link>/puppy-linux/</link>
+		<pubDate>Tue, 21 May 2013 19:12:49 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[sistemas operativos]]></category>
+
+		<guid isPermaLink="false">/?p=197</guid>
+		<description><![CDATA[Hace mucho tiempo que en casa hay un ordenador, casi casi está ahí desde siempre. Es un Intel Celeron a 2.66 Mhz con 256 Mb de RAM. Lo utilizamos todos y se usa para navegar, ver el correo, de servidor de impresión&#8230; Ha salido bueno, porque ha sobrevivido a todo lo que estaba en la [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Cambio de color a barra de progreso en Android</title>
+		<link>/cambio-de-color-a-barra-de-progreso-en-android/</link>
+		<pubDate>Thu, 09 May 2013 16:34:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Android]]></category>
+		<category><![CDATA[Java]]></category>
+
+		<guid isPermaLink="false">/?p=163</guid>
+		<description><![CDATA[La duración de manga de motocross se mide en minutos + 2 vueltas. A nivel regional son 20 minutos + 2 vueltas, a nivel nacional 30 minutos + 2 vueltas, etc&#8230; Entrenando lo normal es hacer mangas de la misma duración, o de menos tiempo (mejorando la rapidez) o de más (mejorando el fondo). Las [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>(Java) Securización de formulario de acceso con SHA-1</title>
+		<link>/java-securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Sun, 28 Apr 2013 19:29:17 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=133</guid>
+		<description><![CDATA[Completando la entrada anterior, he realizado la implementación en Java. Básicamente &#8216;todo es lo mismo&#8230; pero no es igual&#8216;&#160; :-). Cambia la manera de obtener el número aleatorio y la forma de obtener el sha-1. La estructura es la de un proyecto Maven web con su pom.xml para que sea sencillo compilarlo y generar el [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Securización de formulario de acceso con SHA-1</title>
+		<link>/securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Fri, 19 Apr 2013 10:06:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=68</guid>
+		<description><![CDATA[Muchas veces las aplicaciones web no tienen acceso por ssl (https) y suelen tener un formulario de &#8216;login&#8217; de usuario y contraseña. Esto quiere decir que información sensible como la contraseña se transmite en texto claro y que sea relativamente fácil que terceros pueden tener acceso a ella. Por ejemplo esnifando el tráfico si el [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Networking, networking</title>
+		<link>/networking-networking/</link>
+		<pubDate>Fri, 19 Apr 2013 09:58:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[networking]]></category>
+		<category><![CDATA[trabajo]]></category>
+
+		<guid isPermaLink="false">/?p=54</guid>
+		<description><![CDATA[Esta entrada también se podía haber llamado &#8220;Los motivos de este blog&#8221; o &#8220;¿Por qué hago este blog?&#8221; Se han tenido que dar una serie de circunstancias que han creado la tormenta perfecta que ha terminado en el nacimiento de LogicaAlternativa.com. Este comienzo de año ha sido de locura. Problemas en la empresa en la [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

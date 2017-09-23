@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>linux &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/linux/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>﻿Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</title>
+		<link>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/</link>
+		<comments>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/#comments</comments>
+		<pubDate>Tue, 27 Jan 2015 23:54:19 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[rendimiento]]></category>
+		<category><![CDATA[robustez]]></category>
+
+		<guid isPermaLink="false">/?p=803</guid>
+		<description><![CDATA[(más =&#62; simular concurrencia, modelo de actores, de “pull request”,&#8230;) “Este artículo trata sobre la importancia de las pruebas de robustez y de rendimiento y su relación directa con la calidad del software, y lo importante que es medir y representar los datos en una gráfica. Un caso práctico, un sistema de cache PHP simpe [&#8230;]]]></description>
+		<wfw:commentRss>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Puppy Linux</title>
+		<link>/puppy-linux/</link>
+		<pubDate>Tue, 21 May 2013 19:12:49 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[sistemas operativos]]></category>
+
+		<guid isPermaLink="false">/?p=197</guid>
+		<description><![CDATA[Hace mucho tiempo que en casa hay un ordenador, casi casi está ahí desde siempre. Es un Intel Celeron a 2.66 Mhz con 256 Mb de RAM. Lo utilizamos todos y se usa para navegar, ver el correo, de servidor de impresión&#8230; Ha salido bueno, porque ha sobrevivido a todo lo que estaba en la [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

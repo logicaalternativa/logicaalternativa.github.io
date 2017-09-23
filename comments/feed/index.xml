@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comentarios para Lógica Alternativa</title>
+	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Wed, 10 Jun 2015 18:24:04 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Comentario en Java versus JavaScript, reflexiones por José Viera</title>
+		<link>/%ef%bb%bfjava-versus-javascript-reflexiones/#comment-173</link>
+		<dc:creator><![CDATA[José Viera]]></dc:creator>
+		<pubDate>Wed, 10 Jun 2015 18:24:04 +0000</pubDate>
+		<guid isPermaLink="false">/?p=555#comment-173</guid>
+		<description><![CDATA[Estoy de acuerdo contigo Miguel, la tendencia hoy en día es HTML5+JS+CSS3, además esto te permite llevarlo a otras plataformas como a los móviles, gracias a Apache Cordova y PhoneGap.
+
+Actualmente estoy trabajando en el Front-End usando HTML5 + Angularjs + Bootstrap3 , me comunico con el Back-End usando servicios Rest, una arquitectura de esta forma te ayuda a desacoplar los componentes de una manera muy eficiente.
+
+Saludos!]]></description>
+		<content:encoded><![CDATA[<p>Estoy de acuerdo contigo Miguel, la tendencia hoy en día es HTML5+JS+CSS3, además esto te permite llevarlo a otras plataformas como a los móviles, gracias a Apache Cordova y PhoneGap.</p>
+<p>Actualmente estoy trabajando en el Front-End usando HTML5 + Angularjs + Bootstrap3 , me comunico con el Back-End usando servicios Rest, una arquitectura de esta forma te ayuda a desacoplar los componentes de una manera muy eficiente.</p>
+<p>Saludos!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comentario en ﻿Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230; por Sebastian</title>
+		<link>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/#comment-97</link>
+		<dc:creator><![CDATA[Sebastian]]></dc:creator>
+		<pubDate>Tue, 03 Feb 2015 14:36:12 +0000</pubDate>
+		<guid isPermaLink="false">/?p=803#comment-97</guid>
+		<description><![CDATA[Muy buena explicación!
+
+SaluDDOS!]]></description>
+		<content:encoded><![CDATA[<p>Muy buena explicación!</p>
+<p>SaluDDOS!</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comentario en OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps por Miguel R. Esteban Martín</title>
+		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comment-93</link>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+		<pubDate>Tue, 02 Dec 2014 09:53:19 +0000</pubDate>
+		<guid isPermaLink="false">/?p=362#comment-93</guid>
+		<description><![CDATA[Hola.
+
+Ese error aparece cuando se realiza bien la conexión con el servicio pero en la respuesta no contiene ninguna dirección.
+
+Acabo de modificar el código para controlar mejor este caso y aparezca el mensaje adecuado. De paso he también mejorado la petición al servicio.
+
+Puedes ver los cambios que he realizado en el repositorio de &lt;a href=&quot;https://github.com/logicaalternativa/ejemploOpenLayer&quot; title=&quot;[Código de ejemplo en GitHub]&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;. Te recomiendo que bajes el código de nuevo y vuelvas a hacer las pruebas. Si te vuelve a aparecer el mismo mensaje de error abre la consola javaScript del navegador, porque también he añadido una salida a consola con más información.
+
+También he modificado la demo de esta misma entrada para que se pueda observar los nuevos cambios.
+
+Con respecto a tu segunda pregunta el ejemplo esta adaptado a &lt;strong&gt;Openrouteservice.org&lt;/strong&gt;. Creo que existe otro servicio &lt;a href=&quot;wiki.openstreetmap.org/wiki/Nominatim&quot; title=&quot;[Geolocalizacion Nominatim]&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;strong&gt;Nominatim&lt;/strong&gt;&lt;/a&gt; pero no tengo experiencia con él.]]></description>
+		<content:encoded><![CDATA[<p>Hola.</p>
+<p>Ese error aparece cuando se realiza bien la conexión con el servicio pero en la respuesta no contiene ninguna dirección.</p>
+<p>Acabo de modificar el código para controlar mejor este caso y aparezca el mensaje adecuado. De paso he también mejorado la petición al servicio.</p>
+<p>Puedes ver los cambios que he realizado en el repositorio de <a href="https://github.com/logicaalternativa/ejemploOpenLayer" title="[Código de ejemplo en GitHub]" target="_blank" rel="nofollow"><strong>GitHub</strong></a>. Te recomiendo que bajes el código de nuevo y vuelvas a hacer las pruebas. Si te vuelve a aparecer el mismo mensaje de error abre la consola javaScript del navegador, porque también he añadido una salida a consola con más información.</p>
+<p>También he modificado la demo de esta misma entrada para que se pueda observar los nuevos cambios.</p>
+<p>Con respecto a tu segunda pregunta el ejemplo esta adaptado a <strong>Openrouteservice.org</strong>. Creo que existe otro servicio <a href="wiki.openstreetmap.org/wiki/Nominatim" title="[Geolocalizacion Nominatim]" target="_blank" rel="nofollow"><strong>Nominatim</strong></a> pero no tengo experiencia con él.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comentario en OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps por francisco</title>
+		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comment-92</link>
+		<dc:creator><![CDATA[francisco]]></dc:creator>
+		<pubDate>Sat, 29 Nov 2014 09:26:45 +0000</pubDate>
+		<guid isPermaLink="false">/?p=362#comment-92</guid>
+		<description><![CDATA[En primer lugar indicarte que has hecho un gran trabajo. Estoy estudiando tu aplicación y me parece muy interesante. Me la baje y estoy trabajando con netbeans. No obstante, cuando la ejecuto e intento localizar una dirección me displaya el error &quot;error indeterminado al añadir marca&quot;. Entiendo que realiza correctamente la geolocalización, pero no recibe un dato legible. 
+Queria consultarte:
+1.cual es el motivo del error.
+2. Existe posibilidad de utilizar otro tipo de geolocalización sin pasar por OpenRouteservice.org?
+
+Muchas gracias de antemano. 
+Un cordial saludo.]]></description>
+		<content:encoded><![CDATA[<p>En primer lugar indicarte que has hecho un gran trabajo. Estoy estudiando tu aplicación y me parece muy interesante. Me la baje y estoy trabajando con netbeans. No obstante, cuando la ejecuto e intento localizar una dirección me displaya el error &#8220;error indeterminado al añadir marca&#8221;. Entiendo que realiza correctamente la geolocalización, pero no recibe un dato legible.<br />
+Queria consultarte:<br />
+1.cual es el motivo del error.<br />
+2. Existe posibilidad de utilizar otro tipo de geolocalización sin pasar por OpenRouteservice.org?</p>
+<p>Muchas gracias de antemano.<br />
+Un cordial saludo.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comentario en OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps por Marlon Villamizar</title>
+		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comment-90</link>
+		<dc:creator><![CDATA[Marlon Villamizar]]></dc:creator>
+		<pubDate>Thu, 31 Jul 2014 19:25:46 +0000</pubDate>
+		<guid isPermaLink="false">/?p=362#comment-90</guid>
+		<description><![CDATA[Hola, he leído esto y es formidable. Actualmente ya he adelantado bastante sobre OpenLayers y me decidí a meterme con geolocalización y enrutamiento y por ello he llegado a este artículo. Esta buenísimo lo tomaré con calma para digerirlo con gusto.]]></description>
+		<content:encoded><![CDATA[<p>Hola, he leído esto y es formidable. Actualmente ya he adelantado bastante sobre OpenLayers y me decidí a meterme con geolocalización y enrutamiento y por ello he llegado a este artículo. Esta buenísimo lo tomaré con calma para digerirlo con gusto.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comentario en Hibernate 4: obtener el objeto Connection relacionado con la sesión por Peter</title>
+		<link>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/#comment-89</link>
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Thu, 10 Apr 2014 21:17:45 +0000</pubDate>
+		<guid isPermaLink="false">/?p=214#comment-89</guid>
+		<description><![CDATA[Excelente lo que esta buscando, ¡gracias!]]></description>
+		<content:encoded><![CDATA[<p>Excelente lo que esta buscando, ¡gracias!</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

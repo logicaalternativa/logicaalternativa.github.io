@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Hibernate &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/hibernate/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Hibernate 4: obtener el objeto Connection relacionado con la sesión</title>
+		<link>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/</link>
+		<comments>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/#comments</comments>
+		<pubDate>Tue, 28 May 2013 11:47:38 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Hibernate]]></category>
+
+		<guid isPermaLink="false">/?p=214</guid>
+		<description><![CDATA[Una nota rápida de un problema con el que me he pegado hace poco. Necesitaba lanzar una función de BBDD (Oracle) desde Hibernate manteniendo la transacción.&#160; Para lanzar la función desde jdbc, en las versiones anteriores de Hibernate era muy intuitivo obtener el objeto Connection relacionado con la sesión pero en Hibernate 4 ha cambiado [&#8230;]]]></description>
+		<wfw:commentRss>/hibernate-4-obtener-el-objeto-connection-relacionado-con-la-sesion/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+	</channel>
+</rss>

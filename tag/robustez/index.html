@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>robustez | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; robustez RSS de la etiqueta" href="/tag/robustez/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.2" />
+
+<!-- Bad Behavior 2.2.19 run time: 3.743 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196683 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="archive tag tag-robustez tag-75 custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Archivo de la etiqueta: <span>robustez</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-918" class="post-918 post type-post status-publish format-standard hentry category-java category-programacion tag-actores tag-akka tag-bus-de-eventos tag-futuros tag-java tag-programacion-reactiva tag-robustez">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/" rel="bookmark">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<p><!--wp_fromhtmlpreview_devfmt--></p>
+<blockquote><p><strong><span style="color: #808080;">Esta es la segunda entrega de Akka por ejemplos. La primera trató sobre cual es el funcionamiento de la cola de mensajes de un actor, que es un router y como se envían mensajes entre actores.</span></strong></p>
+<p><strong><span style="color: #808080;">Ahora se tratarán temas como el control de fallos y la supervisión de actores, el bus de eventos de Akka y sobre los &#8216;Dead Letters&#8217;</span></strong></p>
+<p style="text-align: right;"><em>Entrada anterior: <strong><a href="/akka-por-ejemplos/">Akka por ejemplos</a></strong></em></p>
+</blockquote>
+<p>Sin más vamos con los ejemplos.</p>
+<p>Todo el código fuente relacionado con esta serie de posts está disponible en mi repositorio de <strong>GitHub</strong></p>
+<p style="text-align: center;"><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures" target="_blank"><img class="alignnone wp-image-432 size-full" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" alt="[Logo GitHub]" width="32" height="32" /></a> <a href="https://github.com/logicaalternativa/AkkaActorsAndFutures" target="_blank">AkkaActorsAndFutures</a></p>
+<hr />
+<h2>Control de fallos: Supervisión y monitorización.</h2>
+<p><div id="attachment_930" style="width: 230px" class="wp-caption alignright"><a href="/wp-content/uploads/2015/10/supervision-peque.png"><img class="wp-image-930 size-full" src="/wp-content/uploads/2015/10/supervision-peque.png" alt="[Supervisión padre-hijo en Akka]" width="220" height="172" /></a><p class="wp-caption-text">[Supervisión padre-hijo en Akka]</p></div>En <strong><em>Akka</em></strong> la robustez a fallos se basa en la supervisión de actores con jerarquía padre-hijo. El actor que delega tareas en los actores que crea es el que &#8216;<em>supervisa</em>&#8216; y decide que hacer cuando se produce un fallo en alguno de sus hijos.</p>
+<p>Se crea así una jerarquía en forma de árbol en la que la que los actores padres supervisan a los actores hijos. El actor &#8216;<em>user</em>&#8216; de <strong><em>Akka</em></strong> será el padre de primera generación de actores que hayamos creado.</p>
+<p>Esto es realmente lo que te da la <strong>robustez</strong> (&#8216;<em>resilence</em>&#8216;)  que un sistema reactivo necesita. Esta robustez se pierde cuando se intenta en vez de tener esta jerarquía, ir a un esquema con una mentalidad más tradicional de inyección de dependencias y se cae en la tentación de inyectar actores a otros actores.</p>
+<p>Cuando un actor falla y se produce una excepción, su supervisor puede hacer, o bien <strong>reiniciar</strong> el actor, <strong>parar</strong> el actor, <strong>escalar</strong> la excepción o absorber la excepción y <strong>continuar</strong> con la ejecución.</p>
+<p>El sistema de supervisión de <em>Akka</em> permite tener la posibilidad de diferente respuesta del supervisor dependiendo del tipo de excepción y si esta afecta a todos los actores supervisados o sólo al que ha fallado. Esto junto con lo anterior permite implementar fácilmente patrones,  por ejemplo de tipo &#8216;<em>circuit breaker</em>&#8216;, si uno de los actores falla.</p>
+<p><em>Akka</em> tiene la posibilidad de establecer eventos o disparadores en el ciclo de vida de un actor. Por ejemplo <strong>antes de crearlo</strong>, <strong>antes</strong> y <strong>después</strong> de <strong>reiniciarlo</strong> y cuando se <strong>para</strong>.</p>
+<p>Ademas del concepto de supervisión, en <em>Akka</em> existe el de <strong>monitorización</strong>. Cualquier actor, puede &#8216;<em>monitorizar</em>&#8216; a cualquier otro, lo haya creado o no. El primero obtiene un mensaje &#8216;<strong><em>Terminated</em></strong>&#8216; cuando el monitorizado ha terminado. Esto permite modificar su comportamiento o cambiar su estado. En los ejemplos siguientes el actor supervisor también hace de &#8216;<em>monitor</em>&#8216; de sus hijos.</p>
+<p>Para poder mostrar con ejemplos como es el comportamiento de las diferentes estrategias a seguir, he creado en el proyecto dos actores: <a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedDummyCheckLifeCycle.java" target="_blank"><strong><em>ActorNoTypedDummyCheckLifeCycle</em></strong></a> y <strong><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLetItCrash.java" target="_blank">ActorNoTypedLetItCrash</a></em></strong>.</p>
+<p><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedDummyCheckLifeCycle.java" target="_blank">ActorNoTypedDummyCheckLifeCycle</a></em> se utiliza para comprobar los eventos que se disparan y por los &#8216;<em>estados</em>&#8216; que pasa un actor cuando es supervisado con diferentes estrategias. Concatena en un atributo &#8216;<em>state</em>&#8216; los diferentes pasos por los &#8216;<em>hooks</em>&#8216; del ciclo de vida de un actor:</p>
+<ul>
+<li>Método &#8216;<strong><em>aroundPreStart</em></strong>&#8216;: Primer evento que se dispara cuando se inicia un actor. Sólo se ejecuta cuando se inicia un actor por primera vez.</li>
+<li>Método &#8216;<strong><em>preStart&#8217;</em></strong>: Se lanzan cuando se inicia un actor o después de que se haya reiniciado.</li>
+<li>Método &#8216;<strong><em>aroundPreRestart&#8217;</em></strong>: Cuando un actor va a ser reiniciado, se dispara antes de parada el actor.</li>
+<li>Método &#8216;<strong><em>preRestart</em></strong>&#8216;: También se ejecuta antes de parar el actor cuando va a ser reiniciado. La llamada es después de la del método &#8216;<em>aroundPreRestart</em>&#8216;</li>
+<li>Método &#8216;<strong><em>postStop</em></strong>&#8216;: Evento que se llama, o bien cuando se para el actor, o bien antes de reiniciarlo (en este último caso justo después de que se llame al método &#8216;<em>preRestart</em>&#8216;)</li>
+<li>Método &#8216;<strong><em>postRestart</em></strong>&#8216;: Se lanza después de reiniciar el actor.</li>
+<li>Método &#8216;<strong><em>aroundPostStop</em></strong>&#8216;: Se realiza la llamada justo antes de parar definitivamente el actor.</li>
+</ul>
+<p>El actor <em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLetItCrash.java" target="_blank">ActorNoTypedLetItCrash</a></em> es el que creará y hará de supervisor de <em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedDummyCheckLifeCycle.java" target="_blank">ActorNoTypedDummyCheckLifeCycle</a></em>. En su constructor,  permite definir por parámetro la estrategia de supervisión. Su comportamiento será en de hacer de proxy en el envío de mensajes a  <em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedDummyCheckLifeCycle.java" target="_blank">ActorNoTypedDummyCheckLifeCycle</a></em> hasta que este el actor hijo se pare o cuando el mismo se haya reiniciado.</p>
+<p>Para mostrar el comportamiento de las diferentes estrategias y cual es el ciclo de vida especifico de los actores (cuando se llama a los diferentes &#8216;<em>hooks</em>&#8216;) he codificado en el proyecto los siguientes ejemplos.</p>
+<h3>Estrategia de supervisión por defecto</h3>
+<p>Test: <strong><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/test/java/com/logicaalternativa/examples/akka/supervisorstrategy/ActorLetItCrashTestDefault.java" target="_blank">ActorLetItCrashTestDefault.java</a></em></strong><br />
+<pre><em>Comando maven</em>
+<strong>mvn -Dtest=com.logicaalternativa.examples.akka.supervisorstrategy.ActorLetItCrashTestDefault test</strong></pre><br />
+Si se produce un excepción en un actor hijo, la <strong>estrategia por defecto</strong> en <em>Akka</em> es la de <strong>reiniciar el actor hijo</strong>, excepto si es un error irrecuperable:</p>
+<ul>
+<li> cuando se ha producido una excepción al inicializar el actor (<strong><em>ActorInitializationException</em></strong>)</li>
+<li>cuando ya se había parado el actor(<strong><em>ActorKilledException</em></strong>)</li>
+</ul>
+<p>Esta estrategia cobra sentido cuando se quiere mantener un sistema estable. La idea subyacente es que cuando se produce un error el sistema debería volver a un estado consistente y esto se consigue reiniciando el estado del actor.</p>
+<p>En este ejemplo, los pasos son:</p>
+<ol>
+<li>Se envía un primer mensaje &#8216;<em>state</em>&#8216; al actor <em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLetItCrash.java" target="_blank">ActorNoTypedLetItCrash</a></em>. Este hará el reenvío del mensaje al actor hijo (<em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedDummyCheckLifeCycle.java" target="_blank">ActorNoTypedDummyCheckLifeCycle</a></em>) que devolverá la concatenación de los diferentes métodos por los que ha pasado hasta ese momento.</li>
+<li>Después se envía un mensaje con una excepción para que el actor hijo provoque la excepción.</li>
+<li>Por último se vuelve a enviar un mensaje &#8216;<em>state</em>&#8216; para ver por los eventos que se ejecutan cuando se reinicia el actor.</li>
+<li>Finalmente para poder ver todo el flujo, se para el actor.</li>
+</ol>
+<p>El ejemplo permite comprobar el flujo completo del paso de los diferentes eventos a lo largo de la vida del actor hijo. En este caso con la estrategia de supervisión por defecto, es este:<br />
+<pre>Se llama al constructor
+ =&gt; Llamada a <strong><em>aroundPreStart</em></strong>
+  =&gt; Llamada a <strong><em>preStart</em></strong>
+   =&gt; [[exception]] Se provoca una excepción
+    =&gt; Llamada a <strong><em>aroundPreRestart</em></strong>
+     =&gt; Llamada a <strong><em>preRestart</em></strong>
+      =&gt; Llamada a <strong><em>postStop</em></strong>
+       =&gt; Llamada al constructor (Se vuelve a crear el actor)
+        =&gt; Llamada a <em><strong>aroundPostRestart</strong></em>
+         =&gt; Llamada a <em><strong>postRestart</strong></em>
+          =&gt; Llamada a <em><strong>preStart</strong></em>
+           =&gt; Llamada a <em><strong>aroundPostStop</strong></em>
+            =&gt; Llamada a <em><strong>postStop</strong></em></pre></p>
+<h3>Estrategia de supervisión: Escalar la excepción</h3>
+<p>Test: <strong><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/test/java/com/logicaalternativa/examples/akka/supervisorstrategy/ActorLetItCrashTestEscalate.java" target="_blank">ActorLetItCrashTestEscalate.java</a></em></strong><br />
+<pre><em>Commando maven</em>
+<strong>mvn -Dtest=com.logicaalternativa.examples.akka.supervisorstrategy.ActorLetItCrashTestEscalate test</strong>
+
+</pre><br />
+¿Qué ocurre cuando se elige una estrategia de supervisión de tipo &#8216;<strong><em>escalate</em></strong>&#8216;? En este caso la excepción en el actor hijo provoca el error también en el actor supervisor. El comportamiento final depende entonces de la propia estrategia de supervisión de este último.</p>
+<p>El ejemplo puede ayudar a verlo más claro. En este caso se configura el supervisor (<em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLetItCrash.java" target="_blank">ActorNoTypedLetItCrash</a></em>) para que la estrategia de supervisión sea la de <strong>escalar la excepción</strong>. Cuando se provoca una excepción en el actor supervisado, el resultado es el mismo que si se <strong>hubiera producido en el supervisor</strong>.</p>
+<p>El este caso el supervisor tiene la estrategia de supervisión por defecto, que lo reinicia, volviéndose a crear el actor hijo.</p>
+<p>En el test se comprueba este hecho cuando se valida todo el ciclo de vida del actor hijo. Se arranca y después de la excepción, se para, para después volver a arrancar sin reinicio. Esto último provocado porque al reiniciarse actor supervisor, el hijo se para y se vuelve a crear:<br />
+<pre>Llamada a constructor
+ =&gt; Llamada a <strong><em>aroundPreStart</em></strong>
+  =&gt; Llamada a  <strong><em>preStart</em></strong>
+   =&gt; [[exception]] Se provoca una excepción
+    =&gt; Llamada a <strong><em>aroundPostStop</em></strong>
+     =&gt; Llamada a <strong><em>postStop</em></strong>
+      =&gt; Llamada al constructor (Se vuelve a crear el actor)
+       =&gt; Llamada a <strong><em>aroundPreStart</em></strong>
+        =&gt; Llamada a <strong><em>preStart</em></strong>
+        =&gt; Llamada a <strong><em>aroundPostStop</em></strong>
+         =&gt; Llamada a <strong><em>postStop</em></strong></pre></p>
+<h3>Estrategia de supervisión &#8216;resume&#8217;: &#8216;Absorber&#8217; la excepción.</h3>
+<p>Test: <strong><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/test/java/com/logicaalternativa/examples/akka/supervisorstrategy/ActorLetItCrashTestResume.java" target="_blank">ActorLetItCrashTestResume.java</a></em></strong><br />
+<pre><em>Comando maven</em>
+<strong>mvn -Dtest=com.logicaalternativa.examples.akka.supervisorstrategy.ActorLetItCrashTestResume test</strong>
+</pre><br />
+Si el supervisor adopta una estrategia de &#8216;<em>resume</em>&#8216; si se produce un error la excepción no produce ni el reinicio, ni la parada del actor supervisado. Aunque se haya producido el error, sigue levantado a la espera de procesar nuevos mensajes.</p>
+<p>El test ayuda a comprender este tipo de supervisión. Se comprueba que cuando se produce una excepción al procesar un mensaje, no se hace <strong>ninguna llamada</strong> a los métodos del ciclo de vida, ni tampoco se escala la excepción. El siguiente mensaje lo procesa correctamente.</p>
+<p>El ciclo de vida del actor supervisado con este tipo de supervisión será:<br />
+<pre>Llamada a constructor
+ =&gt; Llamada a <strong><em>aroundPreStart</em></strong>
+  =&gt; Llamada a <strong><em>preStart</em></strong>
+   =&gt; [[exception]] Se provoca una excepción
+    =&gt; Llamada a <strong><em>aroundPostStop</em></strong>
+     =&gt; Llamada a <strong><em>postStop</em></strong></pre></p>
+<h3>Estrategia de supervisión &#8216;stop&#8217;: Parar el actor supervisado.</h3>
+<p>Test: <strong><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/test/java/com/logicaalternativa/examples/akka/supervisorstrategy/ActorLetItCrashTestStop.java" target="_blank">ActorLetItCrashTestStop.java</a></em></strong><br />
+<pre><em>Comando maven</em>
+<strong>mvn -Dtest=com.logicaalternativa.examples.akka.supervisorstrategy.ActorLetItCrashTestStop test</strong></pre><br />
+En este caso, se para el actor supervisado cuando al procesar un mensaje ocurre una excepción.</p>
+<p>En el ejemplo se fuerza esta situación. Si se provoca una excepción en el actor supervisado se comprueba que el actor no se vuelve a reiniciar. De hecho si se le vuelve a enviar un mensaje de estado, este se envía a la cola de &#8216;<em>Dead Letters</em>&#8216; porque la referencia al actor ya no apunta a un actor válido.</p>
+<p>El ciclo de vida del actor es el siguiente:<br />
+<pre>Llamada a constructor
+ =&gt; Llamada a <strong><em>aroundPreStart</em></strong>
+  =&gt; Llamada a  <strong><em>preStart</em></strong>
+   =&gt; [[exception]] Se provoca una excepción
+    =&gt; Llamada a <strong><em>aroundPostStop</em></strong>
+     =&gt; Llamada a <strong><em>postStop</em></strong></pre><br />
+Los mismos pasos que con la estrategia &#8216;<em>resume</em>&#8216;. Pero en este caso no ha sido necesario parar el actor en el test porque &#8216;<em>muere</em>&#8216; después de provocarse la excepción.</p>
+<h2>Bus de eventos interno de Akka</h2>
+<p>Test: <strong><em><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/test/java/com/logicaalternativa/examples/akka/bus/PublishSimpleSuscribeTest.java" target="_blank">PublishSimpleSuscribeTest.java</a></em></strong><br />
+<pre><em>Comando maven
+</em><strong>mvn -Dtest=com.logicaalternativa.examples.akka.bus.PublishSimpleSubcribeTest test</strong>
+</pre><br />
+<strong><em>Akka</em></strong> poseé un bus interno que permite el envío de mensajes siguiendo el patrón <strong>publicador-suscriptor</strong>. Un &#8216;<em>publicador</em>&#8216; envía un mensaje sin saber quien van a ser los receptores. Los actores que quieran recibir ese tipo de mensajes deberán suscribirse a esa publicación.</p>
+<p><img class="alignleft size-full wp-image-952" src="/wp-content/uploads/2015/10/busEvent-peque2.png" alt="[Bus de eventos de Akka]" width="250" height="145" />El paradigma cambia. En vez de enviar un mensaje a un actor concreto, es decir, “<em>(Por favor) haz esto</em>”, cuando se <strong>publica un mensaje en el bus</strong> se está diciendo “<em>(A quien pueda interesar) ha ocurrido esto</em>”</p>
+<p>En este caso el ejemplo muestra un uso sencillo del bus de <strong><em>Akka</em></strong> para mostrar este patrón.</p>
+<p>Se levantan dos actores suscriptores (del tipo <a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLogEvent.java" target="_blank"><em>ActorNoTypedLogEvent</em></a>) que se suscribirán a mensajes de tipo <em>Integer</em>. La implementación de este actor es sencilla: registra los mensajes del tipo a los que está suscrito y si se le envía un mensaje &#8216;<em>lastMessage</em>&#8216; devolverá el último mensaje que ha registrado.</p>
+<p>En el test después de levantar a los dos suscriptores se envía un mensaje al bus de <em>Akka</em>. Después se comprueba que el mensaje le ha llegado a ambos.</p>
+<h2>Dead letters</h2>
+<p>Test: <em><strong><a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/test/java/com/logicaalternativa/examples/akka/bus/DeadLettersTest.java" target="_blank">DeadLettersTest.java</a></strong></em><br />
+<pre><em>Comando maven
+</em><strong>mvn -Dtest=com.logicaalternativa.examples.akka.bus.DeadLettersTest test</strong></pre><br />
+Un &#8216;<strong><em>dead letter</em></strong>&#8216; se produce cuando <strong>no</strong> se ha podido <strong>entregar un mensaje a un actor</strong>. Un caso típico es cuando el actor receptor del mensaje ya no existe. El &#8216;<em>dead letter</em>&#8216; contiene el<strong> mensaje enviado</strong>, la referencia al <strong>actor que lo envía</strong> y la del que <strong>lo iba a recibir</strong>.</p>
+<p>Por defecto <em>Akka</em> informa en el log de la aplicación los dead letters que se producen (esto es configurable). También pública esta información <strong>a través del bus de eventos de <em>Akka</em></strong>, lo que permite que una aplicación tenga la posibilidad de una gestión específica de estos mensajes perdidos.</p>
+<p>En el ejemplo para poder provocar un <em>dead letter</em> se crea un actor del tipo <a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedDummy.java" target="_blank"><em>ActorNoTypedDummy</em></a> pararlo para a continuación enviarle un mensaje. Este mensaje &#8216;<strong><em>se pierde</em></strong>&#8216; y es recogido como &#8216;<em>dead letter</em>&#8216;.</p>
+<p>Por otra parte en el ejemplo se está utilizando un actor del tipo <a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLogEvent.java" target="_blank"><em>ActorNoTypedLogEvent</em></a> configurado para que suscriba en el bus de eventos de <em>Akka</em> los mensajes del tipo <strong><em>DeadLetter</em></strong>.</p>
+<p>Cuando se manda un mensaje de &#8216;<em>lastMessage</em>&#8216; al actor <a href="https://github.com/logicaalternativa/AkkaActorsAndFutures/blob/master/src/main/java/com/logicaalternativa/examples/akka/ActorNoTypedLogEvent.java" target="_blank"><em>ActorNoTypedLogEvent</em></a> este devolverá la información del mensaje perdido en forma de <em>DeadLetter</em>.</p>
+<p>Como comprobación final del test se validará la información contenida en el objeto <strong><em>DeadLetter</em></strong>: el mensaje y la referencia al actor receptor.</p>
+<hr />
+<p>Hasta aquí este segundo artículo de Akka por ejemplos. El próximo y último artículo de esta serie será sobre <strong>actores tipados</strong>.</p>
+<p>Espero que os sirva.</p>
+<p><strong><em><a href="/mi-cv/" target="_blank">M.E.</a></em></strong></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/programacion/java/" rel="category tag">Java</a>, <a href="/category/programacion/" rel="category tag">Programación</a> y está etiquetada con <a href="/tag/actores/" rel="tag">actores</a>, <a href="/tag/akka/" rel="tag">akka</a>, <a href="/tag/bus-de-eventos/" rel="tag">bus de eventos</a>, <a href="/tag/futuros/" rel="tag">futuros</a>, <a href="/tag/java/" rel="tag">Java</a>, <a href="/tag/programacion-reactiva/" rel="tag">programación reactiva</a>, <a href="/tag/robustez/" rel="tag">robustez</a> en <a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/" title="23:34" rel="bookmark"><time class="entry-date" datetime="2015-10-25T23:34:53+00:00">25 octubre, 2015</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-803" class="post-803 post type-post status-publish format-standard hentry category-php category-sistemas-operativos tag-cache tag-linux tag-php tag-rendimiento tag-robustez">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/" rel="bookmark">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<h3 style="text-align: right;"><strong><em>(más =&gt; simular concurrencia, modelo de actores, de “pull request”,&#8230;)</em></strong></h3>
+<blockquote><p><strong><span style="color: #808080;"><img class="size-full wp-image-816 alignright" src="/wp-content/uploads/2015/01/robustezRendimiento.png" alt="[Robustez y rendimiento]" width="250" height="209" />“Este artículo trata sobre la importancia de las pruebas de robustez y de rendimiento y su relación directa con la calidad del software, y lo importante que es medir y representar los datos en una gráfica. </span></strong></p>
+<p><strong><span style="color: #808080;">Un caso práctico, un sistema de cache PHP simpe basado en almacenamiento en ficheros. En teoría lento ¿verdad? ¿pero lo has comprobado?”</span></strong></p></blockquote>
+<h2>Introducción, Cache&#8230;</h2>
+<p><strong>C</strong>achear no es que sea nuevo, pero si está de rabiosa actualidad. El cacheo es una técnica fundamental dentro de los paradigmas de escalabilidad y rendimiento que se están implementando en la actualidad. Sus ventajas son claras a la hora de evitar tráfico en los cuellos de botella de una arquitectura, típicamente la base de datos. Las arquitecturas con cache compartida (con sistemas como <strong>Memcached</strong> o a otro nivel <strong>Redis</strong>) y colas de mensajes pasan a ser “la nueva forma” de hacer las cosas.</p>
+<p>Está presente también en las tendencias actuales de arquitecturas basadas en <strong>microservicios</strong>. Algunas siguen la máxima “<em>cache everything</em>” (“Cachea todo lo que se mueva..” 🙂 )</p>
+<p>Y a otro nivel, también hay un debate abierto con la movilidad y en el que ha entrado de lleno <strong>Linus Torvalds </strong>(<a href="#referencias"><em>1</em></a>). Defiende que añadir más procesamiento en paralelo (más cores a los procesadores de los móviles) no es la solución y que las caches grandes son eficientes.</p>
+<p>El cache también tiene sus problemas intrínsecos complejos. Por ejemplo, la invalidez de los valores cacheados. Si no se hace correctamente se puede trabajar con datos &#8216;antiguos&#8217; y perder información. Problema antiguo&#8230; <strong>Martin</strong> <strong>Fowler </strong><em>(<a href="#referencias">2</a>)</em>, ha hecho famosa la cita de <strong>Phil Karlton</strong></p>
+<blockquote><p>“There are only two hard things in Computer Science: cache invalidation and naming things.”</p></blockquote>
+<h2>El caso práctico, cache simple en PHP</h2>
+<p>El objetivo de este post no es tan ambicioso como para meterse de lleno en este problema. En su tiempo para el post “<a title="Dar valor a los tweets: Interés, difusión, audiencia,… trasteando con el API de Twitter" href="/tweets-interes-difusion-audiencia-trasteando-api-twiter/" target="_blank">Dar valor a los tweets: Interés, difusión, audiencia,… trasteando con el API de Twitter</a>” necesitaba una librería para cachear los resultados del api de Twitter. Me decanté la librería <a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank"><strong>php-cache</strong></a> de <strong><a title="[Emilio Cobos]" href="http://emiliocobos.net/" target="_blank">Emilio Cobos</a></strong>, me pareció sencilla, fácil de utilizar y configurar y suficiente para lo que necesitaba. Desde entonces llevo usándola también en otros proyectos.</p>
+<p>El almacenamiento en memoria es lo más rápido para una cache. Esto, que en <strong>Java</strong> es sencillo de implementar, basta con almacenar el valor en un atributo estático de una clase para que este accesible en todos los hilos de ejecución, en <strong>PHP</strong> es necesario usar extensiones externas al core de <strong>PHP</strong> o utilizar memoria compartida. Esto último honestamente no creo que sea lo más se adecue dentro de este contexto en donde lo que busqué es la máxima sencillez.</p>
+<p><img class="alignleft size-full wp-image-820" src="/wp-content/uploads/2015/01/cache.png" alt="[Cache]" width="175" height="148" />La finalidad de la librería es tener un sistema de cache sencillo <strong>sin necesidad de instalación</strong> de extensiones como <em>apc</em> ni ni servicios como <em>memcache</em>. Tan sólo es necesario que el usuario del apache tenga permisos de escritura, cosa que es lo más común. Por esto es ideal para “alojamientos compartidos” de páginas web.</p>
+<p>Su funcionamiento similar a otras librerías de este tipo. Está basada en la <strong>serialización</strong> de las variables, y su almacenaje en <strong>ficheros</strong> de texto. El código fuente es sencillo, ordenado y muy fácil de seguir.</p>
+<p>Después de decirme a usarla y ver como funcionaba, me surgieron dos dudas. En su momento, en anteriores proyectos, tuve <strong>problemas de concurrencia</strong> en <strong>PHP</strong> cuando más de un proceso leía/escribía en el mismo fichero a la vez. Además que el acceso a cache tuviera acceso a disco &#8220;<strong><em>¿cuánto estaba penalizada la velocidad este motivo?</em></strong>&#8221;</p>
+<p>Estas dos preguntas fueron la excusa para adentrarme en el mundo de las pruebas de rendimiento y de robustez. Otra pata importante dentro del desarrollo que aporta valor a la calidad del software. El resultado de todo esto está reflejado en lo que viene a continuación.</p>
+<p>Adelanto que propuse unos cambios en el código y Emilio Cobos a tenido a bien aceptar mi &#8216;<strong><em>pull request</em></strong>&#8216;, por lo tanto he pasado a ser un humilde, pero a la vez orgulloso contribuidor de <strong>php-cache</strong>.</p>
+<h2>Pruebas de robustez, concurrencia lectura/escritura de una clave de la cache</h2>
+<p><strong>php-cache</strong> utiliza para cada clave de la cache un fichero donde almacena el valor &#8220;<em>serializado</em>&#8220;. Para probar la concurrencia cuando varios procesos leen/escriben en una misma clave de la cache diseñe dos test.</p>
+<p>El primero de ellos, <strong><a title="[robustness-rw.test.php]" href="https://github.com/ecoal95/php-cache/blob/master/test/robustness-rw.test.php" target="_blank">robustness-rw.test.php</a></strong>, lanza <strong>10 procesos concurrentes</strong>, simulando 10 clientes ejecutando las mismas operaciones a la vez. Cada uno de ellos graba un valor en una clave de la cache y a continuación obtiene el valor de la misma clave de la cache. Estas dos operaciones las realiza cada proceso 50 veces (un total de 500 operaciones de escritura/lectura en total) cambiando cada vez el valor grabado de 3 posibles.</p>
+<p>El valor obtenido de la cache tiene que ser igual a alguno de los tres valores posibles. Si es diferente o es nulo el valor se considera como invalido.</p>
+<p>El segundo de los test de robustez, <a title="[robustness-rw2.test.php] " href="https://github.com/ecoal95/php-cache/blob/master/test/robustness-rw2.test.php" target="_blank"><strong>robustness-rw2.test.php</strong></a> es similar al anterior. En este caso además de guardar y obtener el valor se realiza una tercera operación de borrado de la clave de la cache. En este caso, el valor obtenido de la cache tiene que ser igual a alguno de los tres valores posibles o nulo. En cualquier otro caso se considera como inválido.</p>
+<p>Los dos test están el directorio <a title="[test]" href="https://github.com/ecoal95/php-cache/tree/master/test" target="_blank">test</a> repositorio principal de la librería ya que estaban incluidos en el &#8216;<strong><em>pull request</em></strong>&#8216; <strong>aceptado</strong>. En el <a title="[README.md]" href="https://github.com/ecoal95/php-cache/blob/master/test/README.md" target="_blank"><strong>README.md</strong></a> del directorio test está explicado más en profundidad lo que hacen y como se lanzan.</p>
+<p style="text-align: center;"><a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank"><img class="wp-image-432 size-full alignnone" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" alt="[Logo GitHub]" width="32" height="32" /> </a> <a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank">Repositorio GitHub Cache.php</a></p>
+<h3>Simulando los clientes concurrentes, esquema basado en el modelo de actores</h3>
+<p>¿Cómo simular los clientes/peticiones concurrentes? Hay que tener en cuenta que el soporte multihilo no viene habilitado en una instalación tipo de PHP. El esquema que he seguido para simular la concurrencia he seguido en el paradigma de “<em><strong>modelo de actores</strong></em>”.</p>
+<p>El script principal (actor principal) se encarga de lanzar los demás actores (procesos secundarios). En este caso son <strong>procesos</strong> PHP, en realidad una copia del mismo test que tiene un comportamiento diferente si “<em>actúa</em>” como actor secundario. Los secundarios se encargan cada uno de de hacer las 50 peticiones de escritura/lectura o escritura/lectura/borrado en una misma clave común.</p>
+<p>Una vez lanzado los actores secundarios, el principal espera a que todos terminen para recoger los resultados y calcular la información estadística de los errores que se hayan podido producir.</p>
+<p>Los mensajes entre el actor principal (el proceso) y el resto de actores (los procesos secundarios) los he montado utilizando también la librería <strong>php-cache</strong>.</p>
+<p>Este es el flujo seguido:</p>
+<p><img class="size-full wp-image-811 alignright" src="/wp-content/uploads/2015/01/actores.png" alt="[Concurrencia utlinzando modelo de actores]" width="350" height="284" srcset="/wp-content/uploads/2015/01/actores.png 350w, /wp-content/uploads/2015/01/actores-300x243.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></p>
+<ol>
+<li>El proceso principal crea los actores pesándoles como <strong>parámetro</strong> una <strong>clave auxiliar</strong> de la cache (diferente para cada proceso) en la que escribirán el resultado. Los actores secundarios una vez hayan terminado su trabajo <strong>escriben</strong> en esa clave de la cache sus resultados.</li>
+<li>El proceso/actor principal se encarga de preguntar el estado de los actores lanzados, comprobando si existe la clave auxiliar en la cache que ha asignado a cada proceso.</li>
+<li>Una vez haya leído todas las claves auxiliares (todos los procesos hijos han terminado) <strong>calcula las estadísticas</strong> y muestra los resultados.</li>
+</ol>
+<p>Los mensajes son inmutables, los actores <strong>secundarios sólo escriben</strong> en la clave asignada y <strong>el principal sólo lee</strong> las claves que ha asignado.</p>
+<h3>Resultado de los test de robustez y modificación del código</h3>
+<p>Al lanzar los test de robustez comprobé que en estos casos extremos de concurrencia la librería podía devolver la lectura de datos corruptos.</p>
+<p>Hice una pequeña modificación en el código. Ahora siempre que se almacena un valor de una clave se escribe en un <strong>archivo temporal</strong>. Si la escritura es correcta, el fichero temporal se renombrará al definitivo utilizando la función <em>rename</em> de PHP. Esta función, es atómica si se realiza en el mismo sistema de ficheros. Este es el caso ya que se trabaja en el mismo directorio.</p>
+<p>Volviendo a lanzar los test con este cambio ya no se obtienen datos corruptos y tanto la lectura se ejecutan sin errores.</p>
+<p>Después de hacer un &#8216;<em>fork</em>&#8216; del repositorio y propuse los cambios lanzado un &#8216;<em>pull request</em>&#8216;. Esta petición ha sido aceptada y los esta modificación está ya en el repositorio oficial de <a title="[php-cache en GitHub]" href="https://github.com/ecoal95/php-cache/" target="_blank">php-cache en GitHub</a></p>
+<h2>Pruebas de rendimiento. Mini benchmark</h2>
+<p><strong>php-cache</strong> es una librería basada en lectura/escritura de ficheros, así que su velocidad depende de lo rápido que sea el acceso a disco y su velocidad de lectura.</p>
+<p>En el repositorio de GitHub he subido un pequeño script (<strong><a title="[benchmark.test.php] " href="https://github.com/ecoal95/php-cache/blob/master/test/benchmark.test.php" target="_blank">benchmark.test.php</a></strong>) que permite realizar medidas del acceso a un valor de la cache y cual sería el tiempo medio por respuesta.</p>
+<p>Además como referencia se calcula el valor medio que se tarda en recuperar el objeto de su representación en cadena cuando sus datos están en memoria sin acceder a disco. Es decir, el valor teórico ideal que se alcanzaría si el coste de tiempo de acceso a disco fuera cero.</p>
+<p>La información que devuelve el test es tanto el <em>coste real</em> como el <em>teórico</em>, <em>número de peticiones realizadas</em>, <em>tiempo total</em> y las estadísticas con datos sobre la <em>media de milisegundos</em> que ha tardado en hacer <em>una petición</em> y el cálculo de las<em> peticiones por segundo</em>.</p>
+<h3>&#8230; Dibujando y sacando conclusiones</h3>
+<p>Las conclusiones se pueden pueden ver de las siguientes gráficas:</p>
+
+		<style type='text/css'>
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 50%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style>
+		<div id='gallery-1' class='gallery galleryid-803 gallery-columns-2 gallery-size-medium'><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='/wp-content/uploads/2015/01/grafica_1_1.png'><img width="300" height="202" src="/wp-content/uploads/2015/01/grafica_1_1-300x202.png" class="attachment-medium size-medium" alt="Peticiones/seg real vrs teórico" aria-describedby="gallery-1-823" srcset="/wp-content/uploads/2015/01/grafica_1_1-300x202.png 300w, /wp-content/uploads/2015/01/grafica_1_1.png 427w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-823'>
+				Gráfica 1: Peticiones/segComparando los valores real y teoríco
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='/wp-content/uploads/2015/01/grafica_1_2.png'><img width="300" height="191" src="/wp-content/uploads/2015/01/grafica_1_2-300x191.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-1-841" srcset="/wp-content/uploads/2015/01/grafica_1_2-300x191.png 300w, /wp-content/uploads/2015/01/grafica_1_2.png 452w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-841'>
+				Gráfica 2: Velocidades comparadas tamaño del objeto cacheado
+				</dd></dl><br style="clear: both" />
+		</div>
+
+<p>En la primera (<strong><em>Gráfica 1</em></strong>) se muestra la información de los datos de las peticiones por segundo de los dos procesos, el real y el teórico. Si se observa con atención, para objetos de poco peso el  valor del  número de peticiones es  muy dispar entre las dos gráficas. Sin embargo, según va aumentando el peso del objeto guardado en cache, los dos valores se acercan hasta que casi el valor real es igual al ideal … Pero &#8220;<em> ¿por qué puede pasar esto?</em>&#8221;</p>
+<p>Para poder poner un poco de luz en el asunto he creado la <strong><em>Gráfica 2</em></strong>. Se muestra la velocidad en <em>MB por segundo</em> en obtener el objeto. Una de las líneas es la <em>velocidad de las peticiones reales</em>, otra es como sería el <em>calculo ideal</em> y la línea amarilla es la velocidad que tarda en <em>leer de fichero</em>, es decir el tamaño del objeto dividido por la diferencia de los dos tiempos (real menos teórico).</p>
+<p>Se puede observar, que mientras las velocidades de los procesos teórico y real tienden a ser constantes, la velocidad de lectura crece. En proporción, cuanto más grande es el objeto menos tarda en leerlo.</p>
+<p>Con los objetos más grandes, al ser el proceso de lectura mucho más rápido que el proceso de &#8220;<em>des-serialización</em>&#8220;, el peso del primero pasa a ser despreciable en comparación con el segundo. Es la <strong>velocidad del proceso más lento</strong> (la &#8220;<em>des-serialización</em>&#8220;) la que marca la velocidad al obtener un valor de la cache.</p>
+<p>La librería <strong>php-cache</strong> también tiene la posibilidad de guardar los datos en &#8220;<em>crudo</em>&#8221; sin serializar para almacenar cadenas, por ejemplo, para cachear la salida <em>html</em> directamente. Las siguientes gráficas (<em><strong>Gráficas</strong> <strong>3</strong></em> y <em><strong>4</strong></em>) son los datos obteniendo un valor de la cache en &#8220;<em>crudo</em>&#8220;. Muestran mejor a la conclusión que quiero llegar.</p>
+
+		<style type='text/css'>
+			#gallery-2 {
+				margin: auto;
+			}
+			#gallery-2 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 50%;
+			}
+			#gallery-2 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-2 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style>
+		<div id='gallery-2' class='gallery galleryid-803 gallery-columns-2 gallery-size-medium'><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='/wp-content/uploads/2015/01/grafica_2_1.png'><img width="300" height="192" src="/wp-content/uploads/2015/01/grafica_2_1-300x192.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-2-829" srcset="/wp-content/uploads/2015/01/grafica_2_1-300x192.png 300w, /wp-content/uploads/2015/01/grafica_2_1.png 446w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-2-829'>
+				Figura 3: Peticiones por segundo, objeto en crudo
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='/wp-content/uploads/2015/01/grafica_2_2.png'><img width="300" height="193" src="/wp-content/uploads/2015/01/grafica_2_2-300x193.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-2-832" srcset="/wp-content/uploads/2015/01/grafica_2_2-300x193.png 300w, /wp-content/uploads/2015/01/grafica_2_2.png 444w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-2-832'>
+				Figura 4: Velocidad, objeto en crudo
+				</dd></dl><br style="clear: both" />
+		</div>
+
+<p>En este caso la velocidad de lectura aumenta según lo hace el tamaño del objeto a leer y tiende a un máximo.</p>
+<p>Y vuelvo a repetir &#8220;<em>¿Por qué pasa esto?</em>&#8221; Sorprendente, &#8230;o no tanto.  La respuesta es que el<strong> sistema operativo</strong> viene al rescate y entra en acción el <strong>buffer cache </strong>del disco <em>(<a href="#referencias">3</a>)</em>.</p>
+<p>El acceso a disco es mucho más lento que el acceso a memoria. El buffer cache del disco del sistema operativo sirve de colchón amortiguador de esta diferencia de velocidades de acceso. Mantiene en memoria (cache, &#8230;su cache) aquellos datos que leen la misma parte del disco varias veces durante periodos relativamente cortos de tiempo. Con respecto a este punto también he hecho pruebas realizando un <em>sleep</em> de dos segundos entre peticiones y la velocidad era la misma por lo que el los datos se conservaban en el buffer.</p>
+<p>Recordar que este buffer no realiza cache de archivos, pero sí de <strong>bloques</strong>. Cuantos más bloques del fichero están en cache más rápido será la lectura y también añadir que el buffer de lectura de disco es transparente y lo gestiona el sistema operativo.</p>
+<p><strong>Resumiendo</strong>, cuanto mayor sea el tamaño del objeto a cachear y mayor sea el número de lecturas, <strong>php-cache</strong> pasa de ser un sistema cache <strong>basado en disco</strong>, &#8220;<em>a priori</em>&#8221; <strong>lento</strong>, para convertirse de &#8220;<em>facto</em>&#8221; en un sistema de cache basado en <strong>memoria</strong> y pasar a ser <strong>rápido</strong>. Y recordemos que estas circunstancias, objetos grandes y costosos de calcular con cierta carga de lectura, son precisamente una de las razones por las que se valora adoptar un sistema de cache.</p>
+<h2>Conclusiones</h2>
+<p>Siempre que se evite la optimización prematura evitando complicar innecesariamente el software  (optimizar es un vicio, cuando se empieza no se sabe como parar), las pruebas de <strong>robustez</strong> y de <strong>rendimiento</strong> pueden ser unas <strong>herramientas</strong> muy útiles.</p>
+<p>Permiten valorar como se comportará el producto que estás desarrollando o como lo hará el que estás pensando en adoptar&#8230; Sabemos que en muy pocas ocasiones los errores que surgen en un entorno de producción son reproducibles,  pero que duda cabe que estas pruebas dan un plus de confianza en el software desarrollado. Y puede, como en este caso concreto, que te lleves una sorpresa para bien y se comporte mucho mejor de lo que en un principio podías esperar.</p>
+<p>Otra conclusión, <strong>siempre que se mide se debe dibujar</strong>. Es importante reflejar los datos en un gráfico. Esto ayuda a vislumbrar una tendencia en los datos y obtener respuestas.</p>
+<p>Y por último romper una lanza en favor de <strong>PHP</strong>. En algún sitio he leído que si &#8220;<em>PHP fuera un arma se podía comparar con la manguera que pones al escape del coche para intentar suicidarte</em>&#8220;&#8230;</p>
+<p>No pienso así, PHP es un lenguaje al que tengo especial cariño y su simplicidad y potencia está demostrada con esta clase <strong>php-cache</strong>. Con unas pocas líneas tienes un sistema de cache muy competente y fiable que puedes usar sin problemas en proyectos sencillos y en el que puedes almacenar un montón de valores en la cache&#8230; tantos como espacio tengas en el disco duro.</p>
+<p>Espero que os sirva.</p>
+<p><a title="Mi CV" href="/mi-cv/">M.E.</a></p>
+<p><a name="referencias"></a></p>
+<h3><em>Referencias</em></h3>
+<ol>
+<li><em> [<a href="http://highscalability.com/blog/2014/12/31/linus-the-whole-parallel-computing-is-the-future-is-a-bunch.html" target="_blank">Linus: The whole &#8220;parallel computing is the future&#8221; is a bunch of crock</a>] (highscalability.com) </em></li>
+<li><em>[<a title="[TwoHardThings]" href="http://martinfowler.com/bliki/TwoHardThings.html" target="_blank">TwoHardThings</a>] (martinfowler.com)</em></li>
+<li><em>[<a href="http://www.tldp.org/pub/Linux/docs/ldp-archived/system-admin-guide/translations/es/html/ch07s06.html" target="_blank">El Buffer Cache</a>] (tldp.org)</em></li>
+</ol>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/programacion/php/" rel="category tag">PHP</a>, <a href="/category/sistemas-operativos/" rel="category tag">Sistemas operativos</a> y está etiquetada con <a href="/tag/cache/" rel="tag">cache</a>, <a href="/tag/linux/" rel="tag">linux</a>, <a href="/tag/php/" rel="tag">PHP</a>, <a href="/tag/rendimiento/" rel="tag">rendimiento</a>, <a href="/tag/robustez/" rel="tag">robustez</a> en <a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/" title="00:54" rel="bookmark"><time class="entry-date" datetime="2015-01-28T00:54:19+00:00">28 enero, 2015</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

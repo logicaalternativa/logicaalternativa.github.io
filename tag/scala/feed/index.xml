@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>scala &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/scala/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Akka por ejemplos</title>
+		<link>/akka-por-ejemplos/</link>
+		<pubDate>Mon, 12 Oct 2015 18:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[futuros]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[scala]]></category>
+
+		<guid isPermaLink="false">/?p=861</guid>
+		<description><![CDATA[&#8220;Akka representa muchos conceptos nuevos que al principio cuesta asimilar. Para poder entenderlo mejor, he ido creando, poco a poco, una serie de ejemplos que me han permitido comprender mejor el paradigma que conlleva. Este artículo trata sobre esto, intentar tener una prueba de código de cada nuevo concepto que permita ver cual es su [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

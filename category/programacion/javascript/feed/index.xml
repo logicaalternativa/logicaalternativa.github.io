@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JavaScript &#8211; Lógica Alternativa</title>
+	<atom:link href="/category/programacion/javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>Mocks&#8230; o el TDD y yo</title>
+		<link>/mocks-o-el-tdd-y-yo/</link>
+		<pubDate>Thu, 23 Oct 2014 22:24:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[junit]]></category>
+		<category><![CDATA[maven]]></category>
+		<category><![CDATA[Mock]]></category>
+		<category><![CDATA[REST]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Test]]></category>
+
+		<guid isPermaLink="false">/?p=739</guid>
+		<description><![CDATA[&#8230; segunda Parte de TDD is dead? … o yo y el TDD Este es el segundo y último artículo de la serie que completa el anterior post TDD is dead? … o yo y el TDD. Trataré de explicar como defino y codifico mis propios objetos &#8216;mock&#8216;, y de como los uso tanto para [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Aprendiendo Grunt a partir de Ant</title>
+		<link>/aprendiendo-grunt-a-partir-de-ant/</link>
+		<pubDate>Sun, 11 May 2014 21:22:48 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Control de la configuración]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[ant]]></category>
+		<category><![CDATA[grunt]]></category>
+
+		<guid isPermaLink="false">/?p=642</guid>
+		<description><![CDATA[Prólogo Hace unos años, unos 8 ya &#8230; En un proyecto me tocó realizar una &#8216;builtool&#8216;. Era una herramienta común que utilizarían todos los demás proyectos no importando su tecnología, PHP,.Net, Java, etc. Obtenía el código del sistema de control de versiones compilaba, paquetizaba y subía la build compilada a otra rama del control de [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>﻿Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230;</title>
+		<link>/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/</link>
+		<pubDate>Sun, 09 Mar 2014 22:27:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Concurrencia]]></category>
+		<category><![CDATA[vert.x]]></category>
+
+		<guid isPermaLink="false">/?p=583</guid>
+		<description><![CDATA[Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x La primera vez que oí hablar de Vert.x fue en la charla sobre el nuevo lenguaje Ceylon basado en la JVM que dio Gavin King&#160; (la mente pensante detrás de Hibernate) el pasado febrero en MadridJUG. Comentó que para la web estaban enfocando sus esfuerzos [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Mis primeros pasos de &#8216;newbie&#8217; en AngularJs</title>
+		<link>/mis-primeros-pasos-de-newbie-en-angularjs/</link>
+		<pubDate>Fri, 31 Jan 2014 20:51:18 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[AngularJs]]></category>
+		<category><![CDATA[Framework]]></category>
+
+		<guid isPermaLink="false">/?p=572</guid>
+		<description><![CDATA[Actualmente estoy involucrado en un proyecto en el que la arquitectura es un Backend de servicios web Rest (Java) y como Frontend una aplicación de una sola página (SPA Single-page application) hecha en AngularJs, utilizando el patrón MVC en el navegador. Siempre he tenido ganas en saber algo más de como funciona este framework y [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Java versus JavaScript, reflexiones</title>
+		<link>/%ef%bb%bfjava-versus-javascript-reflexiones/</link>
+		<comments>/%ef%bb%bfjava-versus-javascript-reflexiones/#comments</comments>
+		<pubDate>Sun, 05 Jan 2014 19:21:53 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[MVC]]></category>
+		<category><![CDATA[NOsql]]></category>
+
+		<guid isPermaLink="false">/?p=555</guid>
+		<description><![CDATA[Con la aparición de Node.js y la posibilidad de programar JavaScript en servidor se palpa entre los “javeros” cierta, no se encontrar la palabra, &#8230;¿preocupación?. La sensación es de “&#8230;nos están cambiando el agua&#8230;” y el comentario más oído es “&#8230; parece que es lo que se lleva ahora, no me gusta, pero habrá que [&#8230;]]]></description>
+		<wfw:commentRss>/%ef%bb%bfjava-versus-javascript-reflexiones/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps</title>
+		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/</link>
+		<comments>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comments</comments>
+		<pubDate>Wed, 03 Jul 2013 09:32:20 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Geolocalización]]></category>
+		<category><![CDATA[Mapas]]></category>
+		<category><![CDATA[OpenLayers]]></category>
+		<category><![CDATA[OpenStreetMap]]></category>
+
+		<guid isPermaLink="false">/?p=362</guid>
+		<description><![CDATA[Realmente no te das cuenta de la dependencia que tienes de los servicios de Google. Piensas que puedes disponer de ellos porque además de ser potentes son gratis&#8230; hasta que dejan de serlo. Me ha ocurrido en el pasado, en un proyecto personal (747mx.com) que utilizaba el traductor de Google. Era gratis hasta un número [&#8230;]]]></description>
+		<wfw:commentRss>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>(Java) Securización de formulario de acceso con SHA-1</title>
+		<link>/java-securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Sun, 28 Apr 2013 19:29:17 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=133</guid>
+		<description><![CDATA[Completando la entrada anterior, he realizado la implementación en Java. Básicamente &#8216;todo es lo mismo&#8230; pero no es igual&#8216;&#160; :-). Cambia la manera de obtener el número aleatorio y la forma de obtener el sha-1. La estructura es la de un proyecto Maven web con su pom.xml para que sea sencillo compilarlo y generar el [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Securización de formulario de acceso con SHA-1</title>
+		<link>/securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Fri, 19 Apr 2013 10:06:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=68</guid>
+		<description><![CDATA[Muchas veces las aplicaciones web no tienen acceso por ssl (https) y suelen tener un formulario de &#8216;login&#8217; de usuario y contraseña. Esto quiere decir que información sensible como la contraseña se transmite en texto claro y que sea relativamente fácil que terceros pueden tener acceso a ella. Por ejemplo esnifando el tráfico si el [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Patrones | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Patrones RSS de la categoría" href="/category/programacion/patrones/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.2" />
+
+<!-- Bad Behavior 2.2.19 run time: 3.125 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196646 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="archive category category-patrones category-87 custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Archivo de la categoría: <span>Patrones</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-1035" class="post-1035 post type-post status-publish format-standard hentry category-java category-patrones tag-futuros tag-java tag-patrones">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/" rel="bookmark">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<blockquote><p><strong>&#8220;Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más</strong>.&#8221;</p></blockquote>
+<p>Los modelos <em><strong>NIO</strong></em> no bloqueantes y la programación <strong>asíncrona</strong> y <strong>reactiva</strong> son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente serán la norma en un futuro cercano. La razón es clara: aunque no se obtiene un rendimiento mejor que los modelos tradicionales sincrónicos, si son modelos mucho <strong>más eficientes</strong>. Obtienen el mismo rendimiento con menos recursos al tener un mejor control de los hilos, uno de los recursos más preciados en un sistema operativo.</p>
+<div style="width: 310px" class="wp-caption alignright"><img src="/wp-content/uploads/2017/08/future.png" alt="Futuros y promesas" width="300" height="252" /><p class="wp-caption-text">Futuros y promesas</p></div>
+<p>Para poder articular una programación asíncrona y reactiva es necesario utilizar patrones adaptados a este tipo de programación. Puedes utilizar el patrón <strong>observable</strong> o las <strong>señales</strong>,  pero casi podríamos decir que tu camino te llevará irremisiblemente al patrón <strong>futuro</strong> en cuando tienes que integrar varios resultados asíncronos. Si además nuestra implementación del patrón futuros-promesas cumple con las propiedades de las <strong>monadas</strong> se nos abre un mudo de posibilidades. Con la programación funcional, la composición de futuros se podrá hacer de una manera elegante obteniendo un código más legible.</p>
+<p>Esto permite realizar <strong>DSL&#8217;s</strong> (Domain Specific Language) y separar la lógica de negocio de los efectos de lado. Por ahora “<em>&#8230; ahí lo dejo</em>”; prefiero no perder foco en el objetivo de este artículo, pero en mi mente esta tratar todo esto en una nueva reseña. En este artículo entraré a desarrollar todos estos nuevos conceptos intentando desmitificarlos, porque al principio todo lo de “<em>Futuros</em>”, “<em>Promesas</em>” y “<em>Mónadas</em>” puede que suene “<em>muy místico</em>”. Lo haré apoyado en mi propia implementación del patrón Futuros y promesas que está disponible en mi GitHub.</p>
+<p style="text-align: center;"><a href="https://github.com/logicaalternativa/AlternativeFuture" target="_blank" rel="noopener"><img class="alignnone wp-image-432 size-full" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" alt="[Logo GitHub]" width="32" height="32" /></a> <a href="https://github.com/logicaalternativa/AlternativeFuture" target="_blank" rel="noopener">AlternativeFuture</a></p>
+<p>La implementación está basada “<em>fuertemente</em>” en el Api de Scala de futuros y sólo recordar que Akka en su versión de Java la exporta directamente y que además los futuros de Scala son también monadas. Cuando digo que me apoyo en el Api de Scala me refiero a seguir la definición de su contrato, de hecho, no me interesaba el código fuente y si hacer el ejercicio de, a partir de su interfaz, realizar mi propia implementación en Java. El código que podéis ver y utilizar es todo mio. Hecha esta aclaración es el momento de empezar a entrar en faena.</p>
+<p>Intentaré hacer un acercamiento de dentro a fuera. Primero pondré el foco en las ideas principales para ir después abriendo el zoom y conseguir tener la imagen completa.</p>
+<h2>Futuros</h2>
+<p>&#8220;<em>¿Qué es un futuro?</em>&#8221; Pongámonos en contexto. Imaginemos dos procesos: uno será el principal que llamará a un método que devuelve un futuro de un valor. El otro será el que calcule realmente el valor de manera asíncrona ejecutado en un segundo plano con respecto al principal. Voy a poner un ejemplo para hacerlo más didáctico. <strong>A</strong>na (el hilo <strong>A</strong>, el principal) le dice a <strong>B</strong>artolo (el hilo <strong>B</strong>) que haga la colada (llamada al método)</p>
+<div style="width: 610px" class="wp-caption aligncenter"><a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/futuresanabartolo-1/"><img src="/wp-content/uploads/2017/07/futuresAnaBartolo-1-e1502818196258.png" alt="Llamada asíncrona" width="600" height="344" /></a><p class="wp-caption-text">1. Llamada asíncrona</p></div>
+<p>El proceso principal obtiene un futuro como resultado de llamar a un método que se lanzará en segundo plano gracias al hilo B. En el ejemplo<strong> B</strong>artolo manda una nota (representa el futuro) a <strong>A</strong>na que le permitirá apuntar lo  que se quiere que se haga con la colada cuando haya terminado <strong>B</strong>artolo. El hilo <strong>A</strong> no queda a la espera del resultado de la acción ejecutada por el hilo <strong>B</strong> y queda liberado para realizar otras operaciones. En el ejemplo <strong>A</strong>na no espera a que <strong>B</strong>artolo termine y  puede seguir haciendo otras tareas.</p>
+<div style="width: 620px" class="wp-caption aligncenter"><a href="/futuresanabartolo-2/"><img src="/wp-content/uploads/2017/07/futuresAnaBartolo-2.png" alt="2. Se devuelve un futuro" width="610" height="350" /></a><p class="wp-caption-text">2. Se devuelve un futuro</p></div>
+<p>Este futuro es en realidad un artefacto que permite asignar, desde el proceso principal una función <em>callback</em>. En el siguiente paso, <strong>A</strong>na decidirá que es lo que quiere hacer cuando termine la colada, es decir, asignará la función callback que se ejecutará cuando se obtenga el resultado del segundo proceso ejecutado por <strong>B</strong>artolo.</p>
+<div style="width: 620px" class="wp-caption aligncenter"><a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/futuresanabartolo-3/"><img src="/wp-content/uploads/2017/07/futuresAnaBartolo-3.png" alt="Asignar callback" width="610" height="350" /></a><p class="wp-caption-text">3. Asignar callback</p></div>
+<p>Cuando, gracias al segundo proceso, se haya calculado finalmente el valor, se ejecutará la función de regreso al que se le pasará como argumento el valor final obtenido. En el ejemplo tenemos la función &#8220;<em>planchar la ropa</em>&#8221; y el resultado del proceso: &#8220;<em>la ropa lavada&#8221;</em>.</p>
+<div style="width: 620px" class="wp-caption aligncenter"><a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/futuresanabartolo-4/"><img src="/wp-content/uploads/2017/07/futuresAnaBartolo-4.png" alt="Resultado del futuro" width="610" height="350" /></a><p class="wp-caption-text">4. Resultado del futuro</p></div>
+<h3>Contextos de ejecución</h3>
+<p>La ejecución de las funciones callback con el valor final como argumento se hará dentro de lo que se llama un <strong>contexto de ejecución</strong>. Este no es más que un pool de hilos que permite <strong>independizar la ejecución</strong> de la función con el valor final tanto del hilo principal como del segundo proceso, es decir, se ejecutarán en un tercer hilo “<em>reutilizable</em>”. En el ejemplo que estamos siguiendo es <strong>C</strong>arlos (el hilo <strong>C</strong>) el que plancha la  ropa.</p>
+<div style="width: 620px" class="wp-caption alignright"><a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/futuresanabartolo-5/"><img src="/wp-content/uploads/2017/07/futuresAnaBartolo-5.png" alt="Ejecución de la función callback con el valor del futuro" width="610" height="490" /></a><p class="wp-caption-text">Ejecución de la función callback con el valor del futuro</p></div>
+<p>En la implementación del patrón que he propuesto a cada una de las funciones callback y de orden superior definidas en el interfaz futuro se le puede pasar un contexto de ejecución.</p>
+<h2>Más cosas de los futuros</h2>
+<p>A grandes rasgos, esta es la esencia: el futuro permite configurar desde la ejecución principal que hacer cuando finalmente exista el valor. Y se hace sin tener que bloquear hilos porque sino arruinamos la asincronía.</p>
+<p>Teniendo esto en mente y sin perder de vista lo simple de este concepto, base de todo, voy a ir añadiendo nuevos conceptos e ideas que nos permitirá ir completando la visión general del patrón.</p>
+<h3>Dos caminos</h3>
+<p>Añadiendo una nueva capa a las funciones <em>callback</em>. El resultado de la ejecución de cualquier método puede ser, o bien su valor, o bien que su ejecución se haya saldado con un error, luego el resultado final que contiene un futuro puede ser:</p>
+<ul>
+<li>un valor correcto</li>
+<li>o también una excepción.</li>
+</ul>
+<p>¿Por qué no contemplar esta circunstancia con dos caminos? Un camino para cuando el valor sea correcto con su correspondiente función <em>callback</em> (el método <strong><em>onSuccess</em></strong>) y otro que nos permita definir otra función de regreso cuando se produzca un error (el método <strong><em>onFailure</em></strong>)</p>
+<hr />
+<h4 style="padding-left: 90px;"><span style="color: #808080;">Signatura de un <strong><em>onSuccess</em></strong> y <strong><em>onFailure</em></strong> de <strong><em>AlternativeFuture[T]</em></strong>:</span></h4>
+<h5 style="padding-left: 90px;"><span style="color: #808080;">onSuccess</span></h5>
+<p><pre style="padding-left: 90px;"><span style="color: #808080;"><strong>void</strong> onSuccesful( final <strong>Consumer</strong>&lt;<strong>T</strong>&gt; function, final <strong>Executor</strong> executor );</span></pre></p>
+<p style="padding-left: 90px;"><span style="color: #808080;">El argumento <strong><em>function</em></strong> es una función cuyo argumento es de tipo <strong><em>T</em></strong> (es el tipo del valor final del futuro) y resultado <strong><em>void</em></strong>.</span></p>
+<p><pre style="padding-left: 90px;"><span style="color: #808080;">function: <strong>T</strong> =&gt; <strong>void</strong></span></pre></p>
+<p style="padding-left: 90px;"><span style="color: #808080;">Esta será la función que se ejecutaría cuando de resultado final del futuro ha ido bien.</span></p>
+<h5 style="padding-left: 90px;"><span style="color: #808080;">onFailure</span></h5>
+<p><pre style="padding-left: 90px;"><span style="color: #808080;"><strong>void</strong> onFailure ( final <strong>Consumer</strong>&lt;<strong>Throwable</strong>&gt; function, final <strong>Executor</strong> executor );</span></pre></p>
+<p style="padding-left: 90px;"><span style="color: #808080;">En este caso el argumento <strong><em>function</em></strong> es una función cuyo argumento es un Throwable (la excepción que se reportaría si se produciría un error) y resultado <em>void</em>.</span></p>
+<p><pre style="padding-left: 90px;"><span style="color: #808080;">function: <strong>Throwable</strong> =&gt; <strong>void</strong></span></pre></p>
+<p style="padding-left: 90px;"><span style="color: #333333;"><span style="color: #808080;">Está será la función que se ejecutará cuando el futuro se haya solventado con un error</span>.</span></p>
+<hr style="padding-left: 60px;" />
+<h3>¿Cuando se ejecuta la función callback?</h3>
+<p>Para dar respuesta a esta pregunta nos debemos fijar en que existan las dos cosas necesarias para la ejecución de la función: que exista <strong>la función</strong> y que exista <strong>el valor</strong>. Hay entonces dos posibilidades:</p>
+<ul>
+<li>Puede que ya haya asignada una o varias funciones callback al futuro, entonces la ejecución de las mismas será cuando se obtenga el valor.</li>
+<li>O bien puede ser que se obtenga primero el valor y el disparador de que la función se ejecute será la propia asignación de la función callback.</li>
+</ul>
+<p>Es importante tener en mente que un futuro (“barra” promesa, esto lo explicaré más adelante), sólo se le puede asignar el valor una vez, además otra característica es que una función callback sólo se ejecutará una vez. Sin embargo se puede asignar al futuro, a lo largo del tiempo, todas las funciones callback que se deseen.</p>
+<h2>Promesas</h2>
+<p>Si has llegado hasta aquí probablemente ya te habrá asaltado la duda: ¿Cómo se da valor al futuro? ¿Cómo se le asigna un valor? La respuesta: a través de la <strong><em>promesa</em></strong>.</p>
+<p>Podemos decir que la promesa y el futuro son las dos caras de la misma moneda y que una promesa está relacionada con un futuro. La idea básica que debemos tener en mente es la siguiente:</p>
+<ul>
+<li>el futuro permite asignar la función callback para tomar decisiones una vez se haya obtenido el valor</li>
+<li>la promesa permite dar valor a ese futuro.</li>
+</ul>
+<p>Si volvemos al ejemplo anterior, será más sencillo de entender. Si recordamos el proceso principal llamaba a un método que permite en un segundo proceso calcular un valor de manera asíncrona en un tiempo indeterminado (puede ser antes o después). Mientras que el <strong>proceso principal</strong> tiene como herramienta al<strong> interfaz futuro</strong> que le permite indicar que es lo que se debe de hacer una vez se haya calculado el valor,<strong> el interfaz de la promesa</strong> será el instrumento que poseé <strong> el segundo proceso</strong> encargado de calcular el valor para asignar el valor a ese futuro. En síntesis <strong>A</strong>na usaría el futuro y <strong>B</strong>artolo la promesa.</p>
+<div style="width: 635px" class="wp-caption alignnone"><a href="/diagramadeactividadespromesasfuturo-2/"><img src="/wp-content/uploads/2017/08/diagramaDeactividadesPromesasFuturo-peque.png" alt="Diagrama de flujo Promesa-Futuro" width="625" height="432" /></a><p class="wp-caption-text">Diagrama de flujo Promesa-Futuro</p></div>
+<div style="width: 808px" class="wp-caption aligncenter"><a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/sequenciapromesasfuturo/"><img src="/wp-content/uploads/2016/11/sequenciaPromesasFuturo.png" alt="Diagrama de secuencia Promesa-Futuro" width="798" height="472" /></a><p class="wp-caption-text">Diagrama de secuencia Promesa-Futuro</p></div>
+<hr />
+<h4 style="padding-left: 120px;"><span style="color: #808080;">Implementación</span></h4>
+<p style="padding-left: 120px;"><span style="color: #808080;">Si echáis un vistazo al código, podéis observar que sólo existe una implementación que implementa las dos interfaces: la promesa y el futuro.</span></p>
+<p style="padding-left: 120px;"><span style="color: #808080;">La clase <a href="https://github.com/logicaalternativa/AlternativeFuture/blob/master/src/main/java/com/logicaalternativa/futures/imp/AlternativePromiseImp.java" target="_blank" rel="noopener"><strong><em>AlternativePromiseImp</em></strong></a> tiene un atributo que permite almacenar el valor del futuro. Este se asignará gracias a los métodos que expone el interfaz promesa <strong><em><a href="https://github.com/logicaalternativa/AlternativeFuture/blob/master/src/main/java/com/logicaalternativa/futures/AlternativePromise.java" target="_blank" rel="noopener">AlternativePromise</a></em></strong>.</span></p>
+<p style="padding-left: 120px;"><span style="color: #808080;">Existen dos atributos más en AlternativePromiseImp que son del tipo de cola FIFO (el primero que entra será el primero que sale). Permiten almacenar las funciones callback gracias a los métodos expuestos por el interfaz <a href="https://github.com/logicaalternativa/AlternativeFuture/blob/master/src/main/java/com/logicaalternativa/futures/AlternativeFuture.java" target="_blank" rel="noopener"><strong><em>AlternativeFuture</em></strong></a>.</span></p>
+<p style="padding-left: 120px;"><span style="color: #808080;">Una de las colas guardará las funciones que se van a ejecutar cuando mediante la promesa relacionada se asigne un valor correcto al futuro. Las funciones se van añadiendo a esta cola utilizando el método &#8216;<em>onSuccesful</em>&#8216; del interfaz AlternativeFuture.</span></p>
+<p style="padding-left: 120px;"><span style="color: #808080;">La otra cola FIFO almacenará las funciones callback que se ejecutarán cuando la promesa relacionada se resuelva con un error. De la misma manera, se van añadiendo estas las funciones gracias al método &#8216;<em>onFailure</em>&#8216; del interfaz AlternativeFuture.</span></p>
+<p style="padding-left: 120px;"><span style="color: #808080;">Bien cuando se asigna un valor a la promesa o bien cuando se añade una función callback al futuro se comprueba que existan los requisitos necesarios (la función y el valor del futuro). Si es así se ejecutará las funciones callback incluidas en la cola de callbacks con el valor final. Según se vayan ejecutando las funciones se eliminarán de la cola.</span></p>
+<hr />
+<h2>El Futuro como mónada. Programación funcional con AlternativeFuture</h2>
+<p>Se puede dar una vuelta de tuerca más y seguir añadiendo capas a la cebolla. El patrón Futuro/promesa permite adoptar un nuevo patrón funcional: la <strong>monada</strong>. Este artículo ya es lo suficientemente extenso, quizás con ya demasiados conceptos así que dejo pospuesto introducir la composición mónadica con AlternativeFuture y os emplazo a un siguiente post continuación de este.</p>
+<p><a href="/mi-cv/"><strong><em>M.E.</em></strong></a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/programacion/java/" rel="category tag">Java</a>, <a href="/category/programacion/patrones/" rel="category tag">Patrones</a> y está etiquetada con <a href="/tag/futuros/" rel="tag">futuros</a>, <a href="/tag/java/" rel="tag">Java</a>, <a href="/tag/patrones/" rel="tag">patrones</a> en <a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/" title="19:20" rel="bookmark"><time class="entry-date" datetime="2017-08-15T19:20:34+00:00">15 agosto, 2017</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87 current-cat"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20 current-cat-parent current-cat-ancestor"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

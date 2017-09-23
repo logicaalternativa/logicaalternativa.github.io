@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Líneas maestras del desarrollo para Tizen, nuevo SO enfocado a Smartphones | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps' href='/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/' />
+<link rel='next' title='Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230;' href='/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="/lineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones/" />
+<link rel='shortlink' href='/?p=380' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Flineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Flineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones%2F&#038;format=xml" />
+
+<!-- Bad Behavior 2.2.19 run time: 3.481 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196591 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="post-template-default single single-post postid-380 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-380" class="post-380 post type-post status-publish format-standard hentry category-sistemas-operativos tag-html-5 tag-javascript tag-sistemas-operativos-2">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Líneas maestras del desarrollo para Tizen, nuevo SO enfocado a Smartphones</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><strong><img class="size-full wp-image-383 alignright" alt="[Logo de tizen]" src="/wp-content/uploads/2013/07/tizen_p.png" width="300" height="102" />Tizen</strong> es un nuevo sistema operativo, que pretende ser global. Su principal objetivo son los Smartphone pero exitirán versiones para PC, para tablets, TV inteligentes e incluso para coches (por cierto este último con muy buena pinta, <a title="[Tizen para coches]" href="http://www.youtube.com/watch?v=HZClYjAxP6Y" target="_blank">ver vídeo</a>)&nbsp;</p>
+<p><strong><a title="[Tizen]" href="http://www.tizen.org/">Tizen</a></strong> esta patrocinado y promovido por la <strong>Linux Foundation</strong>. El proyecto es una “<em>join venture</em>” de varias empresas que van desde operadores móviles como <strong>Vodafone</strong> y <strong>Orange</strong>, a fabricantes de dispositivos como <strong>Samsung</strong> e <strong>Intel</strong>. Se ha elegido una forma de gobierno democrático en el que ninguna de las empresas que la forma lleva el peso de las decisiones, aunque eso no significa que cada una de ellas pueda crear sus propios módulos.</p>
+<p><strong>Tizen</strong> se fundamenta en estándares y es una plataforma de código abierto basada en <strong>Linux</strong>. Para el desarrollo de aplicaciones se ha elegido <strong>HTML 5</strong> como entorno de desarrollo de sus aplicaciones.&nbsp;</p>
+<p>Gracias al Taller de Tizen organizado por <a title="[Madrid JS]" href="http://www.meetup.com/madridjs/" target="_blank"><strong>MadridJS</strong></a> y impartido por <strong>Intel</strong> he podido saber las líneas maestras de su plataforma de desarrollo, <strong>API</strong> y <strong>SDK</strong>. <span id="more-380"></span></p>
+<p>Sólo hay que visitar la <a title="[Página de desarrollo de Tizen]" href="https://developer.tizen.org/">página de desarrollo</a> para descargarse el SDK y las herramientas de desarrollo. Los sistemas operativos soportados son por el momento Ubuntu (11.10 o 12.04), Windows 7 y Apple Mac OS (10.7, 10.8).</p>
+<p>El entorno de desarrollo está basado en <strong>Eclipse</strong>, por lo que le resultará familiar a muchos. Todo está pensado para facilitar la vida al desarrollador. Se ha hecho especial hincapié en la documentación y ejemplos, de tal manera que no es necesario buscar recursos externos.</p>
+<p>En la misma línea de mejorar la experiencia de desarrollo, existen dos herramientas para probar y debugear tus aplicaciones, el <b>simulador</b> y el <b>emulador</b>.</p>
+<p><div id="attachment_385" style="width: 660px" class="wp-caption aligncenter"><img class="size-full wp-image-385" alt="[Entorno de desarrollo y emulador]" src="/wp-content/uploads/2013/07/sdk-full_p.png" width="650" height="392" srcset="/wp-content/uploads/2013/07/sdk-full_p.png 650w, /wp-content/uploads/2013/07/sdk-full_p-300x180.png 300w, /wp-content/uploads/2013/07/sdk-full_p-624x376.png 624w" sizes="(max-width: 650px) 100vw, 650px" /><p class="wp-caption-text">[Entorno de desarrollo y emulador]</p></div>El <b>simulador</b> está basado en <b>Chrome</b> (navegador) y permite desplegar y hacer las pruebas rápidamente. Aquel que sabe lo que puede tardar en arrancar el emulador de Android bendecirá este &#8216;gatchet&#8217;. El <b>emulador</b> es una máquina virtual completa de Tizen, más parecido a un dispositivo físico. También se puede probar y depurar en el teléfono directamente. Tanto para el emulador como para desplegar en el teléfono físico es necesario poseer un certificado (para pruebas puede ser autofirmado). Existe una utilidad en el SDK que te permite generarlo.</p>
+<p>Con respecto a la política del &#8216;<strong>market</strong>&#8216; de Tizen se queda en un termino medio entre la permisividad de <strong>Android</strong> y el control de <strong>Applet</strong>. Pueden existir varios &#8216;markets&#8217; (probablemente cada fabricante, o cada operador tendrá el suyo propio) pero pongo un ejemplo curioso de las restricciones que puede haber. Para poder publicar en el market oficial hay unas directrices muy severas en el tema de los iconos de la aplicación. Tiene que ser de alta resolución, estar iluminados desde 90º (Es decir el punto de luz de la imagen tiene que ser desde arriba). El icono tiene que ser circular y debe haber al menos 2 píxeles trasparente a cada lado del icono. Sin esto no subes al market, estás avisado 🙂</p>
+<p>Al igual que Android las aplicaciones se empaquetan para su instalación con extensión &#8216;.<em>wgt</em>&#8216; (.<em>apk</em>, en Android).</p>
+<h2>… Mi opinión</h2>
+<p>Para mi es un acierto la elección de HTML5 como plataforma de desarrollo. Vengo del desarrollo web y el Swing de Java de Android se me hace muy cuesta arriba. Con este sistema, la línea entre una aplicación web en HTML5 y una nativa para Smartphone se diluye.</p>
+<p>Hay que tener en cuenta que con la aparición de Appcelerator titanium y Alloy (multiplataforma, mismo código para Android y IPhone) ya se utiliza HTML 5, así que parece que en un futuro todo irá por este camino.</p>
+<p>Sólo queda que Tizen pueda hacerse un hueco en el competitivo mundo de los SO para Smartphone.</p>
+<p>Espero que os sirva.</p>
+<p><a title="Mi CV" href="/mi-cv/">M.E.</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/sistemas-operativos/" rel="category tag">Sistemas operativos</a> y está etiquetada con <a href="/tag/html-5/" rel="tag">HTML 5</a>, <a href="/tag/javascript/" rel="tag">JavaScript</a>, <a href="/tag/sistemas-operativos-2/" rel="tag">sistemas operativos</a> en <a href="/lineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones/" title="21:03" rel="bookmark"><time class="entry-date" datetime="2013-07-11T21:03:19+00:00">11 julio, 2013</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navegación de entradas</h3>
+					<span class="nav-previous"><a href="/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/" rel="prev"><span class="meta-nav">&larr;</span> OpenStreetMap-OpenLayers-OpenRouteService la &#8216;alternativa&#8217; a Google Maps</a></span>
+					<span class="nav-next"><a href="/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/" rel="next">Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230; <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>

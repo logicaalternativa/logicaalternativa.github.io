@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>PHP &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/php/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>﻿Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</title>
+		<link>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/</link>
+		<comments>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/#comments</comments>
+		<pubDate>Tue, 27 Jan 2015 23:54:19 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[Sistemas operativos]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[rendimiento]]></category>
+		<category><![CDATA[robustez]]></category>
+
+		<guid isPermaLink="false">/?p=803</guid>
+		<description><![CDATA[(más =&#62; simular concurrencia, modelo de actores, de “pull request”,&#8230;) “Este artículo trata sobre la importancia de las pruebas de robustez y de rendimiento y su relación directa con la calidad del software, y lo importante que es medir y representar los datos en una gráfica. Un caso práctico, un sistema de cache PHP simpe [&#8230;]]]></description>
+		<wfw:commentRss>/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Dar valor a los tweets: Interés, difusión, audiencia,&#8230; trasteando con el API de Twitter</title>
+		<link>/tweets-interes-difusion-audiencia-trasteando-api-twiter/</link>
+		<pubDate>Tue, 17 Sep 2013 18:39:54 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[APIs]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[REST]]></category>
+		<category><![CDATA[tweets]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<category><![CDATA[widget]]></category>
+
+		<guid isPermaLink="false">/?p=427</guid>
+		<description><![CDATA[No se puede decir que sea un &#8216;social media&#8216;, pero de un tiempo a esta parte Twitter se ha convertido para mi en una fuente de información esencial y casi imprescindible.&#160; Tiene un pero, a veces te pierdes entre toda la información que te llega&#8230; Pensando siempre &#8216;alternativamente&#8216; me surgieron estas preguntas: ¿Sé puede hacer [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>LogicaAlternativa.com está en la(s) nube(s), en OpenShift</title>
+		<link>/logicaalternativa-com-esta-en-las-nubes/</link>
+		<pubDate>Sat, 15 Jun 2013 19:39:51 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[La Nube]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[Cloud Computing]]></category>
+		<category><![CDATA[MySQL]]></category>
+		<category><![CDATA[Nube]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[WordPress]]></category>
+
+		<guid isPermaLink="false">/?p=315</guid>
+		<description><![CDATA[“Si lees esto significa que Lógica Alternativa está ya en la nube”&#8230; Lo siento no he podido resistir la tentación de empezar esta entrada como los epílogos de las pelis 🙂 OpenShift es un servicio de Red Hat encuadrado en la capa PaaS (Plataforma como Servicio), enfocado por lo tanto al desarrollador. Permite desplegar un [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Securización de formulario de acceso con SHA-1</title>
+		<link>/securizacion-de-formulario-de-acceso-con-sha-1/</link>
+		<pubDate>Fri, 19 Apr 2013 10:06:10 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[acceso]]></category>
+		<category><![CDATA[login]]></category>
+		<category><![CDATA[securizar]]></category>
+		<category><![CDATA[SHA-1]]></category>
+
+		<guid isPermaLink="false">/?p=68</guid>
+		<description><![CDATA[Muchas veces las aplicaciones web no tienen acceso por ssl (https) y suelen tener un formulario de &#8216;login&#8217; de usuario y contraseña. Esto quiere decir que información sensible como la contraseña se transmite en texto claro y que sea relativamente fácil que terceros pueden tener acceso a ella. Por ejemplo esnifando el tráfico si el [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>vert.x &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/vert-x/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<item>
+		<title>﻿Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230;</title>
+		<link>/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/</link>
+		<pubDate>Sun, 09 Mar 2014 22:27:12 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Concurrencia]]></category>
+		<category><![CDATA[vert.x]]></category>
+
+		<guid isPermaLink="false">/?p=583</guid>
+		<description><![CDATA[Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x La primera vez que oí hablar de Vert.x fue en la charla sobre el nuevo lenguaje Ceylon basado en la JVM que dio Gavin King&#160; (la mente pensante detrás de Hibernate) el pasado febrero en MadridJUG. Comentó que para la web estaban enfocando sus esfuerzos [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

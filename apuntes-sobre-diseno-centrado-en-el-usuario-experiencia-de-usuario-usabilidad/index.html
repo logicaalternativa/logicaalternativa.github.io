@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es-ES">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es-ES">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="es-ES">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230; | Lógica Alternativa</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://localhost/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://localhost/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='counterize_stylesheet-css'  href='/wp-content/plugins/counterize/counterize.css.php?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/counterize/counterize.js.php?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Líneas maestras del desarrollo para Tizen, nuevo SO enfocado a Smartphones' href='/lineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones/' />
+<link rel='next' title='Dar valor a los tweets: Interés, difusión, audiencia,&#8230; trasteando con el API de Twitter' href='/tweets-interes-difusion-audiencia-trasteando-api-twiter/' />
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/" />
+<link rel='shortlink' href='/?p=400' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fapuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fapuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad%2F&#038;format=xml" />
+
+<!-- Bad Behavior 2.2.19 run time: 3.202 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1506196589 127.0.0.1';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://localhost/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://localhost/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_common.js?ver=2015.0.2.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/devformatter/devfmt_public.js?ver=2015.0.2.1'></script>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
+<style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
+
+<body class="post-template-default single single-post postid-400 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="/" title="Lógica Alternativa" rel="home">Lógica Alternativa</a></h1>
+			<h2 class="site-description">&#039;¿Otro blog de informática? &#8230; Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Ir al contenido">Ir al contenido</a>
+			<div class="nav-menu"><ul>
+<li ><a href="/">Inicio</a></li><li class="page_item page-item-30"><a href="/mi-cv/">Mi CV</a></li>
+<li class="page_item page-item-122"><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="/"><img src="/wp-content/uploads/2013/04/cabecera3.jpg" class="header-image" width="960" height="250" alt="Lógica Alternativa" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-400" class="post-400 post type-post status-publish format-standard hentry category-programacion tag-card-sorting tag-diseno-centrado-en-el-usuario tag-experiencia-de-usuario tag-testing-ab tag-usabilidad">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Apuntes sobre diseño centrado en el usuario, Experiencia de usuario, Usabilidad, &#8230;</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><strong>Usabilidad</strong>, <strong>Experiencia de Usuario</strong>, <strong>Diseño Centrado en el Usuario</strong>, &#8230; son palabras que se nos han hecho familiares a raíz de la evolución de la web y sobre todo con la aparición de los nuevos dispositivos móviles.</p>
+<p>Esto ha hecho que el técnico experto en estas materias sean uno de los perfiles más valorados en el mercado. Existen otros conceptos relacionados, unos a nivel teórico y otros unidos a la práctica profesional, que son elementos claves y que engloban lo que se llama interacción persona-ordenador (IPO).</p>
+<p>En mi vida profesional he utilizado estas técnicas y conceptos. Últimamente me he enfrentado a ellos desde la visión académica. Para poder fijar ideas y tener una visión clara y concisa de esta apasionante disciplina me obligado a escribir este artículo.</p>
+<p>Me centraré más en el Diseño Centrado en el Usuario, en que consiste, cuales son sus ventajas, sus etapas, que herramientas se usan y su integración con la metodologías ágiles. Pero antes y para enmarcarlo en su contexto doy unas pequeñas pinceladas sobre conceptos como Interacción persona-ordenador, Experiencia de usuario y Usabilidad.<span id="more-400"></span></p>
+<h2>Interacción persona-ordenador (IPO)</h2>
+<p>Este concepto surge del mundo académico. La IPO se fundamenta en tres pilares: <strong>tecnología</strong>, <strong>personas</strong> y <strong>diseño</strong>. De la &#8216;Tecnología interesa sus posibilidades de interacción, de las &#8216;Personas&#8217; su comportamiento, sus capacidades y su entorno, como resuelven problemas,&#8230; y del &#8216;Diseño&#8217;, conociendo las otras dos (tecnología y personas), el idear soluciones a los problemas de interacción.</p>
+<p>Si pensamos y profundizamos un poco en estos tres conceptos es fácil entender que la IPO bebe de&nbsp; muchas disciplinas . Además de la informática, a la IPO le interesa la <em>Ergonomía</em> (Human factors), de la <em>Psicología</em> le interesa su parte cognitiva (el procesamiento humano de la información), la <em>Lingüística</em>, las <em>Ciencias de la Documentación</em> (poniendo énfasis en la recuperación y la estructura de la información), el <em>Diseño</em>, las <em>Ciencias Sociales</em> (estudiar el al usuario y su comportamiento desde su dimensión social), etc.</p>
+<p>Tanto espectro de conocimiento hace que el estudio de la iteración se realice por grupos interdisciplinares formados por expertos en cada una de las áreas. El técnico en IPO debe de, además tener conocimientos más o menos profundos en cada apartado, saber comunicar y trabajar en equipo.</p>
+<h2>Experiencia de Usuario (UX)</h2>
+<p>A partir de estas disciplinas surgen conceptos dentro de la IPO como el de &#8216;Experiencia de Usuario&#8217;. Proviene del campo del marketing, y se desarrolla en un <strong>intervalo de tiempo más amplio</strong> que el de la interacción con el producto, ya se este web, aplicación o dispositivo. En al UX es importante no sólo la<strong> facilidad de uso</strong>, sino las <strong>emociones</strong>, la <strong>diversión</strong> y el <strong>placer</strong> que proporciona su uso. Es un todo que engloba lo que se llama Ingeniería de Usabilidad, Diseño de la Interacción (idea que proviene del área del diseño) y Arquitectura de la Información (se centra en el contenido).</p>
+<p>Un método relacionado con la &#8216;Experiencia de Usuario&#8217; es la <em>Ingeniería Kansei</em>. Proviene del mundo del automóvil (se remarca, otra vez, la disparidad de origines de conceptos relacionados). Establece y mide la relación entre los sentimientos y un producto.</p>
+<h2>Usabilidad</h2>
+<p>Es importante explicar un poco más el concepto de <strong>Usabilidad</strong>. Esta se puede <strong>medir</strong>, <strong>evaluar</strong> y <strong>comparar</strong>. Por eso se precede de la palabra &#8220;ingeniería&#8221; y no &#8220;arte&#8221;. Es el grado de la eficacia, la eficiencia y la satisfacción del usuario cuando se usa un producto. Estos parámetros se pueden medir:</p>
+<ul>
+<li><em> Eficiencia</em> =&gt; tiempo medio empleado en el proceso</li>
+<li><em>Eficacia</em> =&gt; número medio de errores que se comente</li>
+<li><em>Satisfacción de usuario</em> =&gt; valoración final por parte de este</li>
+</ul>
+<p>La <strong>Usabilidad</strong> se define para un <strong>tipo de usuario</strong>, unos <strong>objetivos</strong> y un <strong>contexto de uso</strong> específicos. Una web social enfocada a un público juvenil nativo digital puede no ser &#8216;usable&#8217; para una persona no acostumbrada a utilizar Internet y eso no es intrínsecamente malo.</p>
+<p>Es decir a la hora de diseñar una web o un producto lo primero que debemos definir son estos tres parámetros. A que tipo de usuario nos dirigimos, que objetivos tiene que cumplir y en que contexto se tiene que utilizar.</p>
+<h2>Diseño centrado en el usuario (DCU)</h2>
+<p>Y todo esto lleva al paradigma del &#8216;Diseño centrado en el usuario&#8217; que se caracteriza:</p>
+<ul>
+<li>Todo gira en torno al usuario.</li>
+<li>Es iterativo y cíclico</li>
+</ul>
+<p>Aquí hago un inciso para explicar el concepto de &#8216;<em>Modelo mental</em>&#8216;. No es más que la representación que somos capaces de construir a partir de nuestras experiencias. Como diseñadores tenemos un modelo metal preciso de como funciona el producto pero impreciso de como se interactúa con él. Sin embargo los usuarios del producto tienen un modelo incompleto de como funciona pero tienen un modelo metal muy preciso de como se interacciona. Esto es axioma esencial y que hay que remarcar,<strong> el diseñador no es el usuario</strong>.</p>
+<p>El objetivo del Diseño Centrado en el Usuario es lograr la Usabilidad del producto adaptándolo al modelo mental de sus usuarios. Todos los pasos tienen como guía las <strong>necesidades</strong>, los <strong>objetivos</strong> y los <strong>conocimientos</strong> del usuario y se lo involucra en la <strong>planificación</strong>, en el <strong>diseño</strong> y en el <strong>desarrollo</strong> del proyecto</p>
+<p>Se realiza en cuatro etapas que se suceden y se retroalimentan hasta conseguir el objetivo:</p>
+<ol>
+<li>Especificar el contexto de uso
+<ul>
+<li>Quien serán los usuarios</li>
+<li>Objetivos del producto</li>
+<li>En que contexto se usará</li>
+</ul>
+</li>
+<li>Especificar los requisitos</li>
+<li>Producir las soluciones de diseño</li>
+<li>Evaluación de las soluciones</li>
+</ol>
+<div id="attachment_406" style="width: 660px" class="wp-caption aligncenter"><img class="wp-image-406" alt="Etapas del Diseño Centrado en el Usuario" src="/wp-content/uploads/2013/08/foto.jpg" width="650" height="548" srcset="/wp-content/uploads/2013/08/foto.jpg 650w, /wp-content/uploads/2013/08/foto-300x252.jpg 300w, /wp-content/uploads/2013/08/foto-624x526.jpg 624w" sizes="(max-width: 650px) 100vw, 650px" /><p class="wp-caption-text">[Etapas del Diseño Centrado en el Usuario]</p></div>
+<h3>Contexto de uso y definición de requisitos</h3>
+<p>Las herramientas que se utilizan para definir el contexto y los requisitos son variadas. Están las cualitativas como la <strong>entrevista</strong> en el lugar de trabajo, las <strong>dinámicas de grupo</strong> y las cuantitativas como las <strong>encuestas</strong>, el &#8216;<strong>logging</strong>&#8216; y el <strong>análisis competitivo</strong> (benchmarking).</p>
+<p>Según la naturaleza de lo que se diseña unas tendrán más peso que las otras. Si se trata de un producto nuevo será más interesante identificar a los usuarios y sus requisitos mediante entrevistas para más adelante realizar encuestas y hacer un análisis competitivo de productos que estén ya en el mercado. Si lo que se trata es de mejorar un producto el logging es muy útil. Analizar los <strong>logs</strong> y las <strong>estadísticas</strong> de una web, &#8230; las páginas de entrada, las de fuga, las navegaciones más usuales, el tiempo medio por página&#8230; nos puede dar importante información sobre el comportamiento de los usuarios.</p>
+<p>Una vez recogida la información, se abstrae para definir los requisitos definiendo los <strong>perfiles</strong> de usuarios y de <strong>escenarios</strong> de uso. Como ayuda también se usa la técnica de &#8216;<strong>Personajes</strong>&#8216;, la descripción de un usuario arquetipo que sirve como guía y que es actor en la definición de un escenario.</p>
+<h3>Soluciones de diseño y arquitectura de la información</h3>
+<p>Para la ordenación y la clasificación de conceptos y como se debe mostrar la información el <a title="Card Sorting" href="http://en.wikipedia.org/wiki/Card_sorting" target="_blank"><strong>Card Sorting</strong></a> puede ser útil.</p>
+<p>El <strong>prototipado</strong> y la creación de maquetas sirven para evaluar posibles soluciones antes de codificar la funcionalidad. En unas primeras fases puede ser de &#8216;baja fidelidad&#8217; para definir elementos generales (de hecho estos prototipos se suelen hacer con la apariencia de haberse hecho a mano alzada) para pasar después a ser de &#8216;alta fidelidad&#8217; que sirven para definir detalles.</p>
+<p>También un prototipo puede ser &#8216;vertical&#8217;, modelando una parte muy concreta con casi la apariencia y la funcionalidad final o &#8216;horizontal&#8217; donde lo importante es la navegación y como se muestra la información de todos los módulos del producto en su conjunto y no la funcionalidad.</p>
+<h3>Métodos de evaluación</h3>
+<p>Entre estos están los <strong>test con usuarios</strong>. Se deben tomar como una información cualitativa donde es más importante obtener unas conclusiones que elaborar&nbsp; métricas o estadísticas.</p>
+<p>Se utilizan también métodos de inspección realizados por un experto en Usabilidad y sin que en este análisis intervengan los usuarios. Uno de ellos es comprobar si se <strong>cumplen los estándares</strong> (Ejemplo W3C ) y si el diseño es consistente entre los diferente módulos del producto.&nbsp; Se completan con <strong>evaluaciones heurísticas</strong> examinando si se cumplen las reglas y los principios de Usabilidad que previamente se han establecido. Otro método es el <strong>recorrido cognitivo</strong>, en el que el expertos se pone en la piel del usuario y recorre los escenarios definidos asumiendo su rol.</p>
+<p>El <strong>Testing A/B</strong> se puede utilizar en ciertos casos. A un grupo de usuarios se le muestra una versión A del producto y a otro grupo una versión B. Después, con el retorno obtenido, se valora cual es la mejor en términos de Usabilidad y Experiencia de Usuario. Está técnica, a mi modo de ver, sólo es factible cuando lo que se valora son maquetas cuando el desarrollo permita que sea asumible realizar dos versiones de una misma funcionalidad.</p>
+<h3>Ventajas del DCU</h3>
+<p>Que el usuario este involucrado en todas las fases proyecto y la propia naturaleza de ser un proceso interactivo hace que:</p>
+<ul>
+<li>Los objetivos del proyecto sean claros y además estén priorizados por el usuario. Los requisitos estarán bien definidos.</li>
+<li>Permite que el seguimiento del proyecto sea el adecuado, ajustándolo y revisándolo en cada iteración.</li>
+<li>Sólo se desarrolla lo que se necesita y como se necesita</li>
+<li>Facilita un desarrollo correcto a la primera</li>
+</ul>
+<p>Otras ventajas inherentes al DCU son que aumenta la <strong>satisfacción</strong>, la <strong>productividad</strong> y la <strong>eficiencia</strong> del usuario. Además permite reducir los costes de <strong>soporte</strong> y <strong>formación</strong>.</p>
+<h3>DCU y Agile</h3>
+<p>Las metodologías Agiles tienen características comunes con el DCU, como que se llevan escrito en su ADN el concepto de <strong>iteración</strong>, pero son cosas diferentes. El Diseño Centrado en el Usuario tiene un ámbito más amplio. El <strong>Agile</strong>, que proviene de la Ingeniera del Software, está enfocado fundamentalmente a las fases de puramente desarrollo y por defecto no incorporan la investigación de usuarios.</p>
+<p>Para que el DCU se integre en el método Agile es necesario que se realice antes el trabajo de investigación de usuarios y la definición de sus requisitos, o bien que las primeras iteraciones se dediquen a principalmente a esta labor. Además se debe integrar en las fases de requerimientos y testing al usuario final que no siempre coincide con el cliente.</p>
+<h3>Conclusiones</h3>
+<p>El gran problema de la Ingeniería del Software es que un gran porcentaje de los proyectos no cumplen los objetivos de tiempo, coste y calidad.</p>
+<p>En este aspecto, las ventajas del desarrollo centrado en el usuario son innegables, además de aportar valor añadido al producto.</p>
+<p>El hecho de estar relacionado con ideas como Experiencia de usuario, la Usabilidad , la Accesibilidad , la Arquitectura de la información, el Diseño de la interacción, el Diseño Gráfico , el Design Thinking , el Diseño de Servicios, la Ingeniería Kansei etc.. , y que sea necesario saber como funciona la atención, la memoria, la toma decisiones, la percepción, como influye el factor social en los usuarios, como deben ser la anchura y la profundidad de una tarea y su peso en la percepción del tiempo del usuario,&#8230;, la importancia del color, la jerarquía visual, los textos&#8230; hace que este conjunto de materias sean muy interesantes y que realmente me apetezca saber más sobre estos temas.</p>
+<p>Espero que os sirva.</p>
+<p><a title="Mi CV" href="/mi-cv/">M.E.</a></p>
+<p><small>Articulo escrito a partir de las ideas y conceptos del material didáctico de la asignatura &#8220;<em>Interacción Persona-Ordenador</em>&#8221; del <em>Grado de Ingeniería Informática</em> de la <a title="UOC" href="http://www.uoc.edu/" target="_blank">UOC</a></small></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="/category/programacion/" rel="category tag">Programación</a> y está etiquetada con <a href="/tag/card-sorting/" rel="tag">Card Sorting</a>, <a href="/tag/diseno-centrado-en-el-usuario/" rel="tag">Diseño Centrado en el Usuario</a>, <a href="/tag/experiencia-de-usuario/" rel="tag">Experiencia de Usuario</a>, <a href="/tag/testing-ab/" rel="tag">Testing A/B</a>, <a href="/tag/usabilidad/" rel="tag">Usabilidad</a> en <a href="/apuntes-sobre-diseno-centrado-en-el-usuario-experiencia-de-usuario-usabilidad/" title="21:02" rel="bookmark"><time class="entry-date" datetime="2013-08-27T21:02:55+00:00">27 agosto, 2013</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navegación de entradas</h3>
+					<span class="nav-previous"><a href="/lineas-generales-del-desarrollo-para-tizen-nuevo-so-enfocado-a-smartphones/" rel="prev"><span class="meta-nav">&larr;</span> Líneas maestras del desarrollo para Tizen, nuevo SO enfocado a Smartphones</a></span>
+					<span class="nav-next"><a href="/tweets-interes-difusion-audiencia-trasteando-api-twiter/" rel="next">Dar valor a los tweets: Interés, difusión, audiencia,&#8230; trasteando con el API de Twitter <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-3" class="widget widget_text">			<div class="textwidget"><a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><img class="alignnone" alt="[RSS]" src="/wp-content/uploads/2013/04/rss_copy.png" width="20" height="20" /></a>&nbsp;&nbsp;<a href="/feed/" title="Suscribirse a este sitio usando RSS 2.0"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Buscar" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Entradas recientes</h3>		<ul>
+					<li>
+				<a href="/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/">Futuros y promesas,&#8230; y también monadas. Implementando el patrón</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-actores-tipados/">Actores tipados, Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos-sobre-supervision-bus-de-eventos/">Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</a>
+						</li>
+					<li>
+				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
+						</li>
+					<li>
+				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
+<small>Mi nombre es Miguel Rafael Esteban Martín. Llevo más de 15 años trabajando como&nbsp;analista&nbsp;de software en diferentes empresas, lenguajes de programación y plataformas.<br/>
+En este blog hablaré sobre programación y tecnología e intentaré hacerlo de manera clara y amena.<br/>
+Actualmente trabajando como <strong>arquitecto software</strong> para ING<br/>
+Más sobre mi en el enlace <strong><a href="/mi-cv/#imagenMiCV">Mi CV</a></strong></small>
+
+<p style="text-align: center;"><small><strong>Contacto</strong><br/>
+<a href="/mi-cv/#email"><img class="alignnone" alt="[correo electrónico]" src="/wp-content/uploads/2013/04/e_mail_p.png" width="32" height="32" /></a><a href="http://es.linkedin.com/in/miguelresteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en LinkedIn]" src="/wp-content/uploads/2013/04/linkedin.png" width="32" height="32" /></a><a href="https://twitter.com/MiguelREsteban"><img class="size-full wp-image-25 alignnone" alt="[Perfil en Twitter]" src="/wp-content/uploads/2013/04/twitter.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa"><img class="size-full wp-image-25 alignnone" alt="[Perfil en GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a>
+</small></p></div>
+		</aside><aside id="text-8" class="widget widget_text">			<div class="textwidget"> <!-- De aquí -->
+    <div id="twitter"></div>    
+    <script type="text/javascript" src="/etc/ejemplos/php/twiter-api/js/carga-widget.js.php"></script>
+    <!-- hasta aquí --></div>
+		</aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Categorías</h3>		<ul>
+	<li class="cat-item cat-item-15"><a href="/category/programacion/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="/category/apis/" >APIs</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/control-de-la-configuracion/" >Control de la configuración</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="/category/criptografia-y-certificados/" >Criptografía y certificados</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/general/" >General</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/programacion/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="/category/programacion/javascript/" >JavaScript</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="/category/la-nube/" >La Nube</a>
+</li>
+	<li class="cat-item cat-item-87"><a href="/category/programacion/patrones/" >Patrones</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="/category/programacion/php/" >PHP</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/programacion/" >Programación</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/sistemas-operativos/" >Sistemas operativos</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Lógica Alternativa</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.logicaalternativa.com/mi-cv/" property="cc:attributionName" rel="cc:attributionURL">Miguel Rafael Esteban Martín</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.es_ES">Creative Commons Reconocimiento-NoComercial 3.0 Unported License</a>.		
+			<!--
+						<a href="https://wordpress.org/" title="Plataforma semántica de publicación personal">Creado con WordPress</a>
+			-->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</body>
+</html>
