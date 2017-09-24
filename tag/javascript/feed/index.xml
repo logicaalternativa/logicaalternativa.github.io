@@ -12,7 +12,7 @@
 	<atom:link href="/tag/javascript/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 23 Sep 2017 19:51:40 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 23 Sep 2017 22:24:32 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -51,7 +51,7 @@
 		</item>
 		<item>
 		<title>﻿Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230;</title>
-		<link>/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/</link>
+		<link>/vert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/</link>
 		<pubDate>Sun, 09 Mar 2014 22:27:12 +0000</pubDate>
 		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
 				<category><![CDATA[Java]]></category>
@@ -60,7 +60,7 @@
 		<category><![CDATA[vert.x]]></category>
 
 		<guid isPermaLink="false">/?p=583</guid>
-		<description><![CDATA[Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x La primera vez que oí hablar de Vert.x fue en la charla sobre el nuevo lenguaje Ceylon basado en la JVM que dio Gavin King&#160; (la mente pensante detrás de Hibernate) el pasado febrero en MadridJUG. Comentó que para la web estaban enfocando sus esfuerzos [&#8230;]]]></description>
+		<description><![CDATA[Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x La primera vez que oí hablar de Vert.x fue en la charla sobre el nuevo lenguaje Ceylon basado en la JVM que dio Gavin King  (la mente pensante detrás de Hibernate) el pasado febrero en MadridJUG. Comentó que para la web estaban enfocando sus esfuerzos [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Mis primeros pasos de &#8216;newbie&#8217; en AngularJs</title>
@@ -76,8 +76,8 @@
 		</item>
 		<item>
 		<title>Java versus JavaScript, reflexiones</title>
-		<link>/%ef%bb%bfjava-versus-javascript-reflexiones/</link>
-		<comments>/%ef%bb%bfjava-versus-javascript-reflexiones/#comments</comments>
+		<link>/java-versus-javascript-reflexiones/</link>
+		<comments>/java-versus-javascript-reflexiones/#comments</comments>
 		<pubDate>Sun, 05 Jan 2014 19:21:53 +0000</pubDate>
 		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
 				<category><![CDATA[Java]]></category>
@@ -87,7 +87,7 @@
 
 		<guid isPermaLink="false">/?p=555</guid>
 		<description><![CDATA[Con la aparición de Node.js y la posibilidad de programar JavaScript en servidor se palpa entre los “javeros” cierta, no se encontrar la palabra, &#8230;¿preocupación?. La sensación es de “&#8230;nos están cambiando el agua&#8230;” y el comentario más oído es “&#8230; parece que es lo que se lleva ahora, no me gusta, pero habrá que [&#8230;]]]></description>
-		<wfw:commentRss>/%ef%bb%bfjava-versus-javascript-reflexiones/feed/</wfw:commentRss>
+		<wfw:commentRss>/java-versus-javascript-reflexiones/feed/</wfw:commentRss>
 		<slash:comments>1</slash:comments>
 		</item>
 		<item>

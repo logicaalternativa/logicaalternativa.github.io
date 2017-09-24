@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230; | Lógica Alternativa</title>
+<title>Java versus JavaScript, reflexiones | Lógica Alternativa</title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="/xmlrpc.php" />
 <!--[if lt IE 9]>
@@ -22,6 +22,7 @@
 <link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
 <link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Feed" href="/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; RSS de los comentarios" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lógica Alternativa &raquo; Java versus JavaScript, reflexiones RSS de los comentarios" href="/java-versus-javascript-reflexiones/feed/" />
 		<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
 			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -40,9 +41,9 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
 <link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
@@ -56,15 +57,15 @@ img.emoji {
 <link rel='https://api.w.org/' href='/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Mis primeros pasos de &#8216;newbie&#8217; en AngularJs' href='/mis-primeros-pasos-de-newbie-en-angularjs/' />
-<link rel='next' title='﻿Certificados, relaciones de confianza y Autoridades Certificadoras' href='/%ef%bb%bfcertificados-relaciones-de-confianza-y-entidades-certificadoras/' />
+<link rel='prev' title='Configuración de entornos flexible en Spring utilizando SpEL' href='/configuracion-de-entornos-flexible-en-spring-utilizando-spel/' />
+<link rel='next' title='Mis primeros pasos de &#8216;newbie&#8217; en AngularJs' href='/mis-primeros-pasos-de-newbie-en-angularjs/' />
 <meta name="generator" content="WordPress 4.8.2" />
-<link rel="canonical" href="/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/" />
-<link rel='shortlink' href='/?p=583' />
-<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2F%25ef%25bb%25bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby%2F" />
-<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2F%25ef%25bb%25bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby%2F&#038;format=xml" />
+<link rel="canonical" href="/java-versus-javascript-reflexiones/" />
+<link rel='shortlink' href='/?p=555' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fjava-versus-javascript-reflexiones%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fjava-versus-javascript-reflexiones%2F&#038;format=xml" />
 
-<!-- Bad Behavior 2.2.19 run time: 2.872 ms -->
+<!-- Bad Behavior 2.2.20 run time: 3.739 ms -->
 <script type="text/javascript">
 <!--
 function bb2_addLoadEvent(func) {
@@ -85,7 +86,7 @@ bb2_addLoadEvent(function() {
 			var myElement = document.createElement('input');
 			myElement.setAttribute('type', 'hidden');
 			myElement.name = 'bb2_screener_';
-			myElement.value = '1506196581 127.0.0.1';
+			myElement.value = '1506273097 127.0.0.1';
 			document.forms[i].appendChild(myElement);
 		}
 	}
@@ -100,7 +101,7 @@ bb2_addLoadEvent(function() {
 <style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_reset.css?ver=2015.0.2.1' ); </style>
 <style type="text/css" media="screen"> @import url( '/wp-content/plugins/devformatter/devfmt_css.php?ver=2015.0.2.1' ); </style><script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'wp.08e04e90-ba64-4016-a864-853c9c560eca'});var st_type='wordpress3.5.1';</script></head>
 
-<body class="post-template-default single single-post postid-583 single-format-standard custom-font-enabled single-author">
+<body class="post-template-default single single-post postid-555 single-format-standard custom-font-enabled single-author">
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
@@ -126,53 +127,67 @@ bb2_addLoadEvent(function() {
 
 			
 				
-	<article id="post-583" class="post-583 post type-post status-publish format-standard hentry category-java category-javascript tag-concurrencia tag-java tag-javascript tag-vert-x">
+	<article id="post-555" class="post-555 post type-post status-publish format-standard has-post-thumbnail hentry category-java category-javascript tag-java tag-javascript tag-mvc tag-nosql">
 				<header class="entry-header">
-			
-						<h1 class="entry-title">Vert.x: Mucho más que trabajar en Java como en node.js.. y en groovy, ruby,&#8230;</h1>
+			<img width="240" height="102" src="/wp-content/uploads/2014/01/foto.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Java versus JavaScript" />
+						<h1 class="entry-title">Java versus JavaScript, reflexiones</h1>
 								</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<h1>Prueba de concepto: Gateway con websockets y Gtalk utilizando Vert.x</h1>
-<p><img class="alignleft size-full wp-image-602" alt="[Vert.x Logo]" src="/wp-content/uploads/2014/03/logo-white-big.png" width="240" height="72" />La primera vez que oí hablar de <a title="Vert.x" href="http://vertx.io/" target="_blank"><strong>Vert.x</strong></a> fue en la charla sobre el nuevo lenguaje <a title="Ceylang" href="http://ceylon-lang.org/" target="_blank">Ceylon</a> basado en la JVM que dio <strong>Gavin King</strong>&nbsp; (la mente pensante detrás de Hibernate) el pasado febrero en <strong>MadridJUG</strong>. Comentó que para la web estaban enfocando sus esfuerzos en un framework asíncrono basado en <strong>Vert.x</strong>.</p>
-<p>&#8220;<em>¿Asíncrono&#8230;?&#8221;</em> Ya se me levantó la ceja a lo &#8216;Sobera&#8217; .. y lo que me dio ya la puntilla es cuando se puso a picar en directo un servidor web (puro live coding :-)) me olía todo tenía un aire a como se trabaja con <strong>node.js</strong>,.. Así que me dije&#8230;&#8221;<em>esto de Vert.x me lo tengo que mirar</em>&#8220;.</p>
-<p>He de reconocer que con el título del post me he pasado&#8230; He estado dándole vueltas a uno que tuviera &#8216;<em>punch</em>&#8216;&#8230; y me parece que he tirado por lo fácil. En realidad Vert.x es mucho más que un servidor web&#8230; Su &#8216;<em>misión</em>&#8216;, &#8216;<em>visión</em>&#8216; y &#8216;<em>valores</em>&#8216; es soportar <strong>millones</strong> <strong>de</strong> <strong>conexiones concurrentes</strong> usando un número mínimo de hilos del sistema operativo (¿¿?? así lo asegura en su documentación), imposibles en un esquema multihilo típico.</p>
-<h2>¿Qué es Vert.x?</h2>
-<p>Vert.x es un framework basado en eventos que corre en la máquina virtual de Java. Hecho para que sea fácil de <strong>escalar</strong> y soporte a <strong>tolerancia a fallos</strong>. Pensado para que existan de una manera sencilla varios cores en diferentes JVM y que se intercomuniquen entre ellos. <strong>Vert.x</strong> resuelve la concurrencia siguiendo el <a title="Modelo de actores" href="http://en.wikipedia.org/wiki/Actor_model" target="_blank"><strong>modelo de actores</strong></a> y además asegura que no existirán bloqueos entre hilos. Otra de sus características es su &#8216;<strong><em>bus de eventos</em></strong>&#8216; que permite desacoplar tu aplicación en módulos y comunicarse entre ellos a través de mensajes. Y todo de manera asíncrona.</p>
-<p><strong>Vert.x</strong> es &#8216;<strong><em>Políglota</em></strong>&#8216;, soporta <strong>JavaScript</strong>, <strong>Ruby</strong>, <strong>Groovy</strong>, <strong>Java</strong> o <strong>Python</strong> y con vista a soportar <strong>Scala</strong>, <strong>Clojure</strong> e incluso <strong>PHP</strong>. Ejecuta<strong> código fuente</strong> por lo que, por ejemplo, existe la posibilidad de arrancarlo con ficheros &#8216;.java&#8217; sin necesidad de compilarlos.</p>
-<h2>Simple hilo ó multihilo</h2>
-<p>Llegaréis a la conclusión y la compartiré de que con el título lo he simplificando demasiado ¿Pero porque he hecho esta comparación? Porqué Node.js y Vert.x tienen funcionamientos similares.</p>
-<p>En JavaScript no existe la concurrencia. Aunque esta afirmación pueda ser no del todo cierto, porque en <strong>html5</strong> y en el cliente existe los <strong>workers</strong>, en JavaScript sólo existe un hilo y las operaciones que bloquean se ejecutan con llamadas asíncronas.</p>
-<p>Y quizás esto, lo que parece su debilidad, es su virtud es esto lo que hace que node.js este valorado como un servidor con poca latencia cuando existe mucha carga .</p>
-<p>La diferencia fundamental entre node.js (o Vert.x) y un sistema tradicional multihilo es que la máquina virtual de node utiliza un sólo hilo para atender todas las peticiones. El hilo se limita a recibir la petición y realizar llamadas asíncronas. No espera el resultado de la petición y continua con la siguiente. Más tarde recogerá el resultado para devolverlo al cliente.</p>
-<p>Por el contrario en un sistema multihilo, por ejemplo en un despliegue tradicional de Java, existe un hilo para cada petición. Este se queda bloqueado mientras espera el resultado de una operación. Esto hace que bajo mucha carga existan muchos hilos y parte de ellos esperando, lo que repercute en la latencia.</p>
-<p><strong>Vert.x</strong> trabaja de igual manera, en este caso utilizando el modelo de actores en el que cada uno de los actores será un &#8216;<strong><em>verticle</em></strong>&#8216;. En la documentación lo definen con una partícula de Vert.x y en la práctica es la manera de definir el código desplegado. Los &#8216;<em>verticles</em>&#8216; se pueden agrupar en <strong>módulos</strong> (lo más usual cuando la aplicación deja de ser trivial) y estos se pueden reutilizar.</p>
-<h2>&#8230;Y la prueba de concepto</h2>
-<p>Con Vert.x es muy sencillo crear <strong>servidores</strong> y <strong>clientes</strong> <strong>socket</strong>, <strong>ssl</strong>, <strong>http</strong> y <strong>websocket</strong>.</p>
-<p>Necesitaba poder familiarizarme con la herramienta y tenía que hacer algo. Es entonces cuando recordé la presentación y demo muy, muy chula que hizo <strong>Iván</strong> <strong>López</strong> en <strong>MadridGUG</strong> utilizando una cuenta de Gtalk como boot. Así que basándome en esa idea he creado una prueba de concepto realizando un <strong>Gateway con WebSockets y Gtalk utilizando Vert.x</strong>. El proyecto es un proyecto <strong>Java</strong>.</p>
-<p>Se utiliza una cuenta de Gtalk para poder crear una sala de chat entre usuarios que se conectan por Gtalk y usuarios que se conectan con un navegador mediante websockets.</p>
-<p>Este ejemplo no explota todas las posibilidades&nbsp; de Vert.x como el escalado y el bus de eventos pero si que despliega servidores web y de websocket. Me ha permitido conocer como se genera, se configura y se ejecuta un módulo. En definitiva, ha conseguido mi objetivo que como he dicho más arriba era familiarizarme con el framework</p>
-<p>El proyecto lo he subido a <a title="GitHug de lógica alternativa" href="https://github.com/logicaalternativa" target="_blank">GitHub</a> y que es lo que hace y como está explicado en el <a href="https://github.com/logicaalternativa/gateway-gtalk-websocket-vertx/blob/master/README.md" target="_blank">README.md </a>.</p>
-<p style="text-align: center;"><a title="Prueba de concepto: Gateway WebSockets y Gtalk utilizando Vert.x" href="https://github.com/logicaalternativa/gateway-gtalk-websocket-vertx" target="_blank"><img class="size-full wp-image-432 alignnone" alt="[Logo GitHub]" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" width="32" height="32" /></a><a href="https://github.com/logicaalternativa/gateway-gtalk-websocket-vertx" target="_blank"> Prueba de concepto: Gateway WebSockets y Gtalk utilizando Vert.x</a></p>
-<p style="text-align: center;"><a title="Archivo README.md" href="https://github.com/logicaalternativa/gateway-gtalk-websocket-vertx/blob/master/README.md" target="_blank">README.md</a></p>
+			<p><strong>C</strong>on la aparición de <strong>Node.js</strong> y la posibilidad de programar <strong>JavaScript</strong> en servidor se palpa entre los “<em>javeros</em>” cierta, no se encontrar la palabra, &#8230;¿preocupación?. La sensación es de “<em>&#8230;nos están cambiando el agua&#8230;</em>” y el comentario más oído es “<em>&#8230; parece que es lo que se lleva ahora, no me gusta, pero habrá que aprenderlo&#8230;</em>”</p>
+<p>A este desasosiego no ayudan post como los de <strong>PayPal</strong> (<a title="[PayPal se pasa a Node.js]" href="https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/" target="_blank" rel="noopener">enlace</a> ) en el que en resumen dicen que se pasan a JavaScript entre otras cosas porque es más rápido, necesitan menos gente y además se tira menos código. En respuesta a este post ha habido otros que han salido en defensa de Java y para poner coherencia en el tema (<a title="[Replica al post de Paypal]" href="http://developer-blog.cloudbees.com/2013/12/about-paypal-node-vs-java-fight.html?m=1" target="_blank" rel="noopener">enlace</a>)&#8230; y es que es lo que tienen casi todos los benchmark que pecan de partidistas.</p>
+<p>En todas las ingenierías, pero mucho más en informática, tienes que estar en continua formación y estar al tanto de lo que se está haciendo. Es cierto que no podemos negar que también va todo un poco por modas y que es todo es cíclico. Parece que más tarde o más temprano siempre volvemos al mismo sitio que nos estamos moviendo en un circulo cerrado. Yo prefiero verlo más como una espiral&#8230; si la ves verticalmente parece que estás en el mismo punto,&#8230; pero que si la ves horizontalmente te das cuenta que estás en un nivel superior. Un ejemplo de esto son las nuevas bases de datos <strong>NOsql</strong>. Puede parecer que vuelven a las bases de datos pre-relacionales pero en realidad aportan muchas más cosas (escalabilidad, rapidez, big data y su explotación).</p>
+<p>Pasa lo mismo con JavaScript hace mucho mucho tiempo que ha dejado de ser un lenguaje que sirve para poco más que hacer validaciones y hacer las “<em>cosas bonitas</em>” en la capa de presentación.</p>
+<p>El gran problema de los “javeros” que dan sus primeros pasos en JavaScript, entre los que me incluyo, es que a la hora de enfrentarse al nuevo lenguaje piensan “<em>&#8230; al final será algo como Java, con tipado dinámico y bueno con callbacks..</em>. ” y nada más lejos de la realidad, JavaScript es otra filosofía y en realidad casi casi comparte con Java poco más que el nombre y algunas palabras reservadas.</p>
+<p>Creo que en el aprendizaje hay que enfrentarse con una actitud diferente y positiva. Me parece muy interesante el trabajo que ha realizado <strong>Micael Gallego </strong>en su blog (<a title="[Blog Micael Gallego]" href="http://micaelgallego.github.io/blog/Viaje-por-las-tecnologias-de-front-end/" target="_blank" rel="noopener">enlace</a>), en el que explica su viaje en el aprendizaje del lenguaje desde el punto de vista de un programador Java y como a lo largo de los diferentes artículos va entendiendo la filosofía de JavaScript. A mi me ha ayudado mucho su lectura, así que no puedo más que recomendarla.</p>
+<p>Reconozco que no soy experto en JavaScript y no puedo opinar en profundidad. Pero desde fuera creo que lo bueno y lo malo de JavaScript es que debido a su dinamismo, se pueden hacer las cosas de varias maneras. En Java por el contrario que es todo más cuadriculado.</p>
+<p>De todas maneras creo que lo mejor es ser práctico, intentar conocer las debilidades y las fortalezas de cada lenguaje&#8230; Por ejemplo no me platearía hacer una aplicación de escritorio para Widonws en Java, para eso creo que es mucho mejor .NET. Por la misma razón me encontraría más a gusto, en aplicaciones de Backend en un proyecto con un equipo de trabajo numeroso, en un arquitectura Java que en una JavaScript, ya que al ser Java más “estricto” el código tendería ser más uniforme.</p>
+<p>Lo que es cierto es que JavaScript permite hacer nuevas arquitecturas muy escalables y derivando gran parte de la responsabilidades al cliente. <strong>Angular.js</strong> es un framework que sigo muy de cerca. Sé que en algunos aspectos puede ser limitado pero prefiero la seguridad de basarme en algo estándar para montar una arquitectura MVC en el cliente.</p>
+<p>Además JavaScript, junto con HTML5 se está convirtiendo en la única opción en la parte de navegador. Debido a las restricciones de seguridad que se están poniendo a los <strong>applets</strong> de java y a las <strong>extensiones</strong> y <strong>plugins</strong>. Son un autentico quebradero de cabeza por los agujeros de seguridad encontrados. Un ejemplo, Firefox a partir de su versión 26 no vienen habilitados por defecto los plugins excepto el de Flash.</p>
+<p>Por eso en cosas “<em>especiales</em>” en la capa de cliente que por inercia antes te planteabas hacerlas con un applet o una extensión ahora enfocas tus esfuerzos en hacerlas en JavaScript&#8230; y se pueden hacer cosas muy, muy chulas.</p>
 <p>Espero que os sirva.</p>
 <p><a title="Mi CV" href="/mi-cv/">M.E.</a></p>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
-			Esta entrada se publicó en <a href="/category/programacion/java/" rel="category tag">Java</a>, <a href="/category/programacion/javascript/" rel="category tag">JavaScript</a> y está etiquetada con <a href="/tag/concurrencia/" rel="tag">Concurrencia</a>, <a href="/tag/java/" rel="tag">Java</a>, <a href="/tag/javascript/" rel="tag">JavaScript</a>, <a href="/tag/vert-x/" rel="tag">vert.x</a> en <a href="/%ef%bb%bfvert-x-mucho-mas-que-trabajar-en-java-como-node-js-y-en-groovy-ruby/" title="23:27" rel="bookmark"><time class="entry-date" datetime="2014-03-09T23:27:12+00:00">9 marzo, 2014</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+			Esta entrada se publicó en <a href="/category/programacion/java/" rel="category tag">Java</a>, <a href="/category/programacion/javascript/" rel="category tag">JavaScript</a> y está etiquetada con <a href="/tag/java/" rel="tag">Java</a>, <a href="/tag/javascript/" rel="tag">JavaScript</a>, <a href="/tag/mvc/" rel="tag">MVC</a>, <a href="/tag/nosql/" rel="tag">NOsql</a> en <a href="/java-versus-javascript-reflexiones/" title="20:21" rel="bookmark"><time class="entry-date" datetime="2014-01-05T20:21:53+00:00">5 enero, 2014</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
 	</article><!-- #post -->
 
 				<nav class="nav-single">
 					<h3 class="assistive-text">Navegación de entradas</h3>
-					<span class="nav-previous"><a href="/mis-primeros-pasos-de-newbie-en-angularjs/" rel="prev"><span class="meta-nav">&larr;</span> Mis primeros pasos de &#8216;newbie&#8217; en AngularJs</a></span>
-					<span class="nav-next"><a href="/%ef%bb%bfcertificados-relaciones-de-confianza-y-entidades-certificadoras/" rel="next">Certificados, relaciones de confianza y Autoridades Certificadoras <span class="meta-nav">&rarr;</span></a></span>
+					<span class="nav-previous"><a href="/configuracion-de-entornos-flexible-en-spring-utilizando-spel/" rel="prev"><span class="meta-nav">&larr;</span> Configuración de entornos flexible en Spring utilizando SpEL</a></span>
+					<span class="nav-next"><a href="/mis-primeros-pasos-de-newbie-en-angularjs/" rel="next">Mis primeros pasos de &#8216;newbie&#8217; en AngularJs <span class="meta-nav">&rarr;</span></a></span>
 				</nav><!-- .nav-single -->
 
 				
 <div id="comments" class="comments-area">
 
 	
+			<h2 class="comments-title">
+			Un pensamiento en &ldquo;<span>Java versus JavaScript, reflexiones</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-173">
+		<article id="comment-173" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://2.gravatar.com/avatar/5bd5dd3b72fb626846e11aae7a7e5873?s=44&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5bd5dd3b72fb626846e11aae7a7e5873?s=88&amp;d=mm&amp;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://jbviera.blogspot.com/' rel='external nofollow' class='url'>José Viera</a></b> </cite><a href="/java-versus-javascript-reflexiones/#comment-173"><time datetime="2015-06-10T20:24:04+00:00">10 junio, 2015 en 20:24</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Estoy de acuerdo contigo Miguel, la tendencia hoy en día es HTML5+JS+CSS3, además esto te permite llevarlo a otras plataformas como a los móviles, gracias a Apache Cordova y PhoneGap.</p>
+<p>Actualmente estoy trabajando en el Front-End usando HTML5 + Angularjs + Bootstrap3 , me comunico con el Back-End usando servicios Rest, una arquitectura de esta forma te ayuda a desacoplar los componentes de una manera muy eficiente.</p>
+<p>Saludos!</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+				<p class="nocomments">Los comentarios están cerrados.</p>
+		
 	
 	
 </div><!-- #comments .comments-area -->
@@ -203,7 +218,7 @@ bb2_addLoadEvent(function() {
 				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
 						</li>
 					<li>
-				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+				<a href="/pruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
 						</li>
 				</ul>
 		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>

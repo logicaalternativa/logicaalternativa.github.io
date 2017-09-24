@@ -41,9 +41,9 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
 <link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
@@ -59,7 +59,7 @@ img.emoji {
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 4.8.2" />
 
-<!-- Bad Behavior 2.2.19 run time: 2.892 ms -->
+<!-- Bad Behavior 2.2.20 run time: 10.518 ms -->
 <script type="text/javascript">
 <!--
 function bb2_addLoadEvent(func) {
@@ -80,7 +80,7 @@ bb2_addLoadEvent(function() {
 			var myElement = document.createElement('input');
 			myElement.setAttribute('type', 'hidden');
 			myElement.name = 'bb2_screener_';
-			myElement.value = '1506196689 127.0.0.1';
+			myElement.value = '1506273275 127.0.0.1';
 			document.forms[i].appendChild(myElement);
 		}
 	}
@@ -129,7 +129,7 @@ bb2_addLoadEvent(function() {
 				<header class="entry-header">
 			
 						<h1 class="entry-title">
-				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/" rel="bookmark">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+				<a href="/pruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/" rel="bookmark">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
 			</h1>
 								</header><!-- .entry-header -->
 
@@ -144,7 +144,7 @@ bb2_addLoadEvent(function() {
 <p>El cache también tiene sus problemas intrínsecos complejos. Por ejemplo, la invalidez de los valores cacheados. Si no se hace correctamente se puede trabajar con datos &#8216;antiguos&#8217; y perder información. Problema antiguo&#8230; <strong>Martin</strong> <strong>Fowler </strong><em>(<a href="#referencias">2</a>)</em>, ha hecho famosa la cita de <strong>Phil Karlton</strong></p>
 <blockquote><p>“There are only two hard things in Computer Science: cache invalidation and naming things.”</p></blockquote>
 <h2>El caso práctico, cache simple en PHP</h2>
-<p>El objetivo de este post no es tan ambicioso como para meterse de lleno en este problema. En su tiempo para el post “<a title="Dar valor a los tweets: Interés, difusión, audiencia,… trasteando con el API de Twitter" href="/tweets-interes-difusion-audiencia-trasteando-api-twiter/" target="_blank">Dar valor a los tweets: Interés, difusión, audiencia,… trasteando con el API de Twitter</a>” necesitaba una librería para cachear los resultados del api de Twitter. Me decanté la librería <a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank"><strong>php-cache</strong></a> de <strong><a title="[Emilio Cobos]" href="http://emiliocobos.net/" target="_blank">Emilio Cobos</a></strong>, me pareció sencilla, fácil de utilizar y configurar y suficiente para lo que necesitaba. Desde entonces llevo usándola también en otros proyectos.</p>
+<p>El objetivo de este post no es tan ambicioso como para meterse de lleno en este problema. En su tiempo para el post “<a title="Dar valor a los tweets: Interés, difusión, audiencia,… trasteando con el API de Twitter" href="/tweets-interes-difusion-audiencia-trasteando-api-twiter/" target="_blank" rel="noopener">Dar valor a los tweets: Interés, difusión, audiencia,… trasteando con el API de Twitter</a>” necesitaba una librería para cachear los resultados del api de Twitter. Me decanté la librería <a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank" rel="noopener"><strong>php-cache</strong></a> de <strong><a title="[Emilio Cobos]" href="http://emiliocobos.net/" target="_blank" rel="noopener">Emilio Cobos</a></strong>, me pareció sencilla, fácil de utilizar y configurar y suficiente para lo que necesitaba. Desde entonces llevo usándola también en otros proyectos.</p>
 <p>El almacenamiento en memoria es lo más rápido para una cache. Esto, que en <strong>Java</strong> es sencillo de implementar, basta con almacenar el valor en un atributo estático de una clase para que este accesible en todos los hilos de ejecución, en <strong>PHP</strong> es necesario usar extensiones externas al core de <strong>PHP</strong> o utilizar memoria compartida. Esto último honestamente no creo que sea lo más se adecue dentro de este contexto en donde lo que busqué es la máxima sencillez.</p>
 <p><img class="alignleft size-full wp-image-820" src="/wp-content/uploads/2015/01/cache.png" alt="[Cache]" width="175" height="148" />La finalidad de la librería es tener un sistema de cache sencillo <strong>sin necesidad de instalación</strong> de extensiones como <em>apc</em> ni ni servicios como <em>memcache</em>. Tan sólo es necesario que el usuario del apache tenga permisos de escritura, cosa que es lo más común. Por esto es ideal para “alojamientos compartidos” de páginas web.</p>
 <p>Su funcionamiento similar a otras librerías de este tipo. Está basada en la <strong>serialización</strong> de las variables, y su almacenaje en <strong>ficheros</strong> de texto. El código fuente es sencillo, ordenado y muy fácil de seguir.</p>
@@ -153,11 +153,11 @@ bb2_addLoadEvent(function() {
 <p>Adelanto que propuse unos cambios en el código y Emilio Cobos a tenido a bien aceptar mi &#8216;<strong><em>pull request</em></strong>&#8216;, por lo tanto he pasado a ser un humilde, pero a la vez orgulloso contribuidor de <strong>php-cache</strong>.</p>
 <h2>Pruebas de robustez, concurrencia lectura/escritura de una clave de la cache</h2>
 <p><strong>php-cache</strong> utiliza para cada clave de la cache un fichero donde almacena el valor &#8220;<em>serializado</em>&#8220;. Para probar la concurrencia cuando varios procesos leen/escriben en una misma clave de la cache diseñe dos test.</p>
-<p>El primero de ellos, <strong><a title="[robustness-rw.test.php]" href="https://github.com/ecoal95/php-cache/blob/master/test/robustness-rw.test.php" target="_blank">robustness-rw.test.php</a></strong>, lanza <strong>10 procesos concurrentes</strong>, simulando 10 clientes ejecutando las mismas operaciones a la vez. Cada uno de ellos graba un valor en una clave de la cache y a continuación obtiene el valor de la misma clave de la cache. Estas dos operaciones las realiza cada proceso 50 veces (un total de 500 operaciones de escritura/lectura en total) cambiando cada vez el valor grabado de 3 posibles.</p>
+<p>El primero de ellos, <strong><a title="[robustness-rw.test.php]" href="https://github.com/ecoal95/php-cache/blob/master/test/robustness-rw.test.php" target="_blank" rel="noopener">robustness-rw.test.php</a></strong>, lanza <strong>10 procesos concurrentes</strong>, simulando 10 clientes ejecutando las mismas operaciones a la vez. Cada uno de ellos graba un valor en una clave de la cache y a continuación obtiene el valor de la misma clave de la cache. Estas dos operaciones las realiza cada proceso 50 veces (un total de 500 operaciones de escritura/lectura en total) cambiando cada vez el valor grabado de 3 posibles.</p>
 <p>El valor obtenido de la cache tiene que ser igual a alguno de los tres valores posibles. Si es diferente o es nulo el valor se considera como invalido.</p>
-<p>El segundo de los test de robustez, <a title="[robustness-rw2.test.php] " href="https://github.com/ecoal95/php-cache/blob/master/test/robustness-rw2.test.php" target="_blank"><strong>robustness-rw2.test.php</strong></a> es similar al anterior. En este caso además de guardar y obtener el valor se realiza una tercera operación de borrado de la clave de la cache. En este caso, el valor obtenido de la cache tiene que ser igual a alguno de los tres valores posibles o nulo. En cualquier otro caso se considera como inválido.</p>
-<p>Los dos test están el directorio <a title="[test]" href="https://github.com/ecoal95/php-cache/tree/master/test" target="_blank">test</a> repositorio principal de la librería ya que estaban incluidos en el &#8216;<strong><em>pull request</em></strong>&#8216; <strong>aceptado</strong>. En el <a title="[README.md]" href="https://github.com/ecoal95/php-cache/blob/master/test/README.md" target="_blank"><strong>README.md</strong></a> del directorio test está explicado más en profundidad lo que hacen y como se lanzan.</p>
-<p style="text-align: center;"><a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank"><img class="wp-image-432 size-full alignnone" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" alt="[Logo GitHub]" width="32" height="32" /> </a> <a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank">Repositorio GitHub Cache.php</a></p>
+<p>El segundo de los test de robustez, <a title="[robustness-rw2.test.php] " href="https://github.com/ecoal95/php-cache/blob/master/test/robustness-rw2.test.php" target="_blank" rel="noopener"><strong>robustness-rw2.test.php</strong></a> es similar al anterior. En este caso además de guardar y obtener el valor se realiza una tercera operación de borrado de la clave de la cache. En este caso, el valor obtenido de la cache tiene que ser igual a alguno de los tres valores posibles o nulo. En cualquier otro caso se considera como inválido.</p>
+<p>Los dos test están el directorio <a title="[test]" href="https://github.com/ecoal95/php-cache/tree/master/test" target="_blank" rel="noopener">test</a> repositorio principal de la librería ya que estaban incluidos en el &#8216;<strong><em>pull request</em></strong>&#8216; <strong>aceptado</strong>. En el <a title="[README.md]" href="https://github.com/ecoal95/php-cache/blob/master/test/README.md" target="_blank" rel="noopener"><strong>README.md</strong></a> del directorio test está explicado más en profundidad lo que hacen y como se lanzan.</p>
+<p style="text-align: center;"><a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank" rel="noopener"><img class="wp-image-432 size-full alignnone" src="/wp-content/uploads/2013/09/GitHub-Mark-32px.png" alt="[Logo GitHub]" width="32" height="32" /> </a> <a title="[php-cache]" href="https://github.com/ecoal95/php-cache/" target="_blank" rel="noopener">Repositorio GitHub Cache.php</a></p>
 <h3>Simulando los clientes concurrentes, esquema basado en el modelo de actores</h3>
 <p>¿Cómo simular los clientes/peticiones concurrentes? Hay que tener en cuenta que el soporte multihilo no viene habilitado en una instalación tipo de PHP. El esquema que he seguido para simular la concurrencia he seguido en el paradigma de “<em><strong>modelo de actores</strong></em>”.</p>
 <p>El script principal (actor principal) se encarga de lanzar los demás actores (procesos secundarios). En este caso son <strong>procesos</strong> PHP, en realidad una copia del mismo test que tiene un comportamiento diferente si “<em>actúa</em>” como actor secundario. Los secundarios se encargan cada uno de de hacer las 50 peticiones de escritura/lectura o escritura/lectura/borrado en una misma clave común.</p>
@@ -175,10 +175,10 @@ bb2_addLoadEvent(function() {
 <p>Al lanzar los test de robustez comprobé que en estos casos extremos de concurrencia la librería podía devolver la lectura de datos corruptos.</p>
 <p>Hice una pequeña modificación en el código. Ahora siempre que se almacena un valor de una clave se escribe en un <strong>archivo temporal</strong>. Si la escritura es correcta, el fichero temporal se renombrará al definitivo utilizando la función <em>rename</em> de PHP. Esta función, es atómica si se realiza en el mismo sistema de ficheros. Este es el caso ya que se trabaja en el mismo directorio.</p>
 <p>Volviendo a lanzar los test con este cambio ya no se obtienen datos corruptos y tanto la lectura se ejecutan sin errores.</p>
-<p>Después de hacer un &#8216;<em>fork</em>&#8216; del repositorio y propuse los cambios lanzado un &#8216;<em>pull request</em>&#8216;. Esta petición ha sido aceptada y los esta modificación está ya en el repositorio oficial de <a title="[php-cache en GitHub]" href="https://github.com/ecoal95/php-cache/" target="_blank">php-cache en GitHub</a></p>
+<p>Después de hacer un &#8216;<em>fork</em>&#8216; del repositorio y propuse los cambios lanzado un &#8216;<em>pull request</em>&#8216;. Esta petición ha sido aceptada y los esta modificación está ya en el repositorio oficial de <a title="[php-cache en GitHub]" href="https://github.com/ecoal95/php-cache/" target="_blank" rel="noopener">php-cache en GitHub</a></p>
 <h2>Pruebas de rendimiento. Mini benchmark</h2>
 <p><strong>php-cache</strong> es una librería basada en lectura/escritura de ficheros, así que su velocidad depende de lo rápido que sea el acceso a disco y su velocidad de lectura.</p>
-<p>En el repositorio de GitHub he subido un pequeño script (<strong><a title="[benchmark.test.php] " href="https://github.com/ecoal95/php-cache/blob/master/test/benchmark.test.php" target="_blank">benchmark.test.php</a></strong>) que permite realizar medidas del acceso a un valor de la cache y cual sería el tiempo medio por respuesta.</p>
+<p>En el repositorio de GitHub he subido un pequeño script (<strong><a title="[benchmark.test.php] " href="https://github.com/ecoal95/php-cache/blob/master/test/benchmark.test.php" target="_blank" rel="noopener">benchmark.test.php</a></strong>) que permite realizar medidas del acceso a un valor de la cache y cual sería el tiempo medio por respuesta.</p>
 <p>Además como referencia se calcula el valor medio que se tarda en recuperar el objeto de su representación en cadena cuando sus datos están en memoria sin acceder a disco. Es decir, el valor teórico ideal que se alcanzaría si el coste de tiempo de acceso a disco fuera cero.</p>
 <p>La información que devuelve el test es tanto el <em>coste real</em> como el <em>teórico</em>, <em>número de peticiones realizadas</em>, <em>tiempo total</em> y las estadísticas con datos sobre la <em>media de milisegundos</em> que ha tardado en hacer <em>una petición</em> y el cálculo de las<em> peticiones por segundo</em>.</p>
 <h3>&#8230; Dibujando y sacando conclusiones</h3>
@@ -272,14 +272,14 @@ bb2_addLoadEvent(function() {
 <p><a name="referencias"></a></p>
 <h3><em>Referencias</em></h3>
 <ol>
-<li><em> [<a href="http://highscalability.com/blog/2014/12/31/linus-the-whole-parallel-computing-is-the-future-is-a-bunch.html" target="_blank">Linus: The whole &#8220;parallel computing is the future&#8221; is a bunch of crock</a>] (highscalability.com) </em></li>
-<li><em>[<a title="[TwoHardThings]" href="http://martinfowler.com/bliki/TwoHardThings.html" target="_blank">TwoHardThings</a>] (martinfowler.com)</em></li>
-<li><em>[<a href="http://www.tldp.org/pub/Linux/docs/ldp-archived/system-admin-guide/translations/es/html/ch07s06.html" target="_blank">El Buffer Cache</a>] (tldp.org)</em></li>
+<li><em> [<a href="http://highscalability.com/blog/2014/12/31/linus-the-whole-parallel-computing-is-the-future-is-a-bunch.html" target="_blank" rel="noopener">Linus: The whole &#8220;parallel computing is the future&#8221; is a bunch of crock</a>] (highscalability.com) </em></li>
+<li><em>[<a title="[TwoHardThings]" href="http://martinfowler.com/bliki/TwoHardThings.html" target="_blank" rel="noopener">TwoHardThings</a>] (martinfowler.com)</em></li>
+<li><em>[<a href="http://www.tldp.org/pub/Linux/docs/ldp-archived/system-admin-guide/translations/es/html/ch07s06.html" target="_blank" rel="noopener">El Buffer Cache</a>] (tldp.org)</em></li>
 </ol>
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
-			Esta entrada se publicó en <a href="/category/programacion/php/" rel="category tag">PHP</a>, <a href="/category/sistemas-operativos/" rel="category tag">Sistemas operativos</a> y está etiquetada con <a href="/tag/cache/" rel="tag">cache</a>, <a href="/tag/linux/" rel="tag">linux</a>, <a href="/tag/php/" rel="tag">PHP</a>, <a href="/tag/rendimiento/" rel="tag">rendimiento</a>, <a href="/tag/robustez/" rel="tag">robustez</a> en <a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/" title="00:54" rel="bookmark"><time class="entry-date" datetime="2015-01-28T00:54:19+00:00">28 enero, 2015</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+			Esta entrada se publicó en <a href="/category/programacion/php/" rel="category tag">PHP</a>, <a href="/category/sistemas-operativos/" rel="category tag">Sistemas operativos</a> y está etiquetada con <a href="/tag/cache/" rel="tag">cache</a>, <a href="/tag/linux/" rel="tag">linux</a>, <a href="/tag/php/" rel="tag">PHP</a>, <a href="/tag/rendimiento/" rel="tag">rendimiento</a>, <a href="/tag/robustez/" rel="tag">robustez</a> en <a href="/pruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/" title="00:54" rel="bookmark"><time class="entry-date" datetime="2015-01-28T00:54:19+00:00">28 enero, 2015</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
 	</article><!-- #post -->
 
 	<article id="post-427" class="post-427 post type-post status-publish format-standard hentry category-apis category-php tag-api tag-php tag-rest tag-tweets tag-twitter tag-widget">
@@ -364,7 +364,7 @@ bb2_addLoadEvent(function() {
 				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
 						</li>
 					<li>
-				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+				<a href="/pruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
 						</li>
 				</ul>
 		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>

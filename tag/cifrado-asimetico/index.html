@@ -41,9 +41,9 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_stylesheet-css'  href='/wp-content/plugins/captcha/css/front_end_style.css?ver=4.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
-<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cptch_desktop_style-css'  href='/wp-content/plugins/captcha/css/desktop_style.css?ver=4.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='st-widget-css'  href='/wp-content/plugins/share-this/css/style.css?ver=4.8.2' type='text/css' media='all' />
 <link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='twentytwelve-style-css'  href='/wp-content/themes/twentytwelve/style.css?ver=4.8.2' type='text/css' media='all' />
@@ -59,7 +59,7 @@ img.emoji {
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 4.8.2" />
 
-<!-- Bad Behavior 2.2.19 run time: 2.946 ms -->
+<!-- Bad Behavior 2.2.20 run time: 3.546 ms -->
 <script type="text/javascript">
 <!--
 function bb2_addLoadEvent(func) {
@@ -80,7 +80,7 @@ bb2_addLoadEvent(function() {
 			var myElement = document.createElement('input');
 			myElement.setAttribute('type', 'hidden');
 			myElement.name = 'bb2_screener_';
-			myElement.value = '1506196731 127.0.0.1';
+			myElement.value = '1506273343 127.0.0.1';
 			document.forms[i].appendChild(myElement);
 		}
 	}
@@ -129,31 +129,31 @@ bb2_addLoadEvent(function() {
 				<header class="entry-header">
 			
 						<h1 class="entry-title">
-				<a href="/%ef%bb%bfcertificados-relaciones-de-confianza-y-entidades-certificadoras/" rel="bookmark">Certificados, relaciones de confianza y Autoridades Certificadoras</a>
+				<a href="/certifficados-relaciones-de-confianza-y-entidades-certificadoras/" rel="bookmark">Certificados, relaciones de confianza y Autoridades Certificadoras</a>
 			</h1>
 								</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p><strong>H</strong>ace unos par de meses, por fin tuve tiempo para realizar la integración del plugin de twitter que hice en <a title="[747mx.com]" href="http://www.747mx.com/" target="_blank">747mx.com</a>. Para mi desgracia el servidor compartido no estaba muy actualizado y para que me funcionara tuve que añadir como parámetro, en las propiedades de la función cURL, el certificado de la Autoridad Certificadora. En este caso la CA de VeriSign.</p>
+			<p><strong>H</strong>ace unos par de meses, por fin tuve tiempo para realizar la integración del plugin de twitter que hice en <a title="[747mx.com]" href="http://www.747mx.com/" target="_blank" rel="noopener">747mx.com</a>. Para mi desgracia el servidor compartido no estaba muy actualizado y para que me funcionara tuve que añadir como parámetro, en las propiedades de la función cURL, el certificado de la Autoridad Certificadora. En este caso la CA de VeriSign.</p>
 <p>Y este ejemplo me viene al pelo para intentar explicar brevemente como funciona los certificados digitales y es que, como en la vida misma, <strong>todo está basado en relaciones de confianza</strong>.</p>
 <h3>Los fundamentos&#8230;</h3>
 <p>La firma y la encriptación utilizando los certificados digitales se fundamentan en <strong>cifrado asimétrico</strong> en el que se utilizan dos claves. Una clave es <strong>pública</strong> y puede navegar sin problemas, bien por la red, en un correo electrónico, o embebida en un documento firmado por el usuario. La otra clave es <strong>privada</strong> y es la que sólo está en posesión del dueño. Por esa última razón las dos claves se deberían generar en el dispositivo del usuario, y no por ejemplo en el servidor en una aplicación web.</p>
 <p>Con las dos parejas de claves se pueden hacer:</p>
-<p style="padding-left: 30px;">1)&nbsp; <em><strong>Firmar</strong></em> un “mensaje” con la clave privada y comprobar esa firma con la clave pública. Se calcula un resumen criptográfico (hash) del mensaje y el emisor con su clave privada firma este hash. El receptor vuelve a calcular el hash del mensaje y lo compara con el valor obtenido de firma con la clave pública del emisor.</p>
+<p style="padding-left: 30px;">1)  <em><strong>Firmar</strong></em> un “mensaje” con la clave privada y comprobar esa firma con la clave pública. Se calcula un resumen criptográfico (hash) del mensaje y el emisor con su clave privada firma este hash. El receptor vuelve a calcular el hash del mensaje y lo compara con el valor obtenido de firma con la clave pública del emisor.</p>
 <p style="padding-left: 30px;">Así, con la firma se comprueban dos cosas:</p>
 <p style="padding-left: 60px;">&#8211; La “<strong>integridad</strong>” ya que el mensaje no ha sido modificado desde que se ha enviado (no coincidirían los hash).</p>
 <p style="padding-left: 60px;">&#8211; El “<strong>no repudio</strong>” ya que sólo ha podido emitir la firma el poseedor de la clave privada que corresponde a la clave pública.</p>
 <p style="padding-left: 30px;">2) <em><strong>Cifrar</strong></em> un “mensaje” con la clave pública y descifrarlo con la clave privada. Solamente el poseedor de la clave privada es capaz de leer el mensaje en claro.</p>
 <h3>&#8230; la confianza &#8230;</h3>
 <p>Hasta aquí la situación es esta: dos usuarios generan sus parejas de claves y para mantener mensajes autentificados y cifrados se intercambian sus respectivas claves públicas, pero &#8230; ¿ cómo comprueban su “<em>identidad</em>”? ¿cómo saben que el ha generado la clave pública que tienen es quien dice ser?&#8230; Puedes caer en el peligro de lo que se llama el “<em>ataque del hombre el medio</em>”. Una tercera persona &#8216;puentea&#8217; la comunicación entre otras dos, generado dos parejas de claves y hace de &#8216;<em>proxy</em>&#8216; simulando ser la primera persona para la segunda, y ser la segunda para la primera y permitiéndolo &#8216;escuchar&#8217; toda la conversación.</p>
-<p>Y es aquí donde retomo el título del post y entran en juego las <strong>relaciones de confianza</strong>&#8230; Tiene que existir algún mecanismo, que sin conocer al poseedor de la clave pública,&nbsp; permita &#8220;<em>confiar</em>&#8221; en que es quien dice ser.</p>
+<p>Y es aquí donde retomo el título del post y entran en juego las <strong>relaciones de confianza</strong>&#8230; Tiene que existir algún mecanismo, que sin conocer al poseedor de la clave pública,  permita &#8220;<em>confiar</em>&#8221; en que es quien dice ser.</p>
 <p>Esa confianza se puede establecer de varias maneras. O bien por <strong>anillo de confianza</strong>, o bien delegándola en una <strong>Autoridad Certificadora</strong> (y porque no, dando una vuelta de tuerca más, descasándola en una solución mixta).</p>
-<p>Las dos se basan en firmar la clave pública de un usuario que se conoce su autenticidad. El el caso del anillo de confianza, es el usuario que conoce a la persona el que realiza la firma de la clave. En el caso de&nbsp; la Autoridad Certificadora es esta la que establece los medios necesarios para certificar la autenticidad del usuario y después firma la clave publica del usuario con su clave privada. Un ejemplo de Autoridad Certificadora es la Policía Española con el DNI electrónico.</p>
+<p>Las dos se basan en firmar la clave pública de un usuario que se conoce su autenticidad. El el caso del anillo de confianza, es el usuario que conoce a la persona el que realiza la firma de la clave. En el caso de  la Autoridad Certificadora es esta la que establece los medios necesarios para certificar la autenticidad del usuario y después firma la clave publica del usuario con su clave privada. Un ejemplo de Autoridad Certificadora es la Policía Española con el DNI electrónico.</p>
 <p>Así un tercero sólo necesita dar “<em>confianza</em>” y establecer como auténticas a sólo unas pocas claves públicas del anillo o en la clave de la autoridad certificadora.</p>
 <p>Así en el caso de claves públicas de terceros, sólo serán “<em>confiables</em>” aquellas que estén firmadas por las que “<em>confío</em>”, o en todo caso por las que estén firmadas por claves que a su vez estén firmadas por claves en las que confío (disculpadme lo de “&#8230;<em>la parte contratante de la primera parte&#8230;</em>” 🙂 ). Se establece entonces una “<strong><em>cadena de confianza</em></strong>” en forma de árbol. Creo que el chascarrillo que lo resume es: “<em>&#8230;los amigos de mis amigos son mis amigos&#8230;</em>”</p>
 <h3>&#8230; y los certificados</h3>
 <p>Y es que un <strong>certificado digital</strong>, lo que viaja por la red, y que por ejemplo podemos ver en un navegador cuando comprobamos el certificado de un página https, no es más que un contenedor que contiene <strong>la clave pública</strong>, <strong>metadatos</strong> y la <strong>firma</strong> de ambos por parte de la Autoridad Certificadora. Estos metadatos incluyen los datos de la persona o la empresa para para quien ha sido emitido, las fechas de validez, la dirección donde consultar si el certificado ha sido revocado por la entidad emisora (OSCP o CRL), los datos de la entidad emisora, un número de serie, etc.</p>
-<p><div id="attachment_620" style="width: 360px" class="wp-caption aligncenter"><img class="size-full wp-image-620" alt="[Certificado digital de google.com]" src="/wp-content/uploads/2014/04/datos_certificado_google_p1.png" width="350" height="340" srcset="/wp-content/uploads/2014/04/datos_certificado_google_p1.png 350w, /wp-content/uploads/2014/04/datos_certificado_google_p1-300x291.png 300w" sizes="(max-width: 350px) 100vw, 350px" /><p class="wp-caption-text">Certificado de google.com donde se puede ver la cadena de certificados (jerarquía) y sus metadatos</p></div>Los <strong>navegadores </strong>como el Firefox, <strong>lectores de PDF</strong> por ejemplo el Adobe Acrobat, la <strong>máquina virtual de Java</strong> (si tienes instala la JDK están en el fichero &#8216;cacerts&#8217; dentro de &#8216;$JAVA_HOME/jre/lib/security/cacert&#8217;), PHP para utilizar la función “cURL” vienen de serie ya con los certificados de las Autoridades Certificadoras más reconocidas.</p>
+<p><div id="attachment_620" style="width: 360px" class="wp-caption aligncenter"><img class="size-full wp-image-620" src="/wp-content/uploads/2014/04/datos_certificado_google_p1.png" alt="[Certificado digital de google.com]" width="350" height="340" srcset="/wp-content/uploads/2014/04/datos_certificado_google_p1.png 350w, /wp-content/uploads/2014/04/datos_certificado_google_p1-300x291.png 300w" sizes="(max-width: 350px) 100vw, 350px" /><p class="wp-caption-text">Certificado de google.com donde se puede ver la cadena de certificados (jerarquía) y sus metadatos</p></div>Los <strong>navegadores </strong>como el Firefox, <strong>lectores de PDF</strong> por ejemplo el Adobe Acrobat, la <strong>máquina virtual de Java</strong> (si tienes instala la JDK están en el fichero &#8216;cacerts&#8217; dentro de &#8216;$JAVA_HOME/jre/lib/security/cacert&#8217;), PHP para utilizar la función “cURL” vienen de serie ya con los certificados de las Autoridades Certificadoras más reconocidas.</p>
 <p>Por el hecho de venir con la instalación del programa de turno, implícitamente le das confianza a estas autoridades certificadas. Lo que no significa que las <strong>puedas dejar de dar</strong> confianza eliminado sus certificados manualmente. O que<strong> puedas dar</strong> la misma confianza a otras autoridades incluyéndolas manualmente y que a todos los efectos los certificados emitidos por esta Autoridad Certificadora tengan la misma validez.</p>
 <p>Esto es justo lo que me ha pasado en el ejemplo con el que empezaba el post. Para poder establecer la comunicación ssl con el api de twitter tuve que “darle confianza” a la CA e incluir su certificado en las opciones de la función cURL.</p>
 <p>Y es que como ya he dicho antes, como en la vida misma, <strong>todo es cuestión de confianza&#8230;</strong></p>
@@ -162,7 +162,7 @@ bb2_addLoadEvent(function() {
 					</div><!-- .entry-content -->
 		
 		<footer class="entry-meta">
-			Esta entrada se publicó en <a href="/category/criptografia-y-certificados/" rel="category tag">Criptografía y certificados</a> y está etiquetada con <a href="/tag/autoridades-certificadoras/" rel="tag">Autoridades certificadoras</a>, <a href="/tag/certificados-digitales/" rel="tag">Certificados digitales</a>, <a href="/tag/cifrado-asimetico/" rel="tag">cifrado asimético</a>, <a href="/tag/clave-privada/" rel="tag">clave privada</a>, <a href="/tag/clave-publica/" rel="tag">clave pública</a>, <a href="/tag/ssl/" rel="tag">ssl</a> en <a href="/%ef%bb%bfcertificados-relaciones-de-confianza-y-entidades-certificadoras/" title="20:13" rel="bookmark"><time class="entry-date" datetime="2014-04-06T20:13:31+00:00">6 abril, 2014</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
+			Esta entrada se publicó en <a href="/category/criptografia-y-certificados/" rel="category tag">Criptografía y certificados</a> y está etiquetada con <a href="/tag/autoridades-certificadoras/" rel="tag">Autoridades certificadoras</a>, <a href="/tag/certificados-digitales/" rel="tag">Certificados digitales</a>, <a href="/tag/cifrado-asimetico/" rel="tag">cifrado asimético</a>, <a href="/tag/clave-privada/" rel="tag">clave privada</a>, <a href="/tag/clave-publica/" rel="tag">clave pública</a>, <a href="/tag/ssl/" rel="tag">ssl</a> en <a href="/certifficados-relaciones-de-confianza-y-entidades-certificadoras/" title="20:13" rel="bookmark"><time class="entry-date" datetime="2014-04-06T20:13:31+00:00">6 abril, 2014</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="/author/miguel/" title="Ver todas las entradas de Miguel R. Esteban Martín" rel="author">Miguel R. Esteban Martín</a></span></span>.								</footer><!-- .entry-meta -->
 	</article><!-- #post -->
 
 		
@@ -192,7 +192,7 @@ bb2_addLoadEvent(function() {
 				<a href="/akka-por-ejemplos/">Akka por ejemplos</a>
 						</li>
 					<li>
-				<a href="/%ef%bb%bfpruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
+				<a href="/pruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/">Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</a>
 						</li>
 				</ul>
 		</aside>		<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Sobre el autor</h3>			<div class="textwidget"><a href="/mi-cv"><a href="/mi-cv/#imagenMiCV"><img class="alignright" alt="[Sobre el autor]" src="/wp-content/uploads/2013/04/miguel_p_90x82_claro.jpg" /></a>
