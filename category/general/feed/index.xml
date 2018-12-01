@@ -12,12 +12,27 @@
 	<atom:link href="/category/general/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 23 Sep 2017 22:24:32 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<generator>https://wordpress.org/?v=4.8.7</generator>
 	<item>
+		<title>Diapositivas de la charla de Commit Conf</title>
+		<link>/diapositivas-de-la-charla-de-commit-conf/</link>
+		<pubDate>Sat, 01 Dec 2018 17:23:23 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Scala]]></category>
+		<category><![CDATA[akka]]></category>
+		<category><![CDATA[DDD]]></category>
+		<category><![CDATA[scala]]></category>
+
+		<guid isPermaLink="false">/?p=1125</guid>
+		<description><![CDATA[Los días 23 y 24 de noviembre ha tenido lugar en Madrid la primera edición del Commit Conf, uno de los eventos más importantes que se tiene en lengua castellana. En su momento presente mi charla sobre Akka Sharding y su relación con DDD al &#8220;call for papers&#8221; con ilusión pero sin grandes esperanzas de [&#8230;]]]></description>
+		</item>
+		<item>
 		<title>Actores tipados, Akka por ejemplos</title>
 		<link>/akka-por-ejemplos-actores-tipados/</link>
 		<pubDate>Mon, 09 Nov 2015 20:48:05 +0000</pubDate>

@@ -12,11 +12,11 @@
 	<atom:link href="/tag/futuros/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 23 Sep 2017 22:24:32 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.2</generator>
+	<generator>https://wordpress.org/?v=4.8.7</generator>
 	<item>
 		<title>Futuros y promesas,&#8230; y también monadas. Implementando el patrón</title>
 		<link>/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/</link>
