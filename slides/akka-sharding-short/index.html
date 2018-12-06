@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Akka sharding</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+<!--
+  <link rel="stylesheet" media="screen" href="themes/style/neon.css">
+-->
+<!--
+  <link rel="stylesheet" media="screen" href="themes/style/sandstone.dark.css">
+-->
+  <link rel="stylesheet" media="screen" href="themes/style/sandstone.mdn.css">
+<!--
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+-->
+  <!-- link rel="stylesheet" media="screen" href="themes/style/swiss.css"-->
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <!--link rel="stylesheet" media="screen" href="themes/transition/vertical-slide.css"-->
+  <link rel="stylesheet" media="screen" href="themes/transition/fade.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    
+    <!-- 1. Presentation -->
+    <section class="slide">
+      <div class="markdown">
+       ¬¬¬
+        
+        Akka sharding
+        =============
+        
+       ¬¬
+      </div>      
+    </section> 
+    <section class="slide">
+      <div class="markdown">
+        ¬¬¬ 
+        
+        ## Sobre el ponente
+        
+        ### Nombre: **Miguel Rafael Esteban Martín**    
+        
+        ### Ingeniero de plataformas en ING
+        
+        #### Blog : [Logicaalternativa.com](http://www.logicaalternativa.com)
+        #### GitHub: [github/logicaalternativa](https://github.com/logicaalternativa)
+        #### Twitter: [@MiguelREsteban](https://twitter.com/MiguelREsteban)
+       
+        ##### Diapositivas de esta presentación: [https://wwww.logicaalternativa.com/slides/akka-sharding](https://wwww.logicaalternativa.com/slides/akka-sharding)
+        
+       ¬
+      </div>      
+    </section> 
+<!--
+    <section class="slide">
+      <div class="markdown">
+        ## Que vamos a ver 
+        
+        - **Conceptos claves**
+         ·· + Actor = _"Comportamiento y estado"_
+         ·· + "Ubicación transparente"
+         ·· + Entidad en DDD (_Domain Driven Design_)
+         ·· + Que es Akka Cluster
+         ·· + Arquitectura gossip
+         ···· - Failure Detector
+         ·· + Concepto de región de sharding  =}- **Funciones de dispersión**
+         ·· + Akka persistence
+         ···· - EventSourcing
+         ·· + ¿Un actor que representa una entidad en un cluster? = _Un mundo de posibilidades_
+         - **Cómo se usa**
+         ·· + Enrutamiento por mensaje
+         ·· + Levantando un cluster
+         ·· + Monitorización
+         - **Poniendolo en práctica**.- _ **Demo time** _
+         ·· + Comportamiento del cluster
+         ·· + Spit brain
+         ¬
+         ######_Borrador: Me sirve de indice_
+      </div>      
+    </section> 
+-->
+    
+    <section class="slide">
+      <div class="markdown">
+                                                    ###### Akka sharding
+        ----------------------------------------------------------------
+        ¬
+         ## Que vamos a ver ##
+        ¬
+        
+        - Que es Akka Sharding y su relación con Domain Driven 
+          Development.
+          
+        - Los fundamentos técnicos en los que está soportado
+        
+        - Ejemplos prácticos (codificados en Scala)
+          ¬
+      </div>      
+    </section> 
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Conceptos clave sobre actores
+        ----------------------------------------------------------------
+        
+        ## Actor = _"Comportamiento y estado"_ ##
+        
+        ![Actores](img/Samuel-Jackson-Portrait.png "Actores")
+        
+        
+        ¬
+        
+         
+      </div>      
+    </section>  
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Conceptos clave sobre actores
+        ----------------------------------------------------------------
+        
+        ## "¿Qué define a un actor?" 
+       
+       ¬
+       ¬
+        
+       "_[...] Los actores son objetos que encapsulan estado y 
+          comportamiento y que sólo se comunican intercambiando 
+          mensajes [...]_"*
+       
+       ¬
+       ¬
+       Derivado de esto: implica también"**_identidad_**"
+       ¬
+       ¬
+       
+                                      ###### * __Documentación de Akka__
+        
+      </div>      
+    </section>
+    
+      
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Conceptos clave sobre actores
+        ----------------------------------------------------------------
+        
+        ## Glosario y características de Akka
+       
+       ### Mailbox
+       Todos los actores tienen su propio buzón donde se almacenan los
+       mensajes.
+       
+       ### ActorRef
+       Es en realidad una URI o dirección lógica del actor. Es 
+       serializable y se puede enviar entre actores. Esto permite la 
+       **ubicación transparente** en el sistema de actores.
+       
+       ### Dispatcher
+       Es el encargado de gestionar los mensajes con un grupo de hilos
+       asignado.   
+       Símil de la "_torre de control_": los **hilos** son las pistas de 
+       aterrizaje, los **mensajes** son los aviones que esperan a tomar 
+       tierra y el **dispatcher** sería la torre de control.  
+       Se puede asignar un dispatcher a uno o varios actores. 
+       
+       ### Patrones de estabilidad
+       Akka "_out of the box_" implementa patrones de estabilidad com 
+       "_Bulkheading_", "_Circuit breaker_", "_bounded mailbox_", 
+       Supervisores, Confirmación de entrega (confirmando la entrega de
+       al menos un mensaje), etc..
+       ¬                              
+        
+      </div>      
+    </section>
+    
+<!--
+    <section class="slide">
+      <div class="markdown">
+
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Un ejemplo sencillo o "un sencillo ejemplo"
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+          
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Un ejemplo sencillo o "un sencillo ejemplo"
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       
+       ### ¿Qué se va a hacer?
+       - Un actor "_eco_". Se envía un mensaje y devuelve la misma 
+         respuesta.
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+          
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Un ejemplo sencillo o "un sencillo ejemplo"
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       
+       ### Objetivos
+       - Como "_se ve_" un actor en código y "_perderle el miedo_"
+       - Probar modificar su comportamiento y estado a través de 
+         mensajes 
+      ¬
+        
+      </div>      
+    </section>
+    
+-->
+    <section class="slide">
+      <div class="markdown">
+
+                                        ###### Conceptos clave sobre DDD
+        ----------------------------------------------------------------
+        
+        ## Entidades en DDD (Domain Driven Desing) 
+        
+        [![DDD](img/quicklyDDD.png "DDD")](img/quicklyDDD.png)
+        
+        ###### Domain-Driven Design Quickly
+        
+      </div>      
+    </section>
+    <section class="slide">
+      <div class="markdown">
+
+                                        ###### Conceptos clave sobre DDD
+        ----------------------------------------------------------------
+        
+        ## Entidades y agregados en DDD ## 
+        
+        _"[...] implementar entidades en software significa crear identidad
+          [...]"_ *
+        
+       ¬
+       ### Entidades ###
+        
+        - Son la base de DDD
+        - Tienen **identidad**
+        ··· + En el dominio, sólo existe un objeto entidad con ese 
+              identificador
+        - Tienen un ciclo de vida
+        ··· + Contienen **estado** y **lógica** de negocio
+       ¬
+        
+                                 ###### (*) Domain-Driven Design Quickly
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                        ###### Conceptos clave sobre DDD
+        ----------------------------------------------------------------
+        
+        ## Entidades y agregados en DDD ## 
+        
+        ### Agregados ###
+        
+        ¬
+        
+       - Se considera una unidad con respecto a los cambios de los datos
+        (= _¿transacción?_)
+       ··· + Un agregado puede estar formado por varias entidades y 
+             objetos valor relacionados entre si.
+       - Como raíz tienen una entidad que es su interfaz hacia fuera.
+       ··· + Desde fuera no son accesible el resto de objetos.
+       
+       En resumen : Además de **estado** y **lógica** sólo se puede 
+       acceder a través de una interfaz pública que enmascara la lógica
+       interna.
+       ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                        ###### Conceptos clave sobre DDD
+        ----------------------------------------------------------------
+        
+        ## Entidades y agregados en DDD ## 
+        ¬
+        Ahora nos podemos hacer la pregunta
+        
+        ### _¿Se podría implementar en un sistema de actores?_ ###
+        ¬
+        
+      </div>      
+    </section>
+
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                        ###### Conceptos clave sobre DDD
+        ----------------------------------------------------------------
+        
+        ## Entidades y agregados en DDD ## 
+        ¬
+        
+        ### _¿Se podría implementar en un sistema de actores?_ ###
+        
+        - Entidades reflejan estado y comportamiento 
+        ···  + _Los actores también_    
+        
+        - Cada instancia de una entidad es única en el dominio   
+        ··· +  _Un actor es único en el sistema de actores_
+        
+        - Tienen una interfaz pública de acceso
+        ··· + _En los actores esa interfaz es la mensajería_
+        ¬
+        
+      </div>      
+    </section>    
+<!--
+    <section class="slide">
+      <div class="markdown">
+
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Un ejemplo
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Un ejemplo
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       ### ¿Qué se va a hacer?
+       
+       Un ejemplo bancario: cuentas corrientes y transferencias.
+       
+       - Crear un actor y entidad cuenta y también una transferencia 
+         combinando dos cuentas. 
+       - Se hará un bosquejo de CQRS separando lecturas y escrituras y
+         de Event Sourcing que existe en DDD.
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Un ejemplo
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       ### Objetivos
+       - Ver la elegante solución de poder implementar DDD sin problemas
+         de concurrencia utilizando un sistema de actores.
+       
+      ¬
+        
+      </div>      
+    </section>
+-->    
+    <section class="slide">
+      <div class="markdown">
+
+                                                         ###### Desafíos
+        ----------------------------------------------------------------
+        
+        ## Desafíos de tener una entidad única en un cluster
+        
+       ![Desafios](img/aiga-stairs-up.png "Desafios")
+       
+       
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                         ###### Desafíos
+        ----------------------------------------------------------------
+        
+       ## Desafíos de tener una entidad única en un cluster
+       
+       - **Transparencia referencial**: Para poder usar una entidad, no debe 
+         ser necesario saber en que nodo está alojada.
+         
+        ¬¬¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                         ###### Desafíos
+        ----------------------------------------------------------------
+        
+       ## Desafíos de tener una entidad única en un cluster
+       
+       - Transparencia referencial: Para poder usar una entidad, no debe 
+         ser necesario saber en que nodo está alojada.
+       - **Distribuir las entidades uniformemente en el cluster**.
+         
+        ¬¬¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                         ###### Desafíos
+        ----------------------------------------------------------------
+        
+       ## Desafíos de tener una entidad única en un cluster
+       
+       - Transparencia referencial: Para poder usar una entidad, no debe 
+         ser necesario saber en que nodo está alojada.
+       - Distribuir las entidades uniformemente en el cluster. 
+       - **Creación dinámica de las entidades**, pasivarlas y recrearlas 
+         cuando sea necesario.
+         
+        ¬¬¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                         ###### Desafíos
+        ----------------------------------------------------------------
+       
+       ## Desafíos de tener una entidad única en un cluster
+       
+       - Transparencia referencial: Para poder usar una entidad, no debe 
+         ser necesario saber en que nodo está alojada.
+       - Distribuir las entidades uniformemente en el cluster. 
+       - Creación dinámica de las entidades, pasivarlas y recrearlas 
+         cuando sea necesario.  
+       - **Resistencia a fallos**   
+       ··· + Asegurar que sólo y sólo un actor es reflejo de una 
+             instancia de la entidad dentro del cluster.   
+       ··· + Si un nodo está caído, que sea posible generarlo en otro 
+             nodo del cluster.
+        ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                         ###### Desafíos
+        ----------------------------------------------------------------
+        
+       ## Desafíos de tener una entidad única en un cluster
+       
+       - Transparencia referencial: Para poder usar una entidad, no debe 
+         ser necesario saber en que nodo está alojada.
+       - Distribuir las entidades uniformemente en el cluster. 
+       - Creación dinámica de las entidades, pasivarlas y recrearlas 
+         cuando sea necesario.  
+       - Resistencia a fallos   
+       ··· + Asegurar que sólo y sólo un actor es reflejo de una 
+             instancia de la entidad dentro del cluster.   
+       ··· + Si un nodo está caído, que sea posible generarlo en otro 
+             nodo del cluster.
+       - "**Persistir el estado**" de estas entidades (*)
+       
+                                    ###### (*) _Usando Akka Persistence_
+      
+        
+      </div>      
+    </section>
+    
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## Akka Sharding ## 
+        
+        ![Akka sharding](img/Puzzle-Piece-Green.png "Akka sharding")
+      
+      ¬
+        
+      </div>      
+    </section> 
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## Akka Sharding en pocas palabras... ## 
+         ¬
+        
+        - Abstrae el concepto de entidad en un **ActorRef**
+      
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## Akka Sharding en pocas palabras... ## 
+         ¬
+        
+        - Abstrae el concepto de entidad en un **ActorRef**
+        - La **creación** o el **acceso** a cada una de las instancias 
+          de las entidades se hará a través de la mensajería.  
+        ··· + _"¿Cómo?"_ Se deberá definir una función para esto.     
+        ··· + Incluye también el concepto de **factoría**/**repositorio** 
+              de DDD.
+      
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## Akka Sharding en pocas palabras... ## 
+         ¬
+        
+        - Abstrae el concepto de entidad en un **ActorRef**
+        - La **creación** o el **acceso** a cada una de las instancias 
+          de las entidades se hará a través de la mensajería.  
+        ··· + _"¿Cómo?"_ Se deberá definir una función para esto.     
+        ··· + Incluye también el concepto de **factoría**/**repositorio** 
+              de DDD.
+        - Permite la **distribución** de las diferentes instancias en 
+          **regiones lógicas**.   
+        ··· + _"¿Cómo?"_ También a través de función.
+      
+      ¬
+        
+      </div>      
+    </section>    
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## Akka Sharding en pocas palabras... ## 
+         ¬
+        
+        - Abstrae el concepto de entidad en un **ActorRef**
+        - La **creación** o el **acceso** a cada una de las instancias 
+          de las entidades se hará a través de la mensajería.  
+        ··· + _"¿Cómo?"_ Se deberá definir una función para esto.     
+        ··· + Incluye también el concepto de **factoría**/**repositorio** 
+              de DDD.
+        - Permite la **distribución** de las diferentes instancias en 
+          **regiones lógicas**.   
+        ··· + _"¿Cómo?"_ También a través de función.
+        - Permite **pasivar** las instancias que no se utilicen.
+      
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## Akka Sharding en pocas palabras... ## 
+         ¬
+        
+        - Abstrae el concepto de entidad en un **ActorRef**
+        - La **creación** o el **acceso** a cada una de las instancias 
+          de las entidades se hará a través de la mensajería.  
+        ··· + _"¿Cómo?"_ Se deberá definir una función para esto.     
+        ··· + Incluye también el concepto de **factoría**/**repositorio** 
+              de DDD.
+        - Permite la **distribución** de las diferentes instancias en 
+          **regiones lógicas**.   
+        ··· + _"¿Cómo?"_ También a través de función.
+        - Permite **pasivar** las instancias que no se utilicen.
+        - Está soportada por **Akka Cluster**.
+        ··· + *Consecuencia*: Es necesario entender como funciona.
+      
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Akka Sharding
+        ----------------------------------------------------------------
+        
+        ## ¿Qué es Akka Cluster? ## 
+        ¬
+       `"[..] Akka Cluster proporciona un servicio de cluster 
+       descentralizado basado en peer-to-peer, tolerante a fallos, sin 
+       ningún punto único de fallos o cuellos de botella. `
+              
+       `Lo hace usado protocolos gossip y un detector automático de
+       fallos[..]"`
+       
+       ¬ 
+       ¬
+       ¬
+                                    
+                                           ###### (*) Documentación akka
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Arquitectura gossip ## 
+        
+        ![Gossip](img/paro-AL-LISTEN.png "Escuchando")
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Sistema **distribuido** ##
+        
+        ¬
+        
+        - No existen maestros/esclavos __←__ _Particionado_
+        
+        - Existen **réplicas** __←__ _Alta disponibilidad_
+        
+        - No conserva la consistencia secuencial __←__ Consistencia "_relajada_" 
+        
+        ¬
+        
+      </div>      
+        <!-- 
+          NOTAS: 
+          [Modelo de consitencia](https://en.wikipedia.org/wiki/Consistency_model) 
+          [Consistencia secuencial](https://en.wikipedia.org/wiki/Sequential_consistency)
+        -->
+    </section>
+    
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+       ##  Teorema CAP: ##
+        
+        [![Gossip](img/cap.png "Teorema cap")] (img/cap.png)
+        
+        Tienes el **_P_articionado** y tienes la **disponibilid_A_d** 
+        pero **no** tienes la ~~**_C_onsistencia**~~_(*)_
+        
+               ###### Al menos la consistencia _sequencial_ no se cumple
+        
+      </div>      
+     -->
+
+        <!-- 
+          NOTAS: 
+          [Modelo de consistencia](https://en.wikipedia.org/wiki/Consistency_model) 
+          [Consistencia secuencial](https://en.wikipedia.org/wiki/Sequential_consistency)
+        -->
+    <!--
+    </section>
+    -->
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ##  Otra visión del teorema CAP ##
+        
+        [![Gossip](img/dial.svg "Otra visión del teorema CAP")] (img/dial.svg )
+        
+        En realidad puedes estar más o menos cerca de la consistencia 
+        o por el contrario de la disponibilidad.
+        
+      ######  Se puede lograr con akka-distributed-data(__*__) y también con akka-persistence(__**__)
+        
+        ¬
+        
+      </div>
+    </section>
+    -->
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Sesiones gossip ## 
+        
+        Intercambio de mensajes gossip entre réplicas.
+         
+        ### Consiste:
+        - Sincronizar y actualizar relojes lógicos (Vector clocks)
+        - Intercambiar valores de los logs
+        ¬
+               
+      </div>      
+        <!-- 
+        [![Gossip](img/vectorTimestampReloj.png "Ejemplo gossip")](img/vectorTimestampReloj.png)
+          NOTAS: 
+          + [Convergencia gossip y vector de relojes] 
+            (https://doc.akka.io/docs/akka/current/scala/common/cluster.html) 
+          + [Relojes lógicos] 
+            (https://en.wikipedia.org/wiki/Vector_clock )
+            
+          Foto de los relojes lógicos
+          [![Gossip](img/vectorTimestamp.png "Relojes lógicos")] (img/vectorTimestamp.svg)
+        -->
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Ejemplo de intercambio de logs ## 
+        
+       Imaginemos tres nodos `A`, `B` y `C` y una sesión gossip entre
+         `A`, `B`
+         
+       ### Antes
+       
+       - Log y sumario de `A` de un determinado valor antes del 
+         intercambio gossip
+        
+        ······· +===++----+----+----+               +===++----+
+        ······· | A || a1 | a2 | a3 |      →        | A || a3 |
+        ······· +===++----+----+----+               +===++----+
+        ······· | B || b1 |                →        | B || b1 |
+        ······· +===++----+                         +===++----+
+        ······· | C || c1 |                →        | C || c1 |
+        ······· +===++----+                         +===++----+
+        ·······        Log                            Sumario
+       
+       
+       - Log y sumario de `B` del mismo valor antes del intercambio 
+         gossip
+        
+        ······· +===++----+                         +===++----+
+        ······· | A || a1 |                →        | A || a1 |
+        ······· +===++----+----+                    +===++----+
+        ······· | B || b1 | b2 |           →        | B || b2 |
+        ······· +===++----+----+----+               +===++----+
+        ······· | C || c1 | c2 | c3 |      →        | C || c3 |
+        ······· +===++----+----+----+               +===++----+
+        ·······        Log                            Sumario
+         
+        
+        ###### Time Stamped Anti-Entropy (TSAE) protocol. Richard A. Golding (Diciembre 1992)
+               
+      </div>      
+    </section>    
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Ejemplo de intercambio de logs ##
+        
+       Tres nodos `A`, `B` y `C`. Sesión gossip entre `A`, `B`
+         
+       ### Durante
+       
+       Intercambio de sumarios y valores entre los dos nodos
+       
+        
+        ·······     NODO A                          NODO B
+        ·······  +===++----+                     +===++----+
+        ·······  | A || a3 |      a2, a3 →       | A || a1 |
+        ·······  +===++----+                     +===++----+
+        ·······  | B || b1 |      ← b2           | B || b2 |
+        ·······  +===++----+                     +===++----+
+        ·······  | C || c1 |    ← c2, c3         | C || c3 |
+        ·······  +===++----+                     +===++----+
+        
+        ¬ 
+        
+        ###### Time Stamped Anti-Entropy (TSAE) protocol. Richard A. Golding (Diciembre 1992)
+               
+      </div>      
+    </section>
+    
+        
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Ejemplo de intercambio de logs ## 
+        
+       Tres nodos `A`, `B` y `C`. Sesión gossip entre `A`, `B`
+         
+       ### Después
+       
+        
+        ·······        NODO A                          NODO B
+        ······· +===++----+----+----+            +===++----+----+----+
+        ······· | A || a1 | a2 | a3 |            | A || a1 | a2 | a3 |
+        ······· +===++----+----+----+            +===++----+----+----+
+        ······· | B || b1 | b2 |                 | B || b1 | b2 |     
+        ······· +===++----+----+----+            +===++----+----+----+
+        ······· | C || c1 | c2 | c3 |            | C || c1 | c2 | c3 |
+        ······· +===++----+----+----+            +===++----+----+----+
+        ·······         Log                              Log          
+        
+        ¬
+        
+        ###### Time Stamped Anti-Entropy (TSAE) protocol. Richard A. Golding (Diciembre 1992)
+               
+      </div>      
+    </section>
+    
+    
+<!--
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Conceptos clave
+        ----------------------------------------------------------------
+        
+        ## Sesiones gossip ## 
+        
+       [![Gossip](img/gossipschema2.png "Ejemplo gossip")](img/gossipschema2.png)
+        
+        ###### Time Stamped Anti-Entropy (TSAE) protocol. Richard A. Golding (Diciembre 1992)
+               
+      </div>      
+    </section>
+-->
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Akka y la arquitectura gossip ## 
+        
+        ### Conflict Free Replicated Data Types (CRDTs) ###
+        
+        Usa funciones monótonas para resolver confictos de actualización
+        
+        - Utilizados en **Akka Distributed Data** 
+        ·· + Tipos de datos soportados
+        ····- Contadores: [`GCounter`](img/vectorTimestampReloj.png), `PNCounter`
+        ····- Conjuntos: `GSet`, `ORSet`
+        ····- Mapas: `ORMap`, `ORMultiMap`, `LWWMap`, `PNCounterMap`
+        ····- Registros: `LWWRegister`, `Flag`
+        
+        Por defecto se utiliza **Akka Distributed Data** para guardar el
+        estado del Cluster Sharding 
+        
+        ¬        
+      </div>
+      -->      
+        <!-- 
+          NOTAS: 
+          + [Akka Distributed Data] 
+            (https://doc.akka.io/docs/akka/current/scala/distributed-data.html) 
+          + [Conflict Free Replicated Data Types CRDTs] 
+            (https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type) 
+          + [Fución moónotona] 
+            (https://es.wikipedia.org/wiki/Funci%C3%B3n_mon%C3%B3tona) 
+          + [Delta State Replicated Data Types] 
+            (https://arxiv.org/pdf/1603.01529.pdf) 
+        -->
+    <!--
+    </section>
+    -->
+<!--
+    <section class="slide">
+      <div class="markdown">
+
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Akka y la arquitectura gossip ## 
+        
+        ### Akka Distributed Data ###        
+        
+        [![CRDTs Contador simple](img/vectorTimestamp4.png "CRDTs Contador simple")](img/vectorTimestamp4.png "CRDTs Contador simple")
+        
+                ###### Ejemplo de CRDTs, Contador creciente (_GCounter_)
+      </div> 
+    </section>     
+-->
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                    ###### Akka y la arquitectura gossip
+        ----------------------------------------------------------------
+        
+        ## Akka y la arquitectura gossip ## 
+        
+        ### Akka Distributed Data y teorema CAP (Niveles de consistencia) ###
+        
+        - **Local**        
+        ··+ `WriteLocal`. Escribir sólo en la replica local y diseminado después 
+                         por gossip
+        ··+ `ReadLocal`. Leer sólo el valor de la replica local
+        
+        - **To(n)**
+        ··+ `WriteTo(n)`. Escribir inmediatamente en _al menos_ `n` replicas
+        ··+ `ReadTo(n)`.  Valor leído y combinado en _al menos_ `n` replicas
+        
+        - **Majority**        
+        ··+ `WriteMajority`. Escribir inmediatamente en `N/2 + 1` replicas
+                           (_N_ es el número de nodos)
+        ··+ `ReadMajority` Valor leído y combinado en al menos `N/2 + 1` 
+                           replicas
+        
+        - **All**          
+        ··+ `WriteAll`. Escribir inmediatamente _en todas_ las replicas
+        ··+ `ReadAll`. Valor leído y combinado _en todas_ las replicas
+        ¬        
+      </div> 
+      -->
+        <!-- 
+          NOTAS:
+        -->
+    <!--
+    </section>
+    -->
+    
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                                  ###### Conceptos clave
+        ----------------------------------------------------------------
+        
+        ## Detección de fallos ##
+        
+        ![Detección de fallos](img/detectorFailure.png "Detención de fallos")
+        
+      </div>      
+    </section>
+    
+     <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detención de fallos
+        ----------------------------------------------------------------
+        
+        ## Convergencia gossip ##
+        
+          _"Cuando un nodo puede demostrar, que el estado del clúster 
+           que está observando, ha sido observado por todos los demás 
+           nodos del clúster"_
+        
+        ### Consecuencias ###
+        - No se puede obtener convergencia si hay nodos "_inaccesibles_"
+        ¬        
+      </div>
+      <!-- 
+          NOTAS: 
+          + [Failure Detector]
+            (https://doc.akka.io/docs/akka/current/cluster-usage.html#failure-detector)
+            (https://www.researchgate.net/profile/Xavier_Defago/publication/29682135_The_ph_accrual_failure_detector/links/0a85e53ce412e3b069000000/The-ph-accrual-failure-detector.pdf)
+          + [Split brain] 
+            (https://en.wikipedia.org/wiki/Split-brain_(computing))
+          + [Convergencia gossip y vector de relojes] 
+            (https://doc.akka.io/docs/akka/current/scala/common/cluster.html) 
+          
+        --> 
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detención de fallos
+        ----------------------------------------------------------------
+        
+        ## Nodo líder ##
+        
+        Nodo que administra la convergencia del cluster y las 
+        transiciones de los nodos a los que pertenece.
+        
+        - Si hay convergencia gossip, todos los nodos saben quien es el
+          líder.
+          
+        - Sólo es un rol y puede cambiar por la convergencia.
+        ·· + Es el primer nodo de una lista que se crea cuando entran y
+             salen los nodos del cluster.
+        ¬        
+      </div>
+      
+      <!-- 
+          NOTAS: 
+          + [WeaklyUp Members]
+            (https://doc.akka.io/docs/akka/current/cluster-usage.html#weaklyup-members)
+            
+          ## Concepto de leader
+          _ A single node in the cluster that acts as the leader. 
+            Managing cluster convergence and membership state 
+            transitions._
+          
+        --> 
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detención de fallos
+        ----------------------------------------------------------------
+        
+        ## Información del estado de los nodos del cluster ##
+        
+        Se emiten eventos del cluster, que permiten conocer el estado de
+        cada nodo que pueden escuchar los diferentes integrantes del 
+        cluster.
+        
+        ·····························---- 
+        ····························|····| 
+        ····joining > [weakly up] >·| up | > leaving / exiting > down > removed 
+        ····························|····|
+        ···························· ----
+        
+        
+        El cluster envía mensajes periódicos de heartbeats para 
+        comprobar que otros nodos están disponibles.
+        
+        Estados:  
+        
+        - De disponible a no disponible `=> ureacheable`  
+        - Vuelta a estar disponible `=> reacheable`
+        ¬        
+      </div>
+      
+      <!-- 
+          NOTAS:
+          + [Estados de los nodos del cluster]
+          (https://doc.akka.io/docs/akka/current/common/cluster.html?language=scala#member-states)
+        --> 
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detención de fallos
+        ----------------------------------------------------------------
+        
+        ## Necesidad de un split brain resolver ##
+        
+        [![Split Brain](img/1-to-3-arrows.png "Split brain")] (img/1-to-3-arrows.png)
+        
+        ¬        
+      </div>
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detención de fallos
+        ----------------------------------------------------------------
+        
+        ## Posible de denegación de servicio ##
+        
+        Cuando por ejemplo por problemas de red parte de los nodos del 
+        cluster no pueden "_ver_" otros nodos del cluster.
+        
+        Por lo tanto hay nodos _inaccesibles_.
+      
+        - No hay convergencia
+        ··+ No se puede ni añadir, ni eliminar nodos del cluster.
+                      
+        -  Se puede llegar a denegación de servicio
+        ·· + No **encontrar** ni poder **recrear** el actor que está en 
+             el nodo  "_inaccesible_""
+        ¬        
+      </div>
+    </section>
+    
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Necesidad de un split brain resolver ##
+        
+        ### Opción _auto-down_ 
+        
+        `Los nodos inaccesibles son dados de baja al cabo de un tiempo 
+         configurable.`
+        
+        No es viable:        
+        
+         - Con el tiempo te puedes encontrar con varios cluster de un 
+           sólo nodo. 
+        ¬        
+      </div>
+    </section>
+    -->
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Necesidad de un split brain resolver ## 
+        
+        ### Otras opciones: ###
+        
+        #### **Manualmente**
+        
+        ·· Utilizando akka-management
+        
+        #### **Solución comercial**
+        
+        ·· Akka split brain resolver
+        
+        #### **Crear una solución propia**
+        
+        ·· Escuchando eventos del cluster
+        
+        ¬        
+      </div>
+    </section>    
+        
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Directrices de Akka split brain resolver ##  
+        
+        ### Las decisiones deben ser tomadas en un tiempo finito.
+        
+        ¬        
+      </div>      
+      <!-- 
+          NOTAS:
+          + [Split Brain Resolver]
+          (https://doc.akka.io/docs/akka/old-rp/rp-15v09p04/java/split-brain-resolver.html)
+        --> 
+    </section>     
+        
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Directrices de Akka split brain resolver ##
+        
+        ### Las decisiones deben ser tomadas en un tiempo finito.
+        
+        - Un fallo temporal o permanente es indistinguible.
+        ·· + Fallo de la máquina virtual
+        ·······- Interesa retirar cuanto antes el nodo del cluster
+        ·· + Fallo de red
+        ·······- Tenemos la esperanza que es un problema temporal pero
+                 no esperamos por un tiempo indefinido.
+        ·······- Continuaremos con los nodos de una parte de la 
+                 partición y apagaremos los nodos de la otra parte.  
+        ·· + CPU, garbage collector.
+        
+        ¬        
+      </div>      
+      <!-- 
+          NOTAS:
+          + [Split Brain Resolver]
+          (https://doc.akka.io/docs/akka/old-rp/rp-15v09p04/java/split-brain-resolver.html)
+        --> 
+    </section>  
+    
+       
+        
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Directrices de Akka split brain resolver ##
+        
+        ### Las decisiones deben ser tomadas en un tiempo finito.
+        
+        La única señal para tomar decisiones: "_**no responder en un 
+        tiempo dado a los mensajes heartbeats**_". 
+        
+        ¬        
+      </div>      
+      <!-- 
+          NOTAS:
+          + [Split Brain Resolver]
+          (https://doc.akka.io/docs/akka/old-rp/rp-15v09p04/java/split-brain-resolver.html)
+        --> 
+    </section>    
+    
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Ejemplo de estrategía de Akka split brain resolver ##
+        
+        **Mantener la mayoría**. Se mantendrá la partición que tenga
+          mayor número de nodos. 
+          
+          ![Mantener la mayoría](img/keepMayority.svg "Mantener la mayoría") 
+        ¬        
+      </div>      
+      <!-- 
+          NOTAS:
+          + Static Quorum: Cuando hay un número fijo de nodos
+          + Mayoría: Cuando hay un número de nodos es dinámico
+        --> 
+    </section>
+    
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Estrategias de Akka split brain resolver ##
+        ¬        
+      </div>
+      -->      
+      <!-- 
+          NOTAS:
+          + Static Quorum: Cuando hay un número fijo de nodos
+          + Mayoría: Cuando hay un número de nodos es dinámico
+        --> 
+    <!--
+    </section>
+    -->
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Estrategias de Akka split brain resolver ##
+        
+        - **Quorum estático**. Las particiones que no cumplan el número 
+          mínimo de nodos serán eliminadas del cluster. 
+          
+          ![Quorum estático](img/staticQuorum.svg "Quorum estático")    
+        ¬        
+      </div>      
+      <!-- 
+          NOTAS:
+          + Static Quorum: Cuando hay un número fijo de nodos
+          + Mayoría: Cuando hay un número de nodos es dinámico
+        --> 
+    <!--
+    </section>
+    -->
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Estrategias de Akka split brain resolver ##
+        
+        - **Quorum estático**. Las particiones que no cumplan el número 
+          mínimo de nodos serán eliminadas del cluster.      
+               
+        - **Mantener la mayoría**. Se mantendrá la partición que tenga
+          mayor número de nodos. 
+          
+          ![Mantener la mayoría](img/keepMayority.svg "Mantener la mayoría")
+        ¬        
+      </div>  
+      -->    
+      <!-- 
+          NOTAS:
+          + Static Quorum: Cuando hay un número fijo de nodos
+          + Mayoría: Cuando hay un número de nodos es dinámico
+        -->
+    <!--
+    </section>
+    -->
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Estrategias de Akka split brain resolver ##
+        
+        - **Quorum estático**. Las particiones que no cumplan el número 
+          mínimo de nodos serán eliminadas del cluster.      
+               
+        - **Mantener la mayoría**. Se mantendrá la partición que tenga
+          mayor número de nodos.   
+          
+        - **El más antiguo**. Mantener la partición que contiene el nodo
+          más antiguo.
+          
+          ![El más antiguo](img/oldest.svg "El más antiguo")
+        ¬        
+      </div>      
+      -->
+      <!-- 
+          NOTAS:
+          + Static Quorum: Cuando hay un número fijo de nodos
+          + Mayoría: Cuando hay un número de nodos es dinámico
+        --> 
+    <!--
+    </section>
+    -->
+    
+    <!--
+    <section class="slide">
+      <div class="markdown">
+
+                                              ###### Detección de fallos
+        ----------------------------------------------------------------
+        
+        ## Estrategias de Akka split brain resolver ##
+        
+        - **Quorum estático**. Las particiones que no cumplan el número 
+          mínimo de nodos serán eliminadas del cluster.      
+               
+        - **Mantener la mayoría**. Se mantendrá la partición que tenga
+          mayor número de nodos.   
+          
+        - **El más antiguo**. Mantener la partición que contiene el nodo
+          más antiguo.             
+          
+        - **Mantener al árbitro**. La partición que sobrevive es la que
+          contiene a un nodo árbitro que se define por configuración.  
+          
+          ![Mantener al árbitro](img/keepReferee.svg "Mantener al árbitro")
+        ¬        
+      </div> 
+      -_>     
+      <!-- 
+          NOTAS:
+          + Static Quorum: Cuando hay un número fijo de nodos
+          + Mayoría: Cuando hay un número de nodos es dinámico
+        --> 
+    <!--
+    </section>
+    -->
+        
+    <section class="slide">
+      <div class="markdown">
+
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Ejemplo final con Akka Sharding
+        
+       ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+          
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Ejemplo usando Akka Sharding
+        
+        ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       
+       ### ¿Qué se va a hacer?
+      
+       Un ejemplo bancario: cuentas corrientes y transferencias.
+       
+       - Crear un actor y entidad cuenta y también una transferencia 
+         combinando dos cuentas. 
+       - Se hará un bosquejo de CQRS separando lecturas y escrituras y
+         de Event Sourcing que existe en DDD.
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+          
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Ejemplo usando Akka Sharding
+        
+        ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       
+       ### Objetivos
+       - Ver como funciona Akka Sharding y Akka Cluster.
+       - **Bonus track**: Utilización de akka-management y escuchar los
+         eventos del cluster 
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+          
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## Ejemplo usando Akka Sharding
+        
+        ![Un ejemplo](img/primary-keyboard-shortcut.png "Un ejemplo")
+       
+       
+       # Tiempo de demo
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+          
+                                                 ###### Ejemplo práctico
+        ----------------------------------------------------------------
+        
+        ## ¿Preguntas?
+        
+        ![Preguntas](img/Boy-asking-question.png "Preguntas")
+      ¬
+        
+      </div>      
+    </section>
+    
+    <section class="slide">
+      <div class="markdown">
+        ¬¬¬
+        
+        Gracias
+        =======
+       
+       ¬¬¬
+      </div>      
+    </section> 
+    
+    
+    
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+<!--
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+-->
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<script src="markdown.min.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+    $( '.markdown' ).html( function( index, oldHtml ) {
+      
+        var inner = oldHtml.replace( /[\n\r][\t ]+/g,"\n" );
+        inner = inner.replace( /[·]/g," " );
+        
+        var mark =  markdown.toHTML(inner)
+                .replace( /[&]amp[;]gt[;]/g,"&gt;" )
+                .replace( /[&]amp[;]lt[;]/g,"&lt;" )
+                .replace( /¬/g,"<p>&nbsp;</p>" )
+                .replace( /~~([^~]*)~~/g,"<strike>$1</strike>" )
+                ;
+        
+        return mark;
+      
+    } );
+  });
+</script>
+</body>
+</html>

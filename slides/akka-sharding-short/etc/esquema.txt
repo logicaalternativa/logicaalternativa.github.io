@@ -1,0 +1,20 @@
+Notas
+=====
+
+Primero: ¿Qué es akka sharding?
+ |
+ +- Un actor único rerpresenta una entidad en el cluster
+    |
+    +- Tiene una identidad
+       |
+       +- Será unico, no sólo en la MVC sino en todo el cluster
+       
+    +- Y almacena un estado construido a partir de los mensajes que recibe
+       |
+       +- Se persistir mediante event sourcing gracias Distributed data
+ |
+ +- En que está basado?
+    |
+    +- Akka cluster
+    +- Akka persistence
+    +- Akka distributed data

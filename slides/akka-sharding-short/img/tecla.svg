@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns1="http://sozi.baierouge.fr" id="svg2" sodipodi:docname="tecla.svg" viewBox="0 0 350 350" version="1.1" inkscape:version="0.48.0 r9654">
+  <defs id="defs4">
+    <filter id="filter4051" inkscape:label="filter1" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur4053" stdDeviation="1.9783070866141732"/>
+    </filter>
+    <linearGradient id="linearGradient3098" y2="433.25" gradientUnits="userSpaceOnUse" x2="124.51" y1="497.48" x1="340.07" inkscape:collect="always">
+      <stop id="stop3826" style="stop-color:#000000" offset="0"/>
+      <stop id="stop3836" style="stop-color:#000000" offset="0.3"/>
+      <stop id="stop3834" style="stop-color:#323232" offset=".5"/>
+      <stop id="stop3832" style="stop-color:#000000" offset="0.7"/>
+      <stop id="stop3828" style="stop-color:#000000" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3100" y2="347.98" gradientUnits="userSpaceOnUse" x2="506.33" y1="347.98" x1="237.76" inkscape:collect="always">
+      <stop id="stop4057" style="stop-color:#191919" offset="0"/>
+      <stop id="stop4059" style="stop-color:#000000" offset="1"/>
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview id="base" inkscape:zoom="1.0826087" borderopacity="1.0" inkscape:snap-intersection-paths="true" inkscape:cx="-54.463186" inkscape:cy="241.11113" inkscape:object-paths="true" inkscape:window-maximized="1" showgrid="false" inkscape:snap-midpoints="true" inkscape:snap-global="false" inkscape:document-units="px" bordercolor="#666666" inkscape:window-x="-4" inkscape:window-y="-4" inkscape:snap-smooth-nodes="true" inkscape:object-nodes="true" inkscape:window-width="1920" inkscape:pageopacity="0.0" inkscape:pageshadow="2" pagecolor="#ffffff" inkscape:current-layer="layer1" inkscape:window-height="994"/>
+  <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer" transform="translate(0 -702.36)">
+    <g id="g3090" transform="translate(-197.39 483.69)">
+      <g id="g4342" transform="matrix(1.002 0 0 1.0524 -.40089 -29.691)">
+        <path id="rect2985-1" sodipodi:nodetypes="ccssssssssc" style="fill-rule:evenodd;color:#000000;fill:url(#linearGradient3098)" inkscape:connector-curvature="0" d="m238.2 250.88 267.53-0.55751s19.85 53.871 29.476 79.852c2.4618 6.6446 8.9918 17.851 8.9918 25.527v170.46c0 16.62-13.512 27.911-30 30-96.516 12.225-191.6 14.404-284.31 0-16.423-2.5515-30-13.38-30-30v-170.46c0-9.2337 3.8388-18.646 7.0796-26.533 10.263-24.979 31.231-78.289 31.231-78.289z"/>
+        <path id="rect2985" sodipodi:nodetypes="sssssssss" style="fill-rule:evenodd;color:#000000;fill:url(#linearGradient3100)" inkscape:connector-curvature="0" d="m257.76 238.56c76.19 9.5579 152.38 11.362 228.57 0 10.959-1.6342 20 6.99 20 15.673v179.12c0 8.6827-9.0433 14.024-20 15.673-76.19 11.462-152.38 11.395-228.57 0-10.958-1.6389-20-6.99-20-15.673v-179.12c0-8.6827 9.0062-17.052 20-15.673z"/>
+        <path id="rect2985-4" sodipodi:nodetypes="ccssssccssssc" style="fill-opacity:.32086;color:#000000;filter:url(#filter4051);fill:#ffffff" inkscape:connector-curvature="0" d="m238.2 250.88-0.44 21.37-2.82 162.91c-0.15368 8.8649 9.2165 14.326 20.406 16 77.801 11.636 155.61 11.704 233.41 0 11.188-1.6832 18.297-7.1344 18.406-16v-162.91l-0.82329-18.018 0.0108 179.11c0.00052 8.6827-5.0433 14.039-16 15.688-76.19 11.462-154.4 9.3951-230.59-2-10.958-1.6389-19.903-7.0054-20-15.688z"/>
+      </g>
+      <text id="text4073" style="font-size:235.42px;font-family:Calibri;fill:#ffffff;letter-spacing:0px;text-anchor:middle;line-height:125%;word-spacing:0px;text-align:center" sodipodi:linespacing="125%" transform="matrix(1.3195 .064867 0 .75789 0 0)" xml:space="preserve" y="462.53244" x="259.09235">
+        <tspan id="tspan4075" y="462.53244" x="259.09235" sodipodi:role="line">T</tspan>
+      </text>
+    </g>
+    <text id="text3052" style="font-size:207.39px;font-family:Calibri;fill:#ffffff;letter-spacing:0px;text-anchor:middle;line-height:125%;word-spacing:0px;text-align:center" xml:space="preserve" transform="matrix(1.3081 .10647 0 .76445 0 0)" y="446.0509" x="239.67848" sodipodi:linespacing="125%">
+      <tspan id="tspan3054" sodipodi:role="line" x="239.67848" y="446.0509"/>
+    </text>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>keyboard key</dc:title>
+        <dc:date>2011-05-27T12:36:38</dc:date>
+        <dc:description>A keyboard key...</dc:description>
+        <dc:source>https://openclipart.org/detail/140641/keyboard-key-by-padilhaum</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>padilhaum</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>T</rdf:li>
+            <rdf:li>key</rdf:li>
+            <rdf:li>keyboard</rdf:li>
+            <rdf:li>tecla</rdf:li>
+            <rdf:li>teclado</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
