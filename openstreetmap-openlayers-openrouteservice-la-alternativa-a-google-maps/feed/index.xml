@@ -13,7 +13,7 @@
 	<lastBuildDate>Wed, 10 Jun 2015 18:24:04 +0000</lastBuildDate>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.7</generator>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
 	<item>
 		<title>Por: Miguel R. Esteban Martín</title>
 		<link>/openstreetmap-openlayers-openrouteservice-la-alternativa-a-google-maps/#comment-93</link>
@@ -52,7 +52,7 @@ Queria consultarte:
 
 Muchas gracias de antemano. 
 Un cordial saludo.]]></description>
-		<content:encoded><![CDATA[<p>En primer lugar indicarte que has hecho un gran trabajo. Estoy estudiando tu aplicación y me parece muy interesante. Me la baje y estoy trabajando con netbeans. No obstante, cuando la ejecuto e intento localizar una dirección me displaya el error &#8220;error indeterminado al añadir marca&#8221;. Entiendo que realiza correctamente la geolocalización, pero no recibe un dato legible.<br />
+		<content:encoded><![CDATA[<p>En primer lugar indicarte que has hecho un gran trabajo. Estoy estudiando tu aplicación y me parece muy interesante. Me la baje y estoy trabajando con netbeans. No obstante, cuando la ejecuto e intento localizar una dirección me displaya el error «error indeterminado al añadir marca». Entiendo que realiza correctamente la geolocalización, pero no recibe un dato legible.<br />
 Queria consultarte:<br />
 1.cual es el motivo del error.<br />
 2. Existe posibilidad de utilizar otro tipo de geolocalización sin pasar por OpenRouteservice.org?</p>

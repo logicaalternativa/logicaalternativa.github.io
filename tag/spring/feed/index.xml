@@ -12,11 +12,11 @@
 	<atom:link href="/tag/spring/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.7</generator>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
 	<item>
 		<title>Mocks&#8230; o el TDD y yo</title>
 		<link>/mocks-o-el-tdd-y-yo/</link>
@@ -47,7 +47,7 @@
 		<category><![CDATA[TDD]]></category>
 
 		<guid isPermaLink="false">/?p=698</guid>
-		<description><![CDATA[“Test-driven development (TDD)”, en la lengua de Cervantes “Desarrollo guiado por pruebas”&#8230; Palabras malditas para algunos&#8230; Últimamente se dice que está muerto&#8230; “TDD is dead?”. Actualización: La segunda parte de este artículo es &#8220;Mocks… o el TDD y yo&#8221; ¿Qué es? A grandes rasgos, consiste en primero diseñar y realizar los test de una determinada [&#8230;]]]></description>
+		<description><![CDATA[“Test-driven development (TDD)”, en la lengua de Cervantes “Desarrollo guiado por pruebas”&#8230; Palabras malditas para algunos&#8230; Últimamente se dice que está muerto&#8230; “TDD is dead?”. Actualización: La segunda parte de este artículo es «Mocks… o el TDD y yo» ¿Qué es? A grandes rasgos, consiste en primero diseñar y realizar los test de una determinada [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Configuración de entornos flexible en Spring utilizando SpEL</title>

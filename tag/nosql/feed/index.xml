@@ -12,11 +12,11 @@
 	<atom:link href="/tag/nosql/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.7</generator>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
 	<item>
 		<title>La aventura de Civitana.org</title>
 		<link>/la-aventura-de-civitana-org/</link>
@@ -29,7 +29,7 @@
 		<category><![CDATA[Nube]]></category>
 
 		<guid isPermaLink="false">/?p=678</guid>
-		<description><![CDATA[Actualización octubre del 2014: &#8221; Después de un verano intenso que nos ha dado tiempo a desarrollar un protocolo de voto electrónico en el que por mis tareas me he tocado definir y desarrollar en gran parte, a partir de octubre de 2014, las circunstancias  hacen que me desligue de Civitana.org, . Aunque tengo una [&#8230;]]]></description>
+		<description><![CDATA[Actualización octubre del 2014: » Después de un verano intenso que nos ha dado tiempo a desarrollar un protocolo de voto electrónico en el que por mis tareas me he tocado definir y desarrollar en gran parte, a partir de octubre de 2014, las circunstancias  hacen que me desligue de Civitana.org, . Aunque tengo una [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Java versus JavaScript, reflexiones</title>

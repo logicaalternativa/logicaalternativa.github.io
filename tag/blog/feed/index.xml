@@ -12,11 +12,11 @@
 	<atom:link href="/tag/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.7</generator>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
 	<item>
 		<title>LogicaAlternativa.com está en la(s) nube(s), en OpenShift</title>
 		<link>/logicaalternativa-com-esta-en-las-nubes/</link>
@@ -44,7 +44,7 @@
 		<category><![CDATA[trabajo]]></category>
 
 		<guid isPermaLink="false">/?p=54</guid>
-		<description><![CDATA[Esta entrada también se podía haber llamado &#8220;Los motivos de este blog&#8221; o &#8220;¿Por qué hago este blog?&#8221; Se han tenido que dar una serie de circunstancias que han creado la tormenta perfecta que ha terminado en el nacimiento de LogicaAlternativa.com. Este comienzo de año ha sido de locura. Problemas en la empresa en la [&#8230;]]]></description>
+		<description><![CDATA[Esta entrada también se podía haber llamado «Los motivos de este blog» o «¿Por qué hago este blog?» Se han tenido que dar una serie de circunstancias que han creado la tormenta perfecta que ha terminado en el nacimiento de LogicaAlternativa.com. Este comienzo de año ha sido de locura. Problemas en la empresa en la [&#8230;]]]></description>
 		</item>
 	</channel>
 </rss>

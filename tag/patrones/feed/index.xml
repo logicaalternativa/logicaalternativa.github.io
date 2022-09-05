@@ -12,11 +12,11 @@
 	<atom:link href="/tag/patrones/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.7</generator>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
 	<item>
 		<title>Futuros y promesas,&#8230; y también monadas. Implementando el patrón</title>
 		<link>/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/</link>
@@ -28,7 +28,7 @@
 		<category><![CDATA[patrones]]></category>
 
 		<guid isPermaLink="false">/?p=1035</guid>
-		<description><![CDATA[&#8220;Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más.&#8221; Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente [&#8230;]]]></description>
+		<description><![CDATA[«Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más.» Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente [&#8230;]]]></description>
 		</item>
 	</channel>
 </rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Aprendizaje por refuerzo &#8211; Lógica Alternativa</title>
+	<atom:link href="/tag/aprendizaje-por-refuerzo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
+	<item>
+		<title>Notas sobre aprendizaje por refuerzo</title>
+		<link>/notas-sobre-aprendizaje-por-refuerzo/</link>
+		<pubDate>Mon, 05 Sep 2022 17:38:35 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Inteligencia artificial]]></category>
+		<category><![CDATA[Agente]]></category>
+		<category><![CDATA[Aprendizaje computacional]]></category>
+		<category><![CDATA[Aprendizaje por refuerzo]]></category>
+		<category><![CDATA[Machine learning]]></category>
+		<category><![CDATA[Sistemas no supervisados]]></category>
+		<category><![CDATA[Sistemas supervisados]]></category>
+
+		<guid isPermaLink="false">/?p=1138</guid>
+		<description><![CDATA[El objetivo de este post es servir de introducción a una de las ramas del machine learning o, en español,  aprendizaje computacional. Los sistemas de aprendizaje por refuerzo se pueden modelar como una función que dependiendo del valor de unas entradas se obtienen una salida ayudando a predecir o clasificar. # Modelización de un sistema [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

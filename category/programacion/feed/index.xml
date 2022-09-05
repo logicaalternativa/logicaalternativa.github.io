@@ -12,27 +12,12 @@
 	<atom:link href="/category/programacion/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sat, 01 Dec 2018 17:23:23 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.7</generator>
+	<generator>https://wordpress.org/?v=4.8.20</generator>
 	<item>
-		<title>Diapositivas de la charla de Commit Conf</title>
-		<link>/diapositivas-de-la-charla-de-commit-conf/</link>
-		<pubDate>Sat, 01 Dec 2018 17:23:23 +0000</pubDate>
-		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
-				<category><![CDATA[General]]></category>
-		<category><![CDATA[Programación]]></category>
-		<category><![CDATA[Scala]]></category>
-		<category><![CDATA[akka]]></category>
-		<category><![CDATA[DDD]]></category>
-		<category><![CDATA[scala]]></category>
-
-		<guid isPermaLink="false">/?p=1125</guid>
-		<description><![CDATA[Los días 23 y 24 de noviembre ha tenido lugar en Madrid la primera edición del Commit Conf, uno de los eventos más importantes que se tiene en lengua castellana. En su momento presente mi charla sobre Akka Sharding y su relación con DDD al &#8220;call for papers&#8221; con ilusión pero sin grandes esperanzas de [&#8230;]]]></description>
-		</item>
-		<item>
 		<title>Futuros y promesas,&#8230; y también monadas. Implementando el patrón</title>
 		<link>/futuros-y-promesas-y-tambien-monadas-implementando-el-patron/</link>
 		<pubDate>Tue, 15 Aug 2017 17:20:34 +0000</pubDate>
@@ -43,7 +28,7 @@
 		<category><![CDATA[patrones]]></category>
 
 		<guid isPermaLink="false">/?p=1035</guid>
-		<description><![CDATA[&#8220;Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más.&#8221; Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente [&#8230;]]]></description>
+		<description><![CDATA[«Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más.» Los modelos NIO no bloqueantes y la programación asíncrona y reactiva son paradigmas que poco a poco van adoptándose y utilizando más. No creo que diga una tontería al afirmar que muy probablemente [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Actores tipados, Akka por ejemplos</title>
@@ -58,7 +43,7 @@
 		<category><![CDATA[programación reactiva]]></category>
 
 		<guid isPermaLink="false">/?p=956</guid>
-		<description><![CDATA[&#8220;Tercer y último artículo sobre Akka explicado mediante ejemplos. En los dos anteriores se basó en como funcionan la cola de mensajes de un actor, que es un router, como se envían mensajes entre actores. Después se trató temas como la supervisión y el bus de eventos. Ahora me centraré en los actores tipados.&#8220; Entrada [&#8230;]]]></description>
+		<description><![CDATA[«Tercer y último artículo sobre Akka explicado mediante ejemplos. En los dos anteriores se basó en como funcionan la cola de mensajes de un actor, que es un router, como se envían mensajes entre actores. Después se trató temas como la supervisión y el bus de eventos. Ahora me centraré en los actores tipados.« Entrada [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Akka por ejemplos. Sobre supervisión, bus de eventos, &#8230;</title>
@@ -91,7 +76,7 @@
 		<category><![CDATA[scala]]></category>
 
 		<guid isPermaLink="false">/?p=861</guid>
-		<description><![CDATA[&#8220;Akka representa muchos conceptos nuevos que al principio cuesta asimilar. Para poder entenderlo mejor, he ido creando, poco a poco, una serie de ejemplos que me han permitido comprender mejor el paradigma que conlleva. Este artículo trata sobre esto, intentar tener una prueba de código de cada nuevo concepto que permita ver cual es su [&#8230;]]]></description>
+		<description><![CDATA[«Akka representa muchos conceptos nuevos que al principio cuesta asimilar. Para poder entenderlo mejor, he ido creando, poco a poco, una serie de ejemplos que me han permitido comprender mejor el paradigma que conlleva. Este artículo trata sobre esto, intentar tener una prueba de código de cada nuevo concepto que permita ver cual es su [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>﻿Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</title>
@@ -141,7 +126,7 @@
 		<category><![CDATA[TDD]]></category>
 
 		<guid isPermaLink="false">/?p=698</guid>
-		<description><![CDATA[“Test-driven development (TDD)”, en la lengua de Cervantes “Desarrollo guiado por pruebas”&#8230; Palabras malditas para algunos&#8230; Últimamente se dice que está muerto&#8230; “TDD is dead?”. Actualización: La segunda parte de este artículo es &#8220;Mocks… o el TDD y yo&#8221; ¿Qué es? A grandes rasgos, consiste en primero diseñar y realizar los test de una determinada [&#8230;]]]></description>
+		<description><![CDATA[“Test-driven development (TDD)”, en la lengua de Cervantes “Desarrollo guiado por pruebas”&#8230; Palabras malditas para algunos&#8230; Últimamente se dice que está muerto&#8230; “TDD is dead?”. Actualización: La segunda parte de este artículo es «Mocks… o el TDD y yo» ¿Qué es? A grandes rasgos, consiste en primero diseñar y realizar los test de una determinada [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Aprendiendo Grunt a partir de Ant</title>
