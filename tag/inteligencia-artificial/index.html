@@ -57,7 +57,7 @@ img.emoji {
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 4.8.20" />
 
-<!-- Bad Behavior 2.2.20 run time: 0.820 ms -->
+<!-- Bad Behavior 2.2.20 run time: 1.335 ms -->
 <script type="text/javascript">
 <!--
 function bb2_addLoadEvent(func) {
@@ -78,7 +78,7 @@ bb2_addLoadEvent(function() {
 			var myElement = document.createElement('input');
 			myElement.setAttribute('type', 'hidden');
 			myElement.name = 'bb2_screener_';
-			myElement.value = '1662399552 127.0.0.1';
+			myElement.value = '1662402082 127.0.0.1';
 			document.forms[i].appendChild(myElement);
 		}
 	}
@@ -132,7 +132,7 @@ bb2_addLoadEvent(function() {
 								</header><!-- .entry-header -->
 
 				<div class="entry-content">
-			<p><strong>E</strong>l objetivo de este post es servir de introducción a una de las ramas del machine learning o, en español,  aprendizaje computacional. Los sistemas de aprendizaje por refuerzo se pueden modelar como una función que dependiendo del valor de unas entradas se obtienen una salida ayudando a predecir o clasificar.<br />
+			<p><strong>E</strong>l objetivo de este post es servir de introducción a una de las ramas del machine learning o, en español,  aprendizaje computacional como son los modelos de aprendizaje por refuerzo. Los sistemas de aprendizaje computacional se pueden modelar como una función que dependiendo del valor de unas entradas se obtiene una salida que permite predecir o clasificar.<br />
 <pre># <strong><em>Modelización de un sistema de aprendizaje computacional como una función</em></strong> 
 
 Entrada_1  --&gt;  <strong>,-------.</strong>
@@ -144,8 +144,8 @@ Entrada_n
 <em>predicción</em> = <strong>modelo</strong>( entrada_1, entrada_2, ..., entrada_n )</pre><br />
 <img class="size-full wp-image-1141 alignleft" src="/wp-content/uploads/2022/07/dog-reward.png" alt="Aprendizaje por Refuerzo" width="350" height="418" srcset="/wp-content/uploads/2022/07/dog-reward.png 350w, /wp-content/uploads/2022/07/dog-reward-251x300.png 251w" sizes="(max-width: 350px) 100vw, 350px" />Si nos atenemos al conocimiento a priori de cuan buena puede ser la predicción, podemos clasificar los sistemas en tres grupos:</p>
 <p>En los <strong>sistemas supervisados</strong> se tiene un conocimiento completo. Un ejemplo puede ser un clasificador que es capaz de distinguir entre <a href="https://www.google.es/search?q=muffin+or+chihuahua&amp;hl=es&amp;tbm=isch&amp;source=hp&amp;biw=1375&amp;bih=740&amp;ei=BoT6Yu_yMaeD8gLpl4WgBQ&amp;iflsig=AJiK0e8AAAAAYvqSFp13R2oYV508pi32D1xoKvy7KS3B&amp;oq=muffin+or+c&amp;gs_lcp=CgNpbWcQARgAMgUIABCABDIECAAQHjIECAAQHjIGCAAQHhAFMgYIABAeEAUyBggAEB4QBToLCAAQgAQQsQMQgwE6CAgAELEDEIMBOggIABCABBCxAzoECAAQAzoGCAAQHhAIUOsLWOs6YL5MaAVwAHgAgAGdAYgBlg-SAQQxLjE1mAEAoAEBqgELZ3dzLXdpei1pbWewAQA&amp;sclient=img" target="_blank" rel="noopener">un muffin o un chiguagua</a>, ya que se puede saber (o puede que no sea tan sencillo 😀 ) si el clasificador lo ha hecho bien o se ha equivocado. Por el contrario, los <strong>sistemas no supervisados</strong>, no existe ese conocimiento previo y sirven para descubrir patrones y agrupaciones desconocidos dentro de un conjunto de datos.</p>
-<p>El el punto medio están los sistemas de <strong>aprendizaje por refuerzo</strong>, donde sólo podemos saber si el sistema esta respondiendo mejor o peor con respecto a una entrada. Esto se materializa obteniendo una recompensa o una penalización del resultado de la salida de una entrada el sistema ,y así,  «<em>saber</em>» si la solución  plateada actual, va por el buen camino.</p>
-<p>El ejemplo en la vida real es un cachorro al que le estamos enseñando a sentarse, si lo hace bien, recibe su recompensa y si no, no recibe nada. Sin entender al principio lo que pasa, al cabo de unas cuantas veces pensará<em> «Si en esta situación, me comporto de esta manera, recibiré una recompensa porque en el pasado ya me ha ocurrido»</em>.</p>
+<p>El el punto medio están los sistemas de <strong>aprendizaje por refuerzo</strong>, donde sólo podemos saber si el sistema esta respondiendo mejor o peor con respecto a una entrada. Esto se materializa obteniendo una recompensa o una penalización del resultado de la salida, y así,  «<em>saber</em>» si la solución  plateada actual, va por el buen camino.</p>
+<p>Un ejemplo en la vida real es un cachorro al que le estamos enseñando a sentarse, si lo hace bien, recibe su recompensa y si no, no recibe nada. Sin entender al principio lo que pasa, al cabo de unas cuantas veces pensará<em> «Si en esta situación, me comporto de esta manera, recibiré una recompensa porque en el pasado ya me ha ocurrido»</em>.</p>
 <p>Dentro sistemas de aprendizaje por refuerzo están los algoritmos genéticos utilizados en <strong>sistemas difusos</strong>. Cuando se habla de un sistema difuso se está hablando de un sistema del que no se tiene «<em>incertidumbre</em>» en la percepción del entorno. Hay que tener en cuenta que este tipo de conocimiento incompleto es muy común en el mundo real (<em>«velocidad en torno los 100 km/h»</em>, <em>«temperatura mayor de 25ª»</em>)  y nosotros los humanos somos muy capaces de tomar decisiones a partir de esta información imprecisa.</p>
 <p>Con respecto a los algoritmos genéticos son aquellos que se van variando sus parámetros de modelo de una manera parecida a como funciona en la naturaleza. En esta,  aquellas familias de genes que mejor se adaptan al entorno son las que prevalecen y siguen evolucionado y en los algoritmos genéticos son las familias de parámetros que más se acercan a la solución óptima son los que prevalecen y a partir de los más exitosos  se sigue evolucionando.</p>
 <p>Los <strong>agentes reactivos</strong> también pueden encajar dentro de los sistemas basados en aprendizaje por refuerzo. Un agente tiene un sistema autónomo que está puede obtener información y comunicarse con el mundo real<img class="size-full wp-image-1163 alignright" src="/wp-content/uploads/2022/09/ant.png" alt="" width="350" height="287" srcset="/wp-content/uploads/2022/09/ant.png 350w, /wp-content/uploads/2022/09/ant-300x246.png 300w" sizes="(max-width: 350px) 100vw, 350px" /></p>

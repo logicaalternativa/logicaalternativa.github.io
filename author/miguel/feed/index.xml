@@ -12,7 +12,7 @@
 	<atom:link href="/author/miguel/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Mon, 05 Sep 2022 17:38:35 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Sep 2022 18:20:40 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -32,7 +32,7 @@
 		<category><![CDATA[Sistemas supervisados]]></category>
 
 		<guid isPermaLink="false">/?p=1138</guid>
-		<description><![CDATA[El objetivo de este post es servir de introducción a una de las ramas del machine learning o, en español,  aprendizaje computacional. Los sistemas de aprendizaje por refuerzo se pueden modelar como una función que dependiendo del valor de unas entradas se obtienen una salida ayudando a predecir o clasificar. # Modelización de un sistema [&#8230;]]]></description>
+		<description><![CDATA[El objetivo de este post es servir de introducción a una de las ramas del machine learning o, en español,  aprendizaje computacional como son los modelos de aprendizaje por refuerzo. Los sistemas de aprendizaje computacional se pueden modelar como una función que dependiendo del valor de unas entradas se obtiene una salida que permite predecir [&#8230;]]]></description>
 		</item>
 		<item>
 		<title>Diapositivas de la charla de Commit Conf</title>
