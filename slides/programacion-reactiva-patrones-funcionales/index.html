@@ -14767,7 +14767,9 @@ div.jp-OutputPrompt {
 <h1 id="Funtores">Funtores<a class="anchor-link" href="#Funtores">&#182;</a></h1><h2 id="Definici%C3%B3n-formal">Definici&#243;n formal<a class="anchor-link" href="#Definici%C3%B3n-formal">&#182;</a></h2><p>Permite transformar el valor que hay dentro del un  "<em>contexto</em>" a través de una función.</p>
 <p>Cuando hablamos de contextos hablamos de "<em>tipos de tipos</em>" o "<em>constructores de tipos</em>" como <code>List</code>, <code>Optional</code>, <code>Mono</code>, <code>Observable</code>, etc.</p>
 
-<pre><code>
+<pre><code>Map
+===
+
 [A] ---------- (f: A -&gt; B) ---------- =&gt; [B]</code></pre>
 
 </div>
@@ -14819,7 +14821,9 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Definici%C3%B3n-formal">Definici&#243;n formal<a class="anchor-link" href="#Definici%C3%B3n-formal">&#182;</a></h2><p>A partir de un contextos con valor <code>A</code> y otro con valor de una función de <code>A -&gt; B</code> obtenemos otro con valor <code>B</code></p>
 
-<pre><code>
+<pre><code>Ap
+==
+
 [A] ---------- [(f: A -&gt; B )] ---------- =&gt; [B]</code></pre>
 
 </div>
@@ -14828,7 +14832,10 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Definici%C3%B3n-del-producto">Definici&#243;n del <em>producto</em><a class="anchor-link" href="#Definici%C3%B3n-del-producto">&#182;</a></h2><p>A partir de dos contextos uno con valor <code>A</code> y otro con valor <code>B</code> obtenemos otro con la tupla de los dos valores.</p>
 
-<pre><code>[A] -------------+      
+<pre><code>Product
+=======
+
+[A] -------------+      
                  |
                  + =&gt; [(A,B)]
                  |
@@ -14840,7 +14847,9 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Definici%C3%B3n-de-Map2">Definici&#243;n de Map2<a class="anchor-link" href="#Definici%C3%B3n-de-Map2">&#182;</a></h2><p>A partir de dos contextos de tipo <code>A</code> y <code>B</code> y una función que a partir de los dos tipos se obtiene otro tipo <code>C</code>, se obtiene un contexto de tipo <code>C</code>.</p>
 
-<pre><code>
+<pre><code>Map2
+====
+
 [A] -------------+      
                  |
                  + -- (f: A,B -&gt; C) --  =&gt; [C]
@@ -14858,7 +14867,7 @@ div.jp-OutputPrompt {
 &lt;Cervantes&gt;  -- ( [Biografia] obtenerBiografia( autor) ) -- =&gt; [&lt;Bigrafía Cervantes&gt;]</code></pre>
 
 <pre><code>Map2
- ====
+====
 
  [&lt;El Quijote&gt;] --------+      
                         |
@@ -14870,7 +14879,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Definici%C3%B3n-de-applicativo-para-CompletableFuture">Definici&#243;n de applicativo para <code>CompletableFuture</code><a class="anchor-link" href="#Definici%C3%B3n-de-applicativo-para-CompletableFuture">&#182;</a></h2>
+<h2 id="Definici%C3%B3n-de-aplicativo-para-CompletableFuture">Definici&#243;n de aplicativo para <code>CompletableFuture</code><a class="anchor-link" href="#Definici%C3%B3n-de-aplicativo-para-CompletableFuture">&#182;</a></h2>
 </div>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14899,17 +14908,17 @@ div.jp-OutputPrompt {
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Applicativo,-operaciones-derivadas">Applicativo, operaciones derivadas<a class="anchor-link" href="#Applicativo,-operaciones-derivadas">&#182;</a></h2><p>Utilizando el concepto de <em>algebra</em>, a partir de unas operaciones primitivas y unas leyes, se pueden crear nuevas operaciones por composición de estas.</p>
+<h2 id="Aplicativo,-operaciones-derivadas">Aplicativo, operaciones derivadas<a class="anchor-link" href="#Aplicativo,-operaciones-derivadas">&#182;</a></h2><p>Utilizando el concepto de <em>algebra</em>, a partir de unas operaciones primitivas y unas leyes, se pueden crear nuevas operaciones por composición de estas.</p>
 
 </div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso a partir de la función <code>map2</code> podemos definir:</p>
+<p>En este caso a partir de las funciones primitivas, <code>map2</code> y <code>pure</code>, podemos definir:</p>
 <ul>
-<li>La función aplicativo (definición formal)</li>
-<li>La función producto (definición alternativa)</li>
-<li>La función <code>map</code> del funtor.</li>
+<li>La operación aplicativo</li>
+<li>La operación producto</li>
+<li>La operación <code>map</code> del funtor.</li>
 </ul>
 
 </div>
@@ -14986,7 +14995,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Definici%C3%B3n-de-applicativo-error-para-CompletableFuture">Definici&#243;n de applicativo error para <code>CompletableFuture</code><a class="anchor-link" href="#Definici%C3%B3n-de-applicativo-error-para-CompletableFuture">&#182;</a></h2>
+<h2 id="Definici%C3%B3n-de-aplicativo-error-para-CompletableFuture">Definici&#243;n de aplicativo error para <code>CompletableFuture</code><a class="anchor-link" href="#Definici%C3%B3n-de-aplicativo-error-para-CompletableFuture">&#182;</a></h2>
 </div>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15013,7 +15022,8 @@ div.jp-OutputPrompt {
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Aplicativo-error,-operaciones-derivadas">Aplicativo error, operaciones derivadas<a class="anchor-link" href="#Aplicativo-error,-operaciones-derivadas">&#182;</a></h2>
+<h2 id="Aplicativo-error,-operaciones-derivadas">Aplicativo error, operaciones derivadas<a class="anchor-link" href="#Aplicativo-error,-operaciones-derivadas">&#182;</a></h2><p>La operación <code>handleError</code> se puede definir como una especie de "<em>default</em>"</p>
+
 </div>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15053,7 +15063,9 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="MonadError">MonadError<a class="anchor-link" href="#MonadError">&#182;</a></h1><h2 id="Definici%C3%B3n-formal-de-Monada">Definici&#243;n formal de Monada<a class="anchor-link" href="#Definici%C3%B3n-formal-de-Monada">&#182;</a></h2><p>Es un funtor aplicativo monádico. A partir de un contexto de tipo <code>A</code> y una función que tiene como dominio el tipo <code>A</code> y devuelve un contexto de tipo <code>B</code> se obtiene un contexto del tipo <code>B</code></p>
 
-<pre><code>
+<pre><code>FlatMap
+=======
+
 [A] ---------- (f: A -&gt; [B]) ---------- =&gt; [B]</code></pre>
 
 </div>
@@ -15101,7 +15113,8 @@ FlatMap
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Operaciones-primitivas-y-derivadas-de-MonadError">Operaciones primitivas y derivadas de MonadError<a class="anchor-link" href="#Operaciones-primitivas-y-derivadas-de-MonadError">&#182;</a></h2>
+<h2 id="Operaciones-primitivas-y-derivadas-de-MonadError">Operaciones primitivas y derivadas de MonadError<a class="anchor-link" href="#Operaciones-primitivas-y-derivadas-de-MonadError">&#182;</a></h2><p>Definiremos las operaciones del applicativo <code>map2</code> y la función <code>flatten</code> a partir de las operaciones primitivas de Monada</p>
+
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15212,7 +15225,7 @@ FlatMap
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Creando-un-DSL">Creando un DSL<a class="anchor-link" href="#Creando-un-DSL">&#182;</a></h2><p>Domain Specific Language para evitar el infierno de las <em>llaves</em> <code>{</code> <code>}</code></p>
+<h2 id="Creando-un-DSL">Creando un DSL<a class="anchor-link" href="#Creando-un-DSL">&#182;</a></h2><p>Domain Specific Language para evitar el infierno de los <em>parentesis</em> <code>(</code> <code>)</code></p>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
