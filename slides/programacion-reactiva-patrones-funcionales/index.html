@@ -15044,7 +15044,7 @@ div.jp-OutputPrompt {
         <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">futureA</span><span class="p">,</span> 
         <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
          
-         <span class="k">return</span> <span class="n">handleErrorWith</span><span class="p">(</span> <span class="n">futureA</span><span class="p">,</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span> <span class="p">);</span>
+         <span class="k">return</span> <span class="n">handleErrorWith</span><span class="p">(</span> <span class="n">futureA</span><span class="p">,</span> <span class="n">error</span> <span class="o">-&gt;</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">)</span> <span class="p">);</span>
         
     <span class="p">}</span>
 
@@ -15153,7 +15153,7 @@ FlatMap
              <span class="n">futureA</span><span class="p">,</span>
              <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">flatMap</span><span class="p">(</span> 
                  <span class="n">futureB</span><span class="p">,</span> 
-                 <span class="n">b</span> <span class="o">-&gt;</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+                 <span class="n">b</span> <span class="o">-&gt;</span>  <span class="n">pure</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">)</span>
              <span class="p">)</span>
          <span class="p">);</span>
 
@@ -15176,7 +15176,7 @@ FlatMap
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">record</span> <span class="nf">CompletableFutureMonadErrorImpl</span><span class="p">(</span> <span class="n">Executor</span> <span class="n">executor</span> <span class="p">)</span>  <span class="kd">implements</span> <span class="n">CompletableFutureMonadError</span> <span class="p">{</span>
@@ -15196,16 +15196,17 @@ FlatMap
         <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">futureA</span><span class="p">,</span> 
         <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
         
-        <span class="kd">final</span> <span class="kd">var</span> <span class="n">res</span> <span class="o">=</span> <span class="n">futureA</span><span class="p">.</span><span class="na">handleAsync</span><span class="p">(</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span> <span class="n">error</span> <span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">pure</span><span class="p">(</span> <span class="n">value</span> <span class="p">);</span>
+        <span class="kd">final</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">res</span> <span class="o">=</span> <span class="n">futureA</span><span class="p">.</span><span class="na">handleAsync</span><span class="p">(</span> 
+            <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span> <span class="n">error</span> <span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">pure</span><span class="p">(</span> <span class="n">value</span> <span class="p">);</span>
+                <span class="p">}</span>
             <span class="p">}</span>
-        <span class="p">});</span>
+        <span class="p">);</span>
         
         <span class="k">return</span> <span class="n">flatten</span><span class="p">(</span> <span class="n">res</span> <span class="p">);</span>
-        
     <span class="p">}</span>
     
     <span class="kd">public</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">raiseError</span><span class="p">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>        
@@ -15229,7 +15230,7 @@ FlatMap
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">record</span> <span class="n">CompletableFutureDsl</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="p">(</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="n">CompletableFutureMonadError</span> <span class="n">monad</span>  <span class="p">){</span>
