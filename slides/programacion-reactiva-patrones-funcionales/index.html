@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>segundoEnfoqueCharlaProgramacionReactiva slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>programacionReactiva-CommitConf2023 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14749,7 +14749,12 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="DSL-(Domain-Specific-Language)">DSL (Domain Specific Language)<a class="anchor-link" href="#DSL-(Domain-Specific-Language)">&#182;</a></h1><p>El objetivo es crear un <em>Domain Specifoc Language</em>, utilizando composición monádica. Como ejemplo nos vamos a basar en <code>CompletableFuture</code>.</p>
+<h1 id="DSL-(Domain-Specific-Language)">DSL (Domain Specific Language)<a class="anchor-link" href="#DSL-(Domain-Specific-Language)">&#182;</a></h1><p>El objetivo es crear un <em>Domain Specific Language</em>, utilizando composición monádica. Como ejemplo nos vamos a basar en dos implementaciones una <em>reactiva</em> <code>CompletableFuture</code> y otra que no lo es, basada en <code>Supplier</code>.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>Transformar el valor de un <em>futuro</em></li>
 <li>Unir dos <em>futuros</em></li>
@@ -14759,7 +14764,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Funtores">Funtores<a class="anchor-link" href="#Funtores">&#182;</a></h1><h2 id="Definici%C3%B3n-formal">Definici&#243;n formal<a class="anchor-link" href="#Definici%C3%B3n-formal">&#182;</a></h2><p>Permite transformar el valor que hay dentro del un  "<em>contexto</em>" a través de una función.</p>
@@ -14798,6 +14803,57 @@ div.jp-OutputPrompt {
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureFuntor</span> <span class="p">{</span>
 
     <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">map</span><span class="p">(</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">future</span><span class="p">,</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Definici%C3%B3n-para-Id-(basado-en-Supplier)">Definici&#243;n para <code>Id</code> (basado en <code>Supplier</code>)<a class="anchor-link" href="#Definici%C3%B3n-para-Id-(basado-en-Supplier)">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Id</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Supplier</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{};</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">final</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">exampleId</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="s">&quot;Hola Mundo&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdFuntor</span> <span class="p">{</span>
+
+    <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">map</span><span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">id</span><span class="p">,</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">);</span>
 
 <span class="p">}</span>
 </pre></div>
@@ -14882,7 +14938,7 @@ div.jp-OutputPrompt {
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureApplicative</span> <span class="kd">extends</span> <span class="n">CompletableFutureFuntor</span>  <span class="p">{</span>
@@ -14894,6 +14950,35 @@ div.jp-OutputPrompt {
     <span class="p">);</span>
     
     <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">pure</span><span class="p">(</span><span class="n">A</span> <span class="n">value</span> <span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Definici%C3%B3n-de-aplicativo-para-Id">Definici&#243;n de aplicativo para <code>Id</code><a class="anchor-link" href="#Definici%C3%B3n-de-aplicativo-para-Id">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdApplicative</span> <span class="kd">extends</span> <span class="n">IdFuntor</span>  <span class="p">{</span>
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span> <span class="nf">map2</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futureA</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">futureB</span><span class="p">,</span> 
+        <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">f</span> 
+    <span class="p">);</span>
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">pure</span><span class="p">(</span><span class="n">A</span> <span class="n">value</span> <span class="p">);</span>
 
 <span class="p">}</span>
 </pre></div>
@@ -14923,12 +15008,12 @@ div.jp-OutputPrompt {
 </div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureApplicative</span> <span class="kd">extends</span> <span class="n">CompletableFutureFuntor</span>  <span class="p">{</span>
-    
-    <span class="kd">public</span> <span class="n">record</span> <span class="n">Tuple</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">T</span> <span class="n">one</span><span class="p">,</span> <span class="n">U</span> <span class="n">two</span><span class="p">){};</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">record</span> <span class="n">Tuple</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">T</span> <span class="n">one</span><span class="p">,</span> <span class="n">U</span> <span class="n">two</span><span class="p">){};</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureApplicative</span> <span class="kd">extends</span> <span class="n">CompletableFutureFuntor</span>  <span class="p">{</span>
     
     <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span> <span class="nf">map2</span><span class="p">(</span>
         <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futureA</span><span class="p">,</span> 
@@ -14977,6 +15062,61 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdApplicative</span> <span class="kd">extends</span> <span class="n">IdFuntor</span> <span class="p">{</span>
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span> <span class="nf">map2</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">idB</span><span class="p">,</span> 
+        <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">);</span>
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">pure</span><span class="p">(</span><span class="n">A</span> <span class="n">value</span> <span class="p">);</span>
+    
+    <span class="cm">/*Other Definitions*/</span>
+    
+    <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">ap</span><span class="p">(</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">future</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">futureFunc</span> <span class="p">)</span> <span class="p">{</span>
+        
+        <span class="k">return</span> <span class="n">map2</span><span class="p">(</span> 
+            <span class="n">future</span><span class="p">,</span> 
+            <span class="n">futureFunc</span><span class="p">,</span> 
+            <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
+        <span class="p">);</span>
+        
+    <span class="p">}</span>
+    
+    <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">Tuple</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="nf">product</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">idB</span> <span class="p">)</span> <span class="p">{</span>
+        
+        <span class="k">return</span>  <span class="n">map2</span><span class="p">(</span> 
+            <span class="n">idA</span><span class="p">,</span>
+            <span class="n">idB</span><span class="p">,</span> 
+            <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="n">Tuple</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+         <span class="p">);</span>
+        
+    <span class="p">}</span>
+    
+    <span class="cm">/*Funtor*/</span>
+    
+     <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">map</span><span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">future</span><span class="p">,</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ap</span><span class="p">(</span> <span class="n">future</span><span class="p">,</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span> <span class="p">)</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -14998,7 +15138,7 @@ div.jp-OutputPrompt {
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureApplicativeError</span> <span class="kd">extends</span> <span class="n">CompletableFutureApplicative</span>  <span class="p">{</span>
@@ -15020,13 +15160,40 @@ div.jp-OutputPrompt {
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Definici%C3%B3n-de-aplicativo-error-para-Id">Definici&#243;n de aplicativo error para <code>Id</code><a class="anchor-link" href="#Definici%C3%B3n-de-aplicativo-error-para-Id">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdApplicativeError</span> <span class="kd">extends</span> <span class="n">IdApplicative</span>  <span class="p">{</span>
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">handleErrorWith</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">);</span>
+    
+     <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">raiseError</span><span class="p">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Aplicativo-error,-operaciones-derivadas">Aplicativo error, operaciones derivadas<a class="anchor-link" href="#Aplicativo-error,-operaciones-derivadas">&#182;</a></h2><p>La operación <code>handleError</code> se puede definir como una especie de "<em>default</em>"</p>
 
 </div>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureApplicativeError</span> <span class="kd">extends</span> <span class="n">CompletableFutureApplicative</span>  <span class="p">{</span>
@@ -15056,7 +15223,40 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdApplicativeError</span> <span class="kd">extends</span> <span class="n">IdApplicative</span>  <span class="p">{</span>
+    
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">handleErrorWith</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">);</span>
+    
+     <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">raiseError</span><span class="p">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="p">);</span>
+     
+     <span class="cm">/*Other*/</span>
+     
+     <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">handleError</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+         
+         <span class="k">return</span> <span class="n">handleErrorWith</span><span class="p">(</span> <span class="n">idA</span><span class="p">,</span> <span class="n">error</span> <span class="o">-&gt;</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">)</span> <span class="p">);</span>
+        
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="MonadError">MonadError<a class="anchor-link" href="#MonadError">&#182;</a></h1><h2 id="Definici%C3%B3n-formal-de-Monada">Definici&#243;n formal de Monada<a class="anchor-link" href="#Definici%C3%B3n-formal-de-Monada">&#182;</a></h2><p>Es un funtor aplicativo monádico. A partir de un contexto de tipo <code>A</code> y una función que tiene como dominio el tipo <code>A</code> y devuelve un contexto de tipo <code>B</code> se obtiene un contexto del tipo <code>B</code></p>
@@ -15091,14 +15291,39 @@ FlatMap
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureMonadError</span> <span class="kd">extends</span> <span class="n">CompletableFutureApplicativeError</span>  <span class="p">{</span>
         
     <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span>
-        <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futurT</span><span class="p">,</span> 
+        <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futurA</span><span class="p">,</span> 
         <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">);</span>  
+   
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Definici%C3%B3n-de-MonadError-para-Id">Definici&#243;n de MonadError para <code>Id</code><a class="anchor-link" href="#Definici%C3%B3n-de-MonadError-para-Id">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdMonadError</span> <span class="kd">extends</span> <span class="n">IdApplicativeError</span>  <span class="p">{</span>
+        
+    <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">);</span>  
    
 <span class="p">}</span>
 </pre></div>
@@ -15117,7 +15342,7 @@ FlatMap
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">CompletableFutureMonadError</span> <span class="kd">extends</span> <span class="n">CompletableFutureApplicativeError</span>  <span class="p">{</span>
@@ -15125,7 +15350,7 @@ FlatMap
     <span class="cm">/*Primitives */</span>
     
     <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span>
-        <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futureT</span><span class="p">,</span> 
+        <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futureA</span><span class="p">,</span> 
         <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">);</span>  
 
     <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">pure</span><span class="p">(</span><span class="n">A</span> <span class="n">value</span> <span class="p">);</span>
@@ -15167,16 +15392,69 @@ FlatMap
 </div>
 </div>
 
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdMonadError</span> <span class="kd">extends</span> <span class="n">IdApplicativeError</span>  <span class="p">{</span>
+     
+    <span class="cm">/*Primitives */</span>
+    
+    <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">);</span>  
+
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">pure</span><span class="p">(</span><span class="n">A</span> <span class="n">value</span> <span class="p">);</span>
+
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">handleErrorWith</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">);</span>
+
+    <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">raiseError</span><span class="p">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="p">);</span>
+    
+     <span class="cm">/*Other*/</span>
+    
+    <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">future</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">flatMap</span><span class="p">(</span> <span class="n">future</span><span class="p">,</span> <span class="n">Function</span><span class="p">.</span><span class="na">identity</span><span class="p">()</span> <span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="cm">/*Applicative*/</span>
+    
+    <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span> <span class="nf">map2</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">idB</span><span class="p">,</span> 
+        <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">)</span> <span class="p">{</span>
+
+         <span class="k">return</span> <span class="n">flatMap</span><span class="p">(</span>
+             <span class="n">idA</span><span class="p">,</span>
+             <span class="n">a</span> <span class="o">-&gt;</span> <span class="n">flatMap</span><span class="p">(</span> 
+                 <span class="n">idB</span><span class="p">,</span> 
+                 <span class="n">b</span> <span class="o">-&gt;</span>  <span class="n">pure</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+             <span class="p">)</span>
+         <span class="p">);</span>
+
+    <span class="p">}</span>
+   
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Implementando">Implementando<a class="anchor-link" href="#Implementando">&#182;</a></h1><p>Implementando <code>CompletableFutureMonadError</code>... por fin....</p>
+<h1 id="Implementando">Implementando<a class="anchor-link" href="#Implementando">&#182;</a></h1><p>Por fin....</p>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">record</span> <span class="nf">CompletableFutureMonadErrorImpl</span><span class="p">(</span> <span class="n">Executor</span> <span class="n">executor</span> <span class="p">)</span>  <span class="kd">implements</span> <span class="n">CompletableFutureMonadError</span> <span class="p">{</span>
@@ -15221,6 +15499,54 @@ FlatMap
 </div>
 </div>
 
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">IdMonadErrorImpl</span> <span class="kd">implements</span> <span class="n">IdMonadError</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">){</span>
+        <span class="k">return</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span> <span class="n">idA</span><span class="p">.</span><span class="na">get</span><span class="p">()</span> <span class="p">).</span><span class="na">get</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">pure</span><span class="p">(</span><span class="n">A</span> <span class="n">value</span> <span class="p">){</span>
+        <span class="k">return</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">handleErrorWith</span><span class="p">(</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">return</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span>
+            <span class="k">try</span><span class="p">{</span>
+                <span class="k">return</span> <span class="n">idA</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+            <span class="p">}</span> <span class="k">catch</span><span class="p">(</span> <span class="n">RuntimeException</span> <span class="n">e</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span> <span class="n">e</span> <span class="p">).</span><span class="na">get</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">raiseError</span><span class="p">(</span><span class="n">Throwable</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">{</span>
+            <span class="kd">final</span> <span class="kd">var</span> <span class="n">res</span> <span class="o">=</span> <span class="k">switch</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">case</span> <span class="n">RuntimeException</span> <span class="n">e</span> <span class="o">-&gt;</span>  <span class="n">e</span> <span class="p">;</span>
+                <span class="k">case</span> <span class="k">default</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">;</span> 
+            <span class="p">};</span>
+            <span class="k">throw</span> <span class="n">res</span><span class="p">;</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15230,7 +15556,7 @@ FlatMap
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">record</span> <span class="n">CompletableFutureDsl</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="p">(</span> <span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="n">CompletableFutureMonadError</span> <span class="n">monad</span>  <span class="p">){</span>
@@ -15257,6 +15583,44 @@ FlatMap
     
     <span class="kd">public</span> <span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">CompletableFutureDsl</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">CompletableFuture</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">)</span>  <span class="p">{</span>    
         <span class="k">return</span> <span class="k">new</span> <span class="n">CompletableFutureDsl</span><span class="o">&lt;&gt;</span><span class="p">(</span> <span class="n">monad</span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">f</span><span class="p">),</span> <span class="n">monad</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">record</span> <span class="n">IdDsl</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="n">IdMonadError</span> <span class="n">monad</span>  <span class="p">){</span>
+    
+    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">IdMonadError</span> <span class="n">DEFAULT_MONAD</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IdMonadErrorImpl</span><span class="p">();</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span>  <span class="n">IdDsl</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">from</span><span class="p">(</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">){</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">IdDsl</span><span class="o">&lt;&gt;</span><span class="p">(</span> <span class="n">value</span><span class="p">,</span> <span class="n">DEFAULT_MONAD</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">IdDsl</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">map</span><span class="p">(</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">)</span>  <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">IdDsl</span><span class="o">&lt;&gt;</span><span class="p">(</span> <span class="n">monad</span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">f</span><span class="p">),</span> <span class="n">monad</span> <span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">IdDsl</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span> <span class="nf">zipWith</span><span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">other</span><span class="p">,</span> <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">)</span>  <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">IdDsl</span><span class="o">&lt;&gt;</span><span class="p">(</span> <span class="n">monad</span><span class="p">.</span><span class="na">map2</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">monad</span> <span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="n">IdDsl</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">handleErrorWith</span><span class="p">(</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">Throwable</span><span class="p">,</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">)</span>  <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">IdDsl</span><span class="o">&lt;&gt;</span><span class="p">(</span> <span class="n">monad</span><span class="p">.</span><span class="na">handleErrorWith</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">monad</span> <span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">IdDsl</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">flatMap</span><span class="p">(</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">f</span> <span class="p">)</span>  <span class="p">{</span>    
+        <span class="k">return</span> <span class="k">new</span> <span class="n">IdDsl</span><span class="o">&lt;&gt;</span><span class="p">(</span> <span class="n">monad</span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">f</span><span class="p">),</span> <span class="n">monad</span> <span class="p">);</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
