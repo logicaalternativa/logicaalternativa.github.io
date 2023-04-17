@@ -14691,7 +14691,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Que-est%C3%A9-orientado-a-mensajes-significa:">Que est&#233; orientado a mensajes significa:<a class="anchor-link" href="#Que-est%C3%A9-orientado-a-mensajes-significa:">&#182;</a></h3><ul>
 <li>Que el sistema es más <strong>modular</strong> </li>
-<li>Perserva el <strong>bajo acoplamiento</strong> con otros módulos o sistemas<ul>
+<li>Preserva el <strong>bajo acoplamiento</strong> con otros módulos o sistemas<ul>
 <li>Indirección en el <strong>tiempo</strong> y en el <strong>espacio</strong></li>
 </ul>
 </li>
@@ -14702,7 +14702,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="E-implica:">E implica:<a class="anchor-link" href="#E-implica:">&#182;</a></h3><ul>
-<li>Comunicación <strong>no bloqueante</strong> y <strong>asícrona</strong>.</li>
+<li>Comunicación <strong>no bloqueante</strong> y <strong>asíncrona</strong>.</li>
 </ul>
 
 </div>
@@ -14739,6 +14739,21 @@ div.jp-OutputPrompt {
 
 </div>
 </div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Como-resumen">Como resumen<a class="anchor-link" href="#Como-resumen">&#182;</a></h2><p>Las APIS reactivas por su mejor gestión del los hilos:</p>
+<ul>
+<li>Son más <em>eficientes</em> (mismo rendimiento menos recursos)</li>
+<li>Son más <em>resilentes</em> (más sencillo implementar patrones de estabilidad)</li>
+<li>Soportan mejor los picos de carga</li>
+</ul>
+<p>Pero por su asíncronia y paralelismo:</p>
+<ul>
+<li>Son más complejas</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Requiere-la-adopci%C3%B3n-de-nuevos-patrones">Requiere la adopci&#243;n de nuevos patrones<a class="anchor-link" href="#Requiere-la-adopci%C3%B3n-de-nuevos-patrones">&#182;</a></h2><blockquote><p>In reality all of the patterns in that book can be replaced with basic FP concepts like high-order function, functions composition and pattern matching like I tried to demonstrate years ago with this trivial examples "<a href="https://t.co/tXBTaNyc6E"><em>g ∘ f patterns (aka From Gof to lambda)</em></a>"</p>
@@ -14780,13 +14795,13 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Un-ejemplo:">Un ejemplo:<a class="anchor-link" href="#Un-ejemplo:">&#182;</a></h3>
-<pre><code> &lt;8420412147&gt; -- ( [Libro] obtenerLibro( isbn ) ) -- =&gt; [&lt;El Quijote&gt;]
+<pre><code> &lt;8420412147&gt; -- ( obtenerLibro( isbn ): [Libro] ) -- =&gt; [&lt;El Quijote&gt;]
 
  ---
  Map
  ===
 
- [&lt;El Quijote&gt;] ---- ( int numeroCapitulos( libro ) ) ---- =&gt; [&lt;126&gt;]</code></pre>
+[&lt;El Quijote&gt;] ---- ( numeroCapitulos( libro ): int ) ---- =&gt; [&lt;126&gt;]</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -14916,16 +14931,16 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Unir-el-resultado-de-dos-computaciones">Unir el resultado de dos computaciones<a class="anchor-link" href="#Unir-el-resultado-de-dos-computaciones">&#182;</a></h3>
 <pre><code>
-&lt;8420412147&gt; -- ( [Libro] obtenerLibro( isbn ) ) -- =&gt; [&lt;El Quijote&gt;]
+&lt;8420412147&gt; -- (  obtenerLibro( isbn ): [Libro]  ) -- =&gt; [&lt;El Quijote&gt;]
 
-&lt;Cervantes&gt;  -- ( [Biografia] obtenerBiografia( autor) ) -- =&gt; [&lt;Bigrafía Cervantes&gt;]</code></pre>
+&lt;Cervantes&gt;  -- ( obtenerBiografia( autor): [Biografia] ) -- =&gt; [&lt;Bigrafía Cervantes&gt;]</code></pre>
 
 <pre><code>Map2
 ====
 
- [&lt;El Quijote&gt;] --------+      
+[&lt;El Quijote&gt;] ---------+      
                         |
-                        + -- (Ensayo crearEnsayo( libro, biografía)) -- =&gt; [&lt;Vida y obra de Cervantes&gt;]
+                        + -- ( crearEnsayo( libro, biografía): Ensayo ) -- =&gt; [&lt;Vida y obra de Cervantes&gt;]
                         |          
 [&lt;Bigrafía Cervantes&gt;] -+</code></pre>
 
@@ -14967,14 +14982,14 @@ div.jp-OutputPrompt {
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdApplicative</span> <span class="kd">extends</span> <span class="n">IdFuntor</span>  <span class="p">{</span>
     
     <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">C</span><span class="o">&gt;</span> <span class="nf">map2</span><span class="p">(</span>
-        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">futureA</span><span class="p">,</span> 
-        <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">futureB</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">idB</span><span class="p">,</span> 
         <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="o">&gt;</span> <span class="n">f</span> 
     <span class="p">);</span>
     
@@ -15122,11 +15137,11 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Aplicativo-Error">Aplicativo Error<a class="anchor-link" href="#Aplicativo-Error">&#182;</a></h1><p>Permite gestionar errores.</p>
 
-<pre><code>&lt;1111111111&gt; -- ( [Libro] obtenerLibro( isbn ) ) -- =&gt; [&lt;Excepcion: ErrorNotFound&gt;]
+<pre><code>&lt;1111111111&gt; -- ( obtenerLibro( isbn ): [Libro] ) -- =&gt; [&lt;Excepcion: ErrorNotFound&gt;]
 
 ---
 
- [&lt;Excepcion: ErrorNotFound&gt;] -- ([Libro] alternativaLibro( error )) =&gt; [&lt;La vida es sueño&gt;]</code></pre>
+[&lt;Excepcion: ErrorNotFound&gt;] -- (alternativaLibro( error ): [Libro] ) =&gt; [&lt;La vida es sueño&gt;]</code></pre>
 <p>En nuestro caso el tipo de error será <code>Throwable</code></p>
 
 </div>
@@ -15279,7 +15294,7 @@ div.jp-OutputPrompt {
 FlatMap
 =======
 
-[&lt;El quijote&gt;]  -- ( [Referencias] obtenerReferencias(libro) ) --=&gt; [&lt;Referencias sobre El Quijote&gt;]</code></pre>
+[&lt;El quijote&gt;]  -- ( obtenerReferencias(libro): [Referencias] ) --=&gt; [&lt;Referencias sobre El Quijote&gt;]</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -15336,7 +15351,7 @@ FlatMap
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Operaciones-primitivas-y-derivadas-de-MonadError">Operaciones primitivas y derivadas de MonadError<a class="anchor-link" href="#Operaciones-primitivas-y-derivadas-de-MonadError">&#182;</a></h2><p>Definiremos las operaciones del applicativo <code>map2</code> y la función <code>flatten</code> a partir de las operaciones primitivas de Monada</p>
+<h2 id="Operaciones-primitivas-y-derivadas-de-MonadError">Operaciones primitivas y derivadas de MonadError<a class="anchor-link" href="#Operaciones-primitivas-y-derivadas-de-MonadError">&#182;</a></h2><p>Definiremos las operaciones del aplicativo <code>map2</code> y la función <code>flatten</code> a partir de las operaciones primitivas de Monada</p>
 
 </div>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
