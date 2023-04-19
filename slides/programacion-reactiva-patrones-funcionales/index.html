@@ -14741,11 +14741,11 @@ div.jp-OutputPrompt {
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Como-resumen">Como resumen<a class="anchor-link" href="#Como-resumen">&#182;</a></h2><p>Las APIS reactivas por su mejor gestión del los hilos:</p>
+<h2 id="Recapitulando...">Recapitulando...<a class="anchor-link" href="#Recapitulando...">&#182;</a></h2><p>Las APIS reactivas por su mejor gestión del los hilos:</p>
 <ul>
 <li>Son más <em>eficientes</em> (mismo rendimiento menos recursos)</li>
 <li>Son más <em>resilentes</em> (más sencillo implementar patrones de estabilidad)</li>
-<li>Soportan mejor los picos de carga</li>
+<li>Soportan mejor los picos de carga.</li>
 </ul>
 <p>Pero por su asíncronia y paralelismo:</p>
 <ul>
@@ -14788,20 +14788,20 @@ div.jp-OutputPrompt {
 <pre><code>Map
 ===
 
-[A] ---------- (f: A -&gt; B) ---------- =&gt; [B]</code></pre>
+[A] --------- { f A -&gt; B } ---------- =&gt; [B]</code></pre>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Un-ejemplo:">Un ejemplo:<a class="anchor-link" href="#Un-ejemplo:">&#182;</a></h3>
-<pre><code> &lt;8420412147&gt; -- ( obtenerLibro( isbn ): [Libro] ) -- =&gt; [&lt;El Quijote&gt;]
+<pre><code> &lt;8420412147&gt; -- { obtenerLibro( isbn: String ): [Libro] } -- =&gt; [&lt;El Quijote&gt;]
 
  ---
  Map
  ===
 
-[&lt;El Quijote&gt;] ---- ( numeroCapitulos( libro ): int ) ---- =&gt; [&lt;126&gt;]</code></pre>
+[&lt;El Quijote&gt;] ---- { numeroCapitulos( libro: Libro ): int } ---- =&gt; [&lt;126&gt;]</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -14846,6 +14846,12 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>"<em>Evaluación perezosa</em>" de una variable tipo <code>String</code>  con el valor <code>Hola mundo</code></p>
+
+</div>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14893,7 +14899,7 @@ div.jp-OutputPrompt {
 <pre><code>Ap
 ==
 
-[A] ---------- [(f: A -&gt; B )] ---------- =&gt; [B]</code></pre>
+[A] ---------- [ { f: A -&gt; B } ] ---------- =&gt; [B]</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -14921,7 +14927,7 @@ div.jp-OutputPrompt {
 
 [A] -------------+      
                  |
-                 + -- (f: A,B -&gt; C) --  =&gt; [C]
+                 + -- { f: A,B -&gt; C } --  =&gt; [C]
                  |
 [B] -------------+</code></pre>
 
@@ -14931,18 +14937,18 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Unir-el-resultado-de-dos-computaciones">Unir el resultado de dos computaciones<a class="anchor-link" href="#Unir-el-resultado-de-dos-computaciones">&#182;</a></h3>
 <pre><code>
-&lt;8420412147&gt; -- (  obtenerLibro( isbn ): [Libro]  ) -- =&gt; [&lt;El Quijote&gt;]
+&lt;8420412147&gt; -- (  obtenerLibro( isbn: String ): [Libro]  ) -- =&gt; [&lt;El Quijote&gt;]
 
-&lt;Cervantes&gt;  -- ( obtenerBiografia( autor): [Biografia] ) -- =&gt; [&lt;Bigrafía Cervantes&gt;]</code></pre>
+&lt;Cervantes&gt;  -- ( obtenerBiografia( autor: Autor): [Biografia] ) -- =&gt; [&lt;Bio Cervantes&gt;]</code></pre>
 
 <pre><code>Map2
 ====
 
-[&lt;El Quijote&gt;] ---------+      
-                        |
-                        + -- ( crearEnsayo( libro, biografía): Ensayo ) -- =&gt; [&lt;Vida y obra de Cervantes&gt;]
-                        |          
-[&lt;Bigrafía Cervantes&gt;] -+</code></pre>
+[&lt;El Quijote&gt;] ----+      
+                   |
+                   + - { crearEnsayo( l: Libro, b: Biografia ): Ensayo } - =&gt; [&lt;Vida y obra de Cervantes&gt;]
+                   |          
+[&lt;Bio Cervantes&gt;] -+</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -14982,7 +14988,7 @@ div.jp-OutputPrompt {
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IdApplicative</span> <span class="kd">extends</span> <span class="n">IdFuntor</span>  <span class="p">{</span>
@@ -15095,12 +15101,12 @@ div.jp-OutputPrompt {
     <span class="cm">/*Other Definitions*/</span>
     
     <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">ap</span><span class="p">(</span> 
-        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">future</span><span class="p">,</span> 
-        <span class="n">Id</span><span class="o">&lt;</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">futureFunc</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> 
+        <span class="n">Id</span><span class="o">&lt;</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;&gt;</span> <span class="n">idFunc</span> <span class="p">)</span> <span class="p">{</span>
         
         <span class="k">return</span> <span class="n">map2</span><span class="p">(</span> 
-            <span class="n">future</span><span class="p">,</span> 
-            <span class="n">futureFunc</span><span class="p">,</span> 
+            <span class="n">idA</span><span class="p">,</span> 
+            <span class="n">idFunc</span><span class="p">,</span> 
             <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">f</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
         <span class="p">);</span>
         
@@ -15120,8 +15126,8 @@ div.jp-OutputPrompt {
     
     <span class="cm">/*Funtor*/</span>
     
-     <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">map</span><span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">future</span><span class="p">,</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">ap</span><span class="p">(</span> <span class="n">future</span><span class="p">,</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span> <span class="p">)</span> <span class="p">);</span>
+     <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="nf">map</span><span class="p">(</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">idA</span><span class="p">,</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">f</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">ap</span><span class="p">(</span> <span class="n">idA</span><span class="p">,</span> <span class="n">pure</span><span class="p">(</span> <span class="n">f</span> <span class="p">)</span> <span class="p">);</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -15137,11 +15143,11 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Aplicativo-Error">Aplicativo Error<a class="anchor-link" href="#Aplicativo-Error">&#182;</a></h1><p>Permite gestionar errores.</p>
 
-<pre><code>&lt;1111111111&gt; -- ( obtenerLibro( isbn ): [Libro] ) -- =&gt; [&lt;Excepcion: ErrorNotFound&gt;]
+<pre><code>&lt;1111111111&gt; -- { obtenerLibro( isbn: String ): [Libro] } -- =&gt; [&lt;Error: ErrorNotFound&gt;]
 
 ---
 
-[&lt;Excepcion: ErrorNotFound&gt;] -- (alternativaLibro( error ): [Libro] ) =&gt; [&lt;La vida es sueño&gt;]</code></pre>
+[&lt;Error: ErrorNotFound&gt;] -- { alternativaLibro( error: Error ): [Libro] } =&gt; [&lt;La vida es sueño&gt;]</code></pre>
 <p>En nuestro caso el tipo de error será <code>Throwable</code></p>
 
 </div>
@@ -15279,7 +15285,7 @@ div.jp-OutputPrompt {
 <pre><code>FlatMap
 =======
 
-[A] ---------- (f: A -&gt; [B]) ---------- =&gt; [B]</code></pre>
+[A] ---------- { f: A -&gt; [B] } ---------- =&gt; [B]</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -15287,14 +15293,14 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Permite concatenar el resultado de dos computaciones</p>
 
-<pre><code>&lt;8420412147&gt; -- ( [Libro] obtenerLibro( isbn ) ) -- =&gt; [&lt;El Quijote&gt;]
+<pre><code>&lt;8420412147&gt; -- { [Libro] obtenerLibro( isbn: String ) } -- =&gt; [&lt;El Quijote&gt;]
 
 ---
 
 FlatMap
 =======
 
-[&lt;El quijote&gt;]  -- ( obtenerReferencias(libro): [Referencias] ) --=&gt; [&lt;Referencias sobre El Quijote&gt;]</code></pre>
+[&lt;El quijote&gt;]  -- { obtenerReferencias(libro : Libro): [Referencias] } --=&gt; [&lt;Referencias sobre El Quijote&gt;]</code></pre>
 
 </div>
 </div></section></section><section><section>
@@ -15431,8 +15437,8 @@ FlatMap
     
      <span class="cm">/*Other*/</span>
     
-    <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">future</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">flatMap</span><span class="p">(</span> <span class="n">future</span><span class="p">,</span> <span class="n">Function</span><span class="p">.</span><span class="na">identity</span><span class="p">()</span> <span class="p">);</span>
+    <span class="k">default</span> <span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">Id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&gt;</span> <span class="n">idA</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">flatMap</span><span class="p">(</span> <span class="n">idA</span><span class="p">,</span> <span class="n">Function</span><span class="p">.</span><span class="na">identity</span><span class="p">()</span> <span class="p">);</span>
     <span class="p">}</span>
     
     <span class="cm">/*Applicative*/</span>
