@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Scala &#8211; Lógica Alternativa</title>
+	<atom:link href="/category/programacion/scala/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
+	<lastBuildDate>Sun, 28 May 2023 08:59:20 +0000</lastBuildDate>
+	<language>es-ES</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.26</generator>
+	<item>
+		<title>Vídeo y diapositivas de la charla de Commit Conf</title>
+		<link>/diapositivas-de-la-charla-de-commit-conf/</link>
+		<pubDate>Sat, 01 Dec 2018 19:00:52 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Presentaciones]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Reactiva]]></category>
+		<category><![CDATA[Scala]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[Charla]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[Video]]></category>
+
+		<guid isPermaLink="false">/?p=1127</guid>
+		<description><![CDATA[Los días 23 y 24 de noviembre ha tenido lugar en Madrid la primera edición del Commit Conf, uno de los eventos más importantes que se tiene en lengua castellana. En su momento presente mi charla sobre Akka Sharding y su relación con DDD al “call for papers” con ilusión pero sin grandes esperanzas de [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>

@@ -12,7 +12,7 @@
 	<atom:link href="/category/general/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sun, 28 May 2023 08:19:57 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 28 May 2023 08:59:20 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
@@ -22,7 +22,18 @@
 		<link>/charla-commit-conf-2023-sobre-programacion-funcional-y-patrones-funcionales/</link>
 		<pubDate>Sat, 27 May 2023 20:37:31 +0000</pubDate>
 		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
-				<category><![CDATA[General]]></category>
+				<category><![CDATA[Funcional]]></category>
+		<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Patrones]]></category>
+		<category><![CDATA[Presentaciones]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Reactiva]]></category>
+		<category><![CDATA[Charla]]></category>
+		<category><![CDATA[CommitConf]]></category>
+		<category><![CDATA[DSL]]></category>
+		<category><![CDATA[Programación Functional]]></category>
+		<category><![CDATA[programación reactiva]]></category>
 
 		<guid isPermaLink="false">/?p=1182</guid>
 		<description><![CDATA[El pasado 21 de abril di una charla sobre programación reactiva y como tener conocimiento de los patrones funcionales pueden ayudar a entender mejor este tipo de programación. En la charla también introduzco el concepto de DSL (Domain Specific Language) que permiten de una manera real abstraer nuestro código de la tecnología escogida. En otro [&#8230;]]]></description>
@@ -50,6 +61,14 @@
 		<pubDate>Sat, 01 Dec 2018 19:00:52 +0000</pubDate>
 		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
 				<category><![CDATA[General]]></category>
+		<category><![CDATA[Presentaciones]]></category>
+		<category><![CDATA[Programación]]></category>
+		<category><![CDATA[Reactiva]]></category>
+		<category><![CDATA[Scala]]></category>
+		<category><![CDATA[actores]]></category>
+		<category><![CDATA[Charla]]></category>
+		<category><![CDATA[programación reactiva]]></category>
+		<category><![CDATA[Video]]></category>
 
 		<guid isPermaLink="false">/?p=1127</guid>
 		<description><![CDATA[Los días 23 y 24 de noviembre ha tenido lugar en Madrid la primera edición del Commit Conf, uno de los eventos más importantes que se tiene en lengua castellana. En su momento presente mi charla sobre Akka Sharding y su relación con DDD al “call for papers” con ilusión pero sin grandes esperanzas de [&#8230;]]]></description>
