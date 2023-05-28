@@ -12,12 +12,22 @@
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Mon, 05 Sep 2022 18:20:40 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 28 May 2023 08:19:57 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.20</generator>
+	<generator>https://wordpress.org/?v=4.7.26</generator>
 	<item>
+		<title>Charla Commit Conf 2023 sobre programación funcional y patrones funcionales</title>
+		<link>/charla-commit-conf-2023-sobre-programacion-funcional-y-patrones-funcionales/</link>
+		<pubDate>Sat, 27 May 2023 20:37:31 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+
+		<guid isPermaLink="false">/?p=1182</guid>
+		<description><![CDATA[El pasado 21 de abril di una charla sobre programación reactiva y como tener conocimiento de los patrones funcionales pueden ayudar a entender mejor este tipo de programación. En la charla también introduzco el concepto de DSL (Domain Specific Language) que permiten de una manera real abstraer nuestro código de la tecnología escogida. En otro [&#8230;]]]></description>
+		</item>
+		<item>
 		<title>Notas sobre aprendizaje por refuerzo</title>
 		<link>/notas-sobre-aprendizaje-por-refuerzo/</link>
 		<pubDate>Mon, 05 Sep 2022 17:38:35 +0000</pubDate>
@@ -35,7 +45,7 @@
 		<description><![CDATA[El objetivo de este post es servir de introducción a una de las ramas del machine learning o, en español,  aprendizaje computacional como son los modelos de aprendizaje por refuerzo. Los sistemas de aprendizaje computacional se pueden modelar como una función que dependiendo del valor de unas entradas se obtiene una salida que permite predecir [&#8230;]]]></description>
 		</item>
 		<item>
-		<title>Diapositivas de la charla de Commit Conf</title>
+		<title>Vídeo y diapositivas de la charla de Commit Conf</title>
 		<link>/diapositivas-de-la-charla-de-commit-conf/</link>
 		<pubDate>Sat, 01 Dec 2018 19:00:52 +0000</pubDate>
 		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
@@ -433,19 +443,6 @@
 
 		<guid isPermaLink="false">/?p=68</guid>
 		<description><![CDATA[Muchas veces las aplicaciones web no tienen acceso por ssl (https) y suelen tener un formulario de &#8216;login&#8217; de usuario y contraseña. Esto quiere decir que información sensible como la contraseña se transmite en texto claro y que sea relativamente fácil que terceros pueden tener acceso a ella. Por ejemplo esnifando el tráfico si el [&#8230;]]]></description>
-		</item>
-		<item>
-		<title>Networking, networking</title>
-		<link>/networking-networking/</link>
-		<pubDate>Fri, 19 Apr 2013 09:58:10 +0000</pubDate>
-		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
-				<category><![CDATA[General]]></category>
-		<category><![CDATA[blog]]></category>
-		<category><![CDATA[networking]]></category>
-		<category><![CDATA[trabajo]]></category>
-
-		<guid isPermaLink="false">/?p=54</guid>
-		<description><![CDATA[Esta entrada también se podía haber llamado «Los motivos de este blog» o «¿Por qué hago este blog?» Se han tenido que dar una serie de circunstancias que han creado la tormenta perfecta que ha terminado en el nacimiento de LogicaAlternativa.com. Este comienzo de año ha sido de locura. Problemas en la empresa en la [&#8230;]]]></description>
 		</item>
 	</channel>
 </rss>

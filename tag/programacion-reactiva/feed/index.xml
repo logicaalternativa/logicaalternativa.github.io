@@ -12,11 +12,11 @@
 	<atom:link href="/tag/programacion-reactiva/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Mon, 05 Sep 2022 18:20:40 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 28 May 2023 08:19:57 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.8.20</generator>
+	<generator>https://wordpress.org/?v=4.7.26</generator>
 	<item>
 		<title>Actores tipados, Akka por ejemplos</title>
 		<link>/akka-por-ejemplos-actores-tipados/</link>
