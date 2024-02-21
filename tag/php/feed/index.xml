@@ -12,11 +12,11 @@
 	<atom:link href="/tag/php/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sun, 28 May 2023 08:59:20 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 21 Feb 2024 20:38:12 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.7.26</generator>
+	<generator>https://wordpress.org/?v=4.7.28</generator>
 	<item>
 		<title>﻿Pruebas de robustez y rendimiento, sobre cache y simple cache en PHP y más&#8230;</title>
 		<link>/pruebas-de-robustez-y-rendimiento-sobre-cache-y-simple-cache-en-php-y-mas/</link>

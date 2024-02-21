@@ -12,12 +12,27 @@
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Sun, 28 May 2023 08:59:20 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 21 Feb 2024 20:38:12 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.7.26</generator>
+	<generator>https://wordpress.org/?v=4.7.28</generator>
 	<item>
+		<title>Charla en MadridJUG/Madrid GUG sobre tipos algebraicos en Java 21</title>
+		<link>/charla-en-madridjugmadrid-gug-sobre-tipos-algebraicos-en-java-21/</link>
+		<pubDate>Tue, 24 Oct 2023 18:52:04 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[Funcional]]></category>
+		<category><![CDATA[General]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Presentaciones]]></category>
+		<category><![CDATA[Charla]]></category>
+		<category><![CDATA[Tipos algebracicos]]></category>
+
+		<guid isPermaLink="false">/?p=1194</guid>
+		<description><![CDATA[El pasado 24 de octubre dí una charla sobre el soporte completo que se ha dado en Java 21 a los tipos algebraicos. Estuvo muy bien, sobre todo por el debate que se estableció durante la charla y en el networking posterior. Diapositivas presentación: Tipos algebraicos en Java 21 El repositorio de código:   https://github.com/logicaalternativa/algebraictypes [&#8230;]]]></description>
+		</item>
+		<item>
 		<title>Charla Commit Conf 2023 sobre programación funcional y patrones funcionales</title>
 		<link>/charla-commit-conf-2023-sobre-programacion-funcional-y-patrones-funcionales/</link>
 		<pubDate>Sat, 27 May 2023 20:37:31 +0000</pubDate>
@@ -447,21 +462,6 @@
 
 		<guid isPermaLink="false">/?p=133</guid>
 		<description><![CDATA[Completando la entrada anterior, he realizado la implementación en Java. Básicamente &#8216;todo es lo mismo&#8230; pero no es igual&#8216;&#160; :-). Cambia la manera de obtener el número aleatorio y la forma de obtener el sha-1. La estructura es la de un proyecto Maven web con su pom.xml para que sea sencillo compilarlo y generar el [&#8230;]]]></description>
-		</item>
-		<item>
-		<title>Securización de formulario de acceso con SHA-1</title>
-		<link>/securizacion-de-formulario-de-acceso-con-sha-1/</link>
-		<pubDate>Fri, 19 Apr 2013 10:06:10 +0000</pubDate>
-		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
-				<category><![CDATA[JavaScript]]></category>
-		<category><![CDATA[PHP]]></category>
-		<category><![CDATA[acceso]]></category>
-		<category><![CDATA[login]]></category>
-		<category><![CDATA[securizar]]></category>
-		<category><![CDATA[SHA-1]]></category>
-
-		<guid isPermaLink="false">/?p=68</guid>
-		<description><![CDATA[Muchas veces las aplicaciones web no tienen acceso por ssl (https) y suelen tener un formulario de &#8216;login&#8217; de usuario y contraseña. Esto quiere decir que información sensible como la contraseña se transmite en texto claro y que sea relativamente fácil que terceros pueden tener acceso a ella. Por ejemplo esnifando el tráfico si el [&#8230;]]]></description>
 		</item>
 	</channel>
 </rss>
