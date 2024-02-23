@@ -12,12 +12,22 @@
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Wed, 21 Feb 2024 20:38:12 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 23 Feb 2024 20:24:32 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.7.28</generator>
 	<item>
+		<title>Speaker en la Commit Conf 2024</title>
+		<link>/speaker-en-la-commit-conf-2024/</link>
+		<pubDate>Fri, 23 Feb 2024 20:24:32 +0000</pubDate>
+		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
+				<category><![CDATA[General]]></category>
+
+		<guid isPermaLink="false">/?p=1205</guid>
+		<description><![CDATA[El próximo sábado 20 de abril, tengo el placer de dar una charla en la Commit Conf 2024. La charla será  «La nueva forma de expresar &#8216;Data&#8217; en Java 21» y tratará sobre como con el nuevo soporte de los tipos algebraicos que se ha dado en Java 21 se ofrece de facto la nueva [&#8230;]]]></description>
+		</item>
+		<item>
 		<title>Charla en MadridJUG/Madrid GUG sobre tipos algebraicos en Java 21</title>
 		<link>/charla-en-madridjugmadrid-gug-sobre-tipos-algebraicos-en-java-21/</link>
 		<pubDate>Tue, 24 Oct 2023 18:52:04 +0000</pubDate>
@@ -447,21 +457,6 @@
 
 		<guid isPermaLink="false">/?p=163</guid>
 		<description><![CDATA[La duración de manga de motocross se mide en minutos + 2 vueltas. A nivel regional son 20 minutos + 2 vueltas, a nivel nacional 30 minutos + 2 vueltas, etc&#8230; Entrenando lo normal es hacer mangas de la misma duración, o de menos tiempo (mejorando la rapidez) o de más (mejorando el fondo). Las [&#8230;]]]></description>
-		</item>
-		<item>
-		<title>(Java) Securización de formulario de acceso con SHA-1</title>
-		<link>/java-securizacion-de-formulario-de-acceso-con-sha-1/</link>
-		<pubDate>Sun, 28 Apr 2013 19:29:17 +0000</pubDate>
-		<dc:creator><![CDATA[Miguel R. Esteban Martín]]></dc:creator>
-				<category><![CDATA[Java]]></category>
-		<category><![CDATA[JavaScript]]></category>
-		<category><![CDATA[acceso]]></category>
-		<category><![CDATA[login]]></category>
-		<category><![CDATA[securizar]]></category>
-		<category><![CDATA[SHA-1]]></category>
-
-		<guid isPermaLink="false">/?p=133</guid>
-		<description><![CDATA[Completando la entrada anterior, he realizado la implementación en Java. Básicamente &#8216;todo es lo mismo&#8230; pero no es igual&#8216;&#160; :-). Cambia la manera de obtener el número aleatorio y la forma de obtener el sha-1. La estructura es la de un proyecto Maven web con su pom.xml para que sea sencillo compilarlo y generar el [&#8230;]]]></description>
 		</item>
 	</channel>
 </rss>
