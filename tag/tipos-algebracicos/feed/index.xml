@@ -12,11 +12,11 @@
 	<atom:link href="/tag/tipos-algebracicos/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>&#039;¿Otro blog de informática? ... Todavía no&#039; .- Cuaderno de bitácora de Miguel R. Esteban</description>
-	<lastBuildDate>Fri, 23 Feb 2024 20:24:32 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 29 Oct 2024 21:16:53 +0000</lastBuildDate>
 	<language>es-ES</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.7.28</generator>
+	<generator>https://wordpress.org/?v=4.7.29</generator>
 	<item>
 		<title>Charla en MadridJUG/Madrid GUG sobre tipos algebraicos en Java 21</title>
 		<link>/charla-en-madridjugmadrid-gug-sobre-tipos-algebraicos-en-java-21/</link>
